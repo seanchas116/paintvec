@@ -20,26 +20,26 @@ var Vec2 = (function () {
         enumerable: true,
         configurable: true
     });
-    Vec2.prototype.equals = function (a) {
-        return this.x == a.x && this.y == a.y;
+    Vec2.prototype.equals = function (v) {
+        return this.x == v.x && this.y == v.y;
     };
-    Vec2.prototype.add = function (a) {
-        return new Vec2(this.x + a.x, this.y + a.y);
+    Vec2.prototype.add = function (v) {
+        return new Vec2(this.x + v.x, this.y + v.y);
     };
-    Vec2.prototype.sub = function (a) {
-        return new Vec2(this.x - a.x, this.y - a.y);
+    Vec2.prototype.sub = function (v) {
+        return new Vec2(this.x - v.x, this.y - v.y);
     };
-    Vec2.prototype.mul = function (a) {
-        return new Vec2(this.x * a.x, this.y * a.y);
+    Vec2.prototype.mul = function (v) {
+        return new Vec2(this.x * v.x, this.y * v.y);
     };
-    Vec2.prototype.div = function (a) {
-        return new Vec2(this.x / a.x, this.y / a.y);
+    Vec2.prototype.div = function (v) {
+        return new Vec2(this.x / v.x, this.y / v.y);
     };
-    Vec2.prototype.mulScalar = function (a) {
-        return new Vec2(this.x * a, this.y * a);
+    Vec2.prototype.mulScalar = function (s) {
+        return new Vec2(this.x * s, this.y * s);
     };
-    Vec2.prototype.divScalar = function (a) {
-        return new Vec2(this.x / a, this.y / a);
+    Vec2.prototype.divScalar = function (s) {
+        return new Vec2(this.x / s, this.y / s);
     };
     Vec2.prototype.neg = function () {
         return new Vec2(-this.x, -this.y);
@@ -79,6 +79,8 @@ var Vec2 = (function () {
 exports.Vec2 = Vec2;
 var Rect = (function () {
     function Rect(topLeft, bottomRight) {
+        if (topLeft === void 0) { topLeft = new Vec2(); }
+        if (bottomRight === void 0) { bottomRight = topLeft; }
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
     }
@@ -181,7 +183,7 @@ var Rect = (function () {
         }
         rects = rects.filter(function (r) { return !r.isEmpty; });
         if (rects.length == 0) {
-            return new Rect(new Vec2(), new Vec2());
+            return new Rect();
         }
         var left = Math.min.apply(Math, rects.map(function (r) { return r.left; }));
         var top = Math.min.apply(Math, rects.map(function (r) { return r.top; }));
@@ -196,7 +198,7 @@ var Rect = (function () {
         }
         var isEmpty = rects.some(function (r) { return r.isEmpty; });
         if (isEmpty) {
-            return new Rect(new Vec2(), new Vec2());
+            return new Rect();
         }
         var left = Math.max.apply(Math, rects.map(function (r) { return r.left; }));
         var top = Math.max.apply(Math, rects.map(function (r) { return r.top; }));
@@ -317,9 +319,9 @@ var Transform = (function () {
     Transform.scale = function (scale) {
         return new Transform(scale.x, 0, 0, 0, scale.y, 0, 0, 0, 1);
     };
-    Transform.rotate = function (rotation) {
-        var c = Math.cos(rotation);
-        var s = Math.sin(rotation);
+    Transform.rotate = function (angle) {
+        var c = Math.cos(angle);
+        var s = Math.sin(angle);
         return new Transform(c, s, 0, -s, c, 0, 0, 0, 1);
     };
     Transform.translate = function (translation) {
