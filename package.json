@@ -4,7 +4,7 @@
   "description": "JavaScript 2D vector math library",
   "main": "index.js",
   "scripts": {
-    "docs": "typedoc --mode file --out docs index.ts",
+    "docs": "typedoc --mode file --theme minimal --out docs index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
