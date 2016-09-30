@@ -1,0 +1,22 @@
+{
+  "name": "paintvec",
+  "version": "0.1.0",
+  "description": "JavaScript 2D vector math library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanchas116/paintvec.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanchas116/paintvec/issues"
+  },
+  "homepage": "https://github.com/seanchas116/paintvec#readme",
+  "devDependencies": {
+    "typescript": "^2.0.3"
+  }
+}
