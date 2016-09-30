@@ -173,6 +173,20 @@ var Rect = (function () {
         var bottom = Math.max.apply(Math, ys);
         return new Rect(new Vec2(left, top), new Vec2(left, bottom));
     };
+    Rect.prototype.union = function () {
+        var others = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            others[_i - 0] = arguments[_i];
+        }
+        return Rect.union.apply(Rect, [this].concat(others));
+    };
+    Rect.prototype.intersection = function () {
+        var others = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            others[_i - 0] = arguments[_i];
+        }
+        return Rect.intersection.apply(Rect, [this].concat(others));
+    };
     Rect.prototype.toString = function () {
         return "Rect(" + this.topLeft + "," + this.bottomRight + ")";
     };

@@ -235,6 +235,14 @@ class Rect {
     return new Rect(new Vec2(left, top), new Vec2(left, bottom))
   }
 
+  union(...others: Rect[]) {
+    return Rect.union(this, ...others)
+  }
+
+  intersection(...others: Rect[]) {
+    return Rect.intersection(this, ...others)
+  }
+
   toString() {
     return `Rect(${this.topLeft},${this.bottomRight})`
   }
