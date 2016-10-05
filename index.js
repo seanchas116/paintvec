@@ -341,6 +341,13 @@ var Transform = (function () {
     Transform.translate = function (translation) {
         return new Transform(1, 0, 0, 0, 1, 0, translation.x, translation.y, 1);
     };
+    Transform.merge = function () {
+        var transforms = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            transforms[_i - 0] = arguments[_i];
+        }
+        return transforms.reduce(function (a, x) { return a.merge(x); }, new Transform());
+    };
     return Transform;
 }());
 exports.Transform = Transform;

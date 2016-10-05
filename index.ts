@@ -447,4 +447,11 @@ class Transform {
       translation.x, translation.y, 1
     )
   }
+
+  /**
+    Merges all transforms.
+  */
+  static merge(...transforms: Transform[]) {
+    return transforms.reduce((a, x) => a.merge(x), new Transform())
+  }
 }
