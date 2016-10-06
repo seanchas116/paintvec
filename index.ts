@@ -1,6 +1,15 @@
 
 /**
   Vec2 represents 2D vector, point or size.
+
+  ```js
+  const a = new Vec2(1, 2)
+  const b = new Vec2(3, 4)
+  a.add(b) //=> Vec2(4, 6)
+  a.sub(b) //=> Vec2(-2, -2)
+  b.length() //=> 5
+  ...
+  ```
 */
 export
 class Vec2 {
@@ -131,6 +140,18 @@ class Vec2 {
 
 /**
   Rect represents rectangle in 2D space.
+
+  ```js
+  // 100*200 rectangle at (0, 0)
+  const r1 = new Rect(new Vec2(0), new Vec2(100, 200))
+  // 100*200 rectangle at (50, 50)
+  const r2 = new Rect(new Vec2(50, 50), new Vec2(150, 250))
+
+  const intersect = Rect.intersection(r1, r2) //=> Rect(Vec2(50, 50), Vec2(100, 200))
+  const union = Rect.union(r1, r2) //=> Rect(Vec2(0, 0), Vec2(150, 250))
+
+  ...
+  ```
 */
 export
 class Rect {
@@ -280,6 +301,20 @@ class Rect {
 
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
+
+  ```js
+  // translate by (100, 200)
+  const translate = Transform.translate(new Vec2(100, 200))
+
+  // 2x scale
+  const scale = Transform.scale(new Vec2(2))
+
+  // rotate 45 degrees
+  const rotate = Transform.rotate(Math.PI / 4)
+
+  // translate then scale then rotate
+  const transform = translate.merge(scale).merge(rotate)
+  ```
 */
 export
 class Transform {

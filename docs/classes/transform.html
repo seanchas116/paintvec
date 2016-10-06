@@ -961,6 +961,9 @@ img { max-width: 100%; }
 					<a href="transform.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="transform.html#merge-1" class="tsd-kind-icon">merge</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a href="transform.html#rotate" class="tsd-kind-icon">rotate</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -985,6 +988,18 @@ img { max-width: 100%; }
 				<div class="lead">
 					<p>Transform represents 2D affine and perspective transform with 3x3 matrix.</p>
 				</div>
+				<pre><code class="lang-js"><span class="hljs-comment">// translate by (100, 200)</span>
+<span class="hljs-keyword">const</span> translate = Transform.translate(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>))
+
+<span class="hljs-comment">// 2x scale</span>
+<span class="hljs-keyword">const</span> scale = Transform.scale(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">2</span>))
+
+<span class="hljs-comment">// rotate 45 degrees</span>
+<span class="hljs-keyword">const</span> rotate = Transform.rotate(<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">4</span>)
+
+<span class="hljs-comment">// translate then scale then rotate</span>
+<span class="hljs-keyword">const</span> transform = translate.merge(scale).merge(rotate)
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -1027,6 +1042,7 @@ img { max-width: 100%; }
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="transform.html#members" class="tsd-kind-icon">members</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="transform.html#merge" class="tsd-kind-icon">merge</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="transform.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="transform.html#merge-1" class="tsd-kind-icon">merge</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="transform.html#rotate" class="tsd-kind-icon">rotate</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="transform.html#scale" class="tsd-kind-icon">scale</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="transform.html#translate" class="tsd-kind-icon">translate</a></li>
@@ -1047,7 +1063,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L277">index.ts:277</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L320">index.ts:320</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1143,7 +1159,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m00<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L291">index.ts:291</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L334">index.ts:334</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1158,7 +1174,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m01<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L291">index.ts:291</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L334">index.ts:334</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1173,7 +1189,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m02<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L291">index.ts:291</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L334">index.ts:334</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1188,7 +1204,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m10<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L292">index.ts:292</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L335">index.ts:335</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1203,7 +1219,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m11<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L292">index.ts:292</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L335">index.ts:335</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1218,7 +1234,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m12<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L292">index.ts:292</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L335">index.ts:335</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1233,7 +1249,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m20<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L293">index.ts:293</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L336">index.ts:336</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1248,7 +1264,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m21<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L293">index.ts:293</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L336">index.ts:336</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1263,7 +1279,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">m22<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L293">index.ts:293</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L336">index.ts:336</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1285,7 +1301,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L300">index.ts:300</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L343">index.ts:343</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1313,7 +1329,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L354">index.ts:354</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L397">index.ts:397</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1338,7 +1354,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L390">index.ts:390</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L433">index.ts:433</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1360,7 +1376,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L317">index.ts:317</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L360">index.ts:360</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1388,10 +1404,38 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L404">index.ts:404</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L447">index.ts:447</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="merge-1" class="tsd-anchor"></a>
+				<h3>merge</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">merge<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>transforms<span class="tsd-signature-symbol">: </span><a href="transform.html" class="tsd-signature-type">Transform</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="transform.html" class="tsd-signature-type">Transform</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L489">index.ts:489</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Merges all transforms.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>transforms: <a href="transform.html" class="tsd-signature-type">Transform</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="transform.html" class="tsd-signature-type">Transform</a></h4>
 					</li>
 				</ul>
 			</section>
@@ -1405,7 +1449,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L422">index.ts:422</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L465">index.ts:465</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1433,7 +1477,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L411">index.ts:411</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L454">index.ts:454</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1461,7 +1505,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L435">index.ts:435</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L478">index.ts:478</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

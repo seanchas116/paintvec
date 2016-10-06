@@ -958,16 +958,22 @@ img { max-width: 100%; }
 					<a href="rect.html#intbounding" class="tsd-kind-icon">int<wbr>Bounding</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="rect.html#intersection" class="tsd-kind-icon">intersection</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="rect.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="rect.html#transform" class="tsd-kind-icon">transform</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a href="rect.html#intersection" class="tsd-kind-icon">intersection</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="rect.html#union" class="tsd-kind-icon">union</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a href="rect.html#union" class="tsd-kind-icon">union</a>
+					<a href="rect.html#intersection-1" class="tsd-kind-icon">intersection</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="rect.html#union-1" class="tsd-kind-icon">union</a>
 				</li>
 			</ul>
 		</li>
@@ -988,6 +994,16 @@ img { max-width: 100%; }
 				<div class="lead">
 					<p>Rect represents rectangle in 2D space.</p>
 				</div>
+				<pre><code class="lang-js"><span class="hljs-comment">// 100*200 rectangle at (0, 0)</span>
+<span class="hljs-keyword">const</span> r1 = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">0</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>))
+<span class="hljs-comment">// 100*200 rectangle at (50, 50)</span>
+<span class="hljs-keyword">const</span> r2 = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">150</span>, <span class="hljs-number">250</span>))
+
+<span class="hljs-keyword">const</span> intersect = Rect.intersection(r1, r2) <span class="hljs-comment">//=&gt; Rect(Vec2(50, 50), Vec2(100, 200))</span>
+<span class="hljs-keyword">const</span> union = Rect.union(r1, r2) <span class="hljs-comment">//=&gt; Rect(Vec2(0, 0), Vec2(150, 250))</span>
+
+...
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -1035,10 +1051,12 @@ img { max-width: 100%; }
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#equals" class="tsd-kind-icon">equals</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#intbounding" class="tsd-kind-icon">int<wbr>Bounding</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#intersection" class="tsd-kind-icon">intersection</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#transform" class="tsd-kind-icon">transform</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="rect.html#intersection" class="tsd-kind-icon">intersection</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="rect.html#union" class="tsd-kind-icon">union</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="rect.html#union" class="tsd-kind-icon">union</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="rect.html#intersection-1" class="tsd-kind-icon">intersection</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="rect.html#union-1" class="tsd-kind-icon">union</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1056,7 +1074,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L136">index.ts:136</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L157">index.ts:157</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1096,7 +1114,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">bottom<wbr>Right<span class="tsd-signature-symbol">:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L142">index.ts:142</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L163">index.ts:163</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1111,7 +1129,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">top<wbr>Left<span class="tsd-signature-symbol">:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L142">index.ts:142</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L163">index.ts:163</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1129,7 +1147,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">bottom<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L191">index.ts:191</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L212">index.ts:212</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1144,7 +1162,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">bottom<wbr>Left<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L167">index.ts:167</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L188">index.ts:188</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1159,7 +1177,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L203">index.ts:203</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L224">index.ts:224</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1174,7 +1192,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L210">index.ts:210</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L231">index.ts:231</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1189,7 +1207,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">left<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L173">index.ts:173</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L194">index.ts:194</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1204,7 +1222,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">right<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L185">index.ts:185</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L206">index.ts:206</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1219,7 +1237,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L155">index.ts:155</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L176">index.ts:176</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1234,7 +1252,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">top<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L179">index.ts:179</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L200">index.ts:200</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1249,7 +1267,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">top<wbr>Right<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L161">index.ts:161</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L182">index.ts:182</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1264,7 +1282,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L197">index.ts:197</a></li>
+						<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L218">index.ts:218</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1286,7 +1304,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L148">index.ts:148</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L169">index.ts:169</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1314,7 +1332,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L217">index.ts:217</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L238">index.ts:238</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1322,6 +1340,29 @@ img { max-width: 100%; }
 								<p>Calculates the smallest integer rectangle which includes this rectangle.</p>
 							</div>
 						</div>
+						<h4 class="tsd-returns-title">Returns <a href="rect.html" class="tsd-signature-type">Rect</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="intersection" class="tsd-anchor"></a>
+				<h3>intersection</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">intersection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L263">index.ts:263</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="rect.html" class="tsd-signature-type">Rect</a></h4>
 					</li>
 				</ul>
@@ -1336,7 +1377,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L238">index.ts:238</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L267">index.ts:267</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1353,7 +1394,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L226">index.ts:226</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L247">index.ts:247</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1371,8 +1412,31 @@ img { max-width: 100%; }
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="union" class="tsd-anchor"></a>
+				<h3>union</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">union<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L259">index.ts:259</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="rect.html" class="tsd-signature-type">Rect</a></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-				<a name="intersection" class="tsd-anchor"></a>
+				<a name="intersection-1" class="tsd-anchor"></a>
 				<h3>intersection</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<li class="tsd-signature tsd-kind-icon">intersection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></li>
@@ -1381,7 +1445,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L260">index.ts:260</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L289">index.ts:289</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1400,7 +1464,7 @@ img { max-width: 100%; }
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-				<a name="union" class="tsd-anchor"></a>
+				<a name="union-1" class="tsd-anchor"></a>
 				<h3>union</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<li class="tsd-signature tsd-kind-icon">union<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></li>
@@ -1409,7 +1473,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/5653ebd/index.ts#L245">index.ts:245</a></li>
+								<li>Defined in <a href="https://github.com/seanchas116/paintvec/blob/9d80757/index.ts#L274">index.ts:274</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
