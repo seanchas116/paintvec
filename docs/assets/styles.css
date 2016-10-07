@@ -29,6 +29,9 @@ body {
 .member-title .default-value {
     font-weight: normal;
 }
+.member-title.tsd-is-static:before {
+    content: "static ";
+}
 ul {
   list-style-type: none;
   padding-left: 20px;
