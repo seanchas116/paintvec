@@ -4,7 +4,7 @@
   "description": "JavaScript 2D vector math library",
   "main": "index.js",
   "scripts": {
-    "docs": "typedoc --mode file --out docs index.ts",
+    "docs": "typedoc --theme node_modules/typedoc-theme-clean/bin --mode file --out docs index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/seanchas116/paintvec#readme",
   "devDependencies": {
     "typedoc": "github:jasongrout/typedoc#ts2",
+    "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^2.0.3"
   }
 }
