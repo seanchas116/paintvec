@@ -17,7 +17,7 @@ class Vec2 {
     @param x The x component of this vector.
     @param y The y component of this vector.
   */
-  constructor(public readonly x = 0, public readonly y = x) {
+  constructor(public x = 0, public y = x) {
   }
 
   get width() {
@@ -160,7 +160,7 @@ class Rect {
     @param topLeft The top-left position (in top-left origin coordinates) of this rectangle.
     @param bottomRight The bottom-right position (in top-left origin coordinates) of this rectangle.
   */
-  constructor(public readonly topLeft = new Vec2(), public readonly bottomRight = topLeft) {
+  constructor(public topLeft = new Vec2(), public bottomRight = topLeft) {
   }
 
   /**
@@ -324,9 +324,9 @@ class Transform {
     @param m22 Column 2 and row 2 component of this transform.
   */
   constructor(
-    public readonly m00 = 1, public readonly m01 = 0, public readonly m02 = 0,
-    public readonly m10 = 0, public readonly m11 = 1, public readonly m12 = 0,
-    public readonly m20 = 0, public readonly m21 = 0, public readonly m22 = 1,
+    public m00 = 1, public m01 = 0, public m02 = 0,
+    public m10 = 0, public m11 = 1, public m12 = 0,
+    public m20 = 0, public m21 = 0, public m22 = 1,
   ) {
   }
 
