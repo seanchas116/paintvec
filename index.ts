@@ -226,13 +226,6 @@ class Rect {
   }
 
   /**
-    Checks if the rectangle is empty (right <= left or bottom <= top).
-  */
-  get isEmpty() {
-    return this.width <= 0 || this.height <= 0
-  }
-
-  /**
     Calculates the smallest integer rectangle which includes this rectangle.
   */
   intBounding() {
@@ -272,9 +265,8 @@ class Rect {
     Calculates the bounding rectangle of given rectangles.
   */
   static union(...rects: Rect[]) {
-    rects = rects.filter(r => !r.isEmpty)
     if (rects.length == 0) {
-      return new Rect()
+      return
     }
     const left = Math.min(...rects.map(r => r.left))
     const top = Math.min(...rects.map(r => r.top))
@@ -287,15 +279,16 @@ class Rect {
     Calculates the rectangle that represents the shared region of given rectangles.
   */
   static intersection(...rects: Rect[]) {
-    const isEmpty = rects.some(r => r.isEmpty)
-    if (isEmpty) {
-      return new Rect()
+    if (rects.length == 0) {
+      return
     }
     const left = Math.max(...rects.map(r => r.left))
     const top = Math.max(...rects.map(r => r.top))
     const right = Math.min(...rects.map(r => r.right))
     const bottom = Math.min(...rects.map(r => r.bottom))
-    return new Rect(new Vec2(left, top), new Vec2(right, bottom))
+    if (left < right && top < bottom) {
+      return new Rect(new Vec2(left, top), new Vec2(right, bottom))
+    }
   }
 }
 

@@ -150,13 +150,6 @@ var Rect = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Rect.prototype, "isEmpty", {
-        get: function () {
-            return this.width <= 0 || this.height <= 0;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Rect.prototype.intBounding = function () {
         var min = this.topLeft.floor();
         var max = this.topLeft.add(this.size).ceil();
@@ -195,9 +188,8 @@ var Rect = (function () {
         for (var _i = 0; _i < arguments.length; _i++) {
             rects[_i - 0] = arguments[_i];
         }
-        rects = rects.filter(function (r) { return !r.isEmpty; });
         if (rects.length == 0) {
-            return new Rect();
+            return;
         }
         var left = Math.min.apply(Math, rects.map(function (r) { return r.left; }));
         var top = Math.min.apply(Math, rects.map(function (r) { return r.top; }));
@@ -210,15 +202,16 @@ var Rect = (function () {
         for (var _i = 0; _i < arguments.length; _i++) {
             rects[_i - 0] = arguments[_i];
         }
-        var isEmpty = rects.some(function (r) { return r.isEmpty; });
-        if (isEmpty) {
-            return new Rect();
+        if (rects.length == 0) {
+            return;
         }
         var left = Math.max.apply(Math, rects.map(function (r) { return r.left; }));
         var top = Math.max.apply(Math, rects.map(function (r) { return r.top; }));
         var right = Math.min.apply(Math, rects.map(function (r) { return r.right; }));
         var bottom = Math.min.apply(Math, rects.map(function (r) { return r.bottom; }));
-        return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+        if (left < right && top < bottom) {
+            return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+        }
     };
     return Rect;
 }());
