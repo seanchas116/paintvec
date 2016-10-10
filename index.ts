@@ -261,6 +261,10 @@ class Rect {
     return `Rect(${this.topLeft},${this.bottomRight})`
   }
 
+  vertices(): [Vec2, Vec2, Vec2, Vec2] {
+    return [this.topLeft, this.topRight, this.bottomLeft, this.bottomRight]
+  }
+
   /**
     Calculates the bounding rectangle of given rectangles.
   */

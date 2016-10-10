@@ -183,6 +183,9 @@ var Rect = (function () {
     Rect.prototype.toString = function () {
         return "Rect(" + this.topLeft + "," + this.bottomRight + ")";
     };
+    Rect.prototype.vertices = function () {
+        return [this.topLeft, this.topRight, this.bottomLeft, this.bottomRight];
+    };
     Rect.union = function () {
         var rects = [];
         for (var _i = 0; _i < arguments.length; _i++) {
