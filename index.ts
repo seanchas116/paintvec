@@ -236,15 +236,14 @@ class Rect {
     Transforms each corners by transform and returns the bounding rectangle.
   */
   transform(transform: Transform) {
-    const points = [this.topLeft, this.topRight, this.bottomLeft, this.bottomRight]
-    const mapped = points.map(p => p.transform(transform))
-    const xs = mapped.map(p => p.x)
-    const ys = mapped.map(p => p.y)
+    const points = this.vertices().map(p => p.transform(transform))
+    const xs = points.map(p => p.x)
+    const ys = points.map(p => p.y)
     const left = Math.min(...xs)
     const right = Math.max(...xs)
     const top = Math.min(...ys)
     const bottom = Math.max(...ys)
-    return new Rect(new Vec2(left, top), new Vec2(left, bottom))
+    return new Rect(new Vec2(left, top), new Vec2(right, bottom))
   }
 
   union(...others: Rect[]) {
