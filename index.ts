@@ -229,9 +229,7 @@ class Rect {
     Calculates the smallest integer rectangle which includes this rectangle.
   */
   intBounding() {
-    const min = this.topLeft.floor()
-    const max = this.topLeft.add(this.size).ceil()
-    return new Rect(min, max.sub(min))
+    return new Rect(this.topLeft.floor(), this.bottomRight.ceil())
   }
 
   /**
