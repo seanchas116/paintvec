@@ -9,17 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seanchas116/paintvec.git"
+    "url": "git+https://github.com/sketchglass/paintvec.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seanchas116/paintvec/issues"
+    "url": "https://github.com/sketchglass/paintvec/issues"
   },
-  "homepage": "https://github.com/seanchas116/paintvec#readme",
+  "homepage": "https://github.com/sketchglass/paintvec#readme",
   "devDependencies": {
     "typedoc": "github:jasongrout/typedoc#ts2",
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^2.0.3"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
