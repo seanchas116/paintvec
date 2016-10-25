@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/sketchglass/paintvec#readme",
   "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "mocha": "^3.1.2",
     "typedoc": "github:jasongrout/typedoc#ts2",
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^2.0.3"
