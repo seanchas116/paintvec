@@ -141,3 +141,86 @@ describe("Vec2", () => {
     })
   })
 })
+
+describe("Rect", () => {
+  describe("equals", () => {
+    it("compares 2 rects by value", () => {
+      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+      const r2 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+      assert(r1.equals(r2))
+    })
+  })
+  describe("size", () => {
+    it("returns size", () => {
+       const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+       const result = r1.size
+       assert.equal(result.width, 9)
+       assert.equal(result.height, 28)
+    })
+  })
+  describe("topRight", () => {
+    it("returns top right", () => {
+       const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+       const result = r1.topRight
+       assert.equal(result.x, 10)
+       assert.equal(result.y, 2)
+    })
+  })
+  describe("bottomLeft", () => {
+    it("returns bototm left", () => {
+       const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+       const result = r1.bottomLeft
+       assert.equal(result.x, 1)
+       assert.equal(result.y, 30)
+    })
+  })
+  describe("left, top, right, bottom, width, height", () => {
+    it("returns each component", () => {
+       const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+       assert.equal(r1.left, 1)
+       assert.equal(r1.top, 2)
+       assert.equal(r1.right, 10)
+       assert.equal(r1.bottom, 30)
+       assert.equal(r1.width, 9)
+       assert.equal(r1.height, 28)
+    })
+  })
+  describe("intBounding", () => {
+    it("returns integer bounding rect", () => {
+       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
+       const result = r1.intBounding()
+       assert.equal(result.left, 0)
+       assert.equal(result.top, 1)
+       assert.equal(result.right, 6)
+       assert.equal(result.bottom, 5)
+    })
+  })
+  describe("union", () => {
+    it("returns union rect", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
+      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
+      const result = Rect.union(r1, r2)!
+      assert.equal(result.left, 10)
+      assert.equal(result.top, 0)
+      assert.equal(result.right, 100)
+      assert.equal(result.bottom, 120)
+    })
+  })
+  describe("intersection", () => {
+    it("returns intersection rect", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
+      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
+      const result = Rect.intersection(r1, r2)!
+      assert.equal(result.left, 30)
+      assert.equal(result.top, 20)
+      assert.equal(result.right, 50)
+      assert.equal(result.bottom, 60)
+    })
+    it("returns undefined if no intersection exists", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(30, 40))
+      const r2 = new Rect(new Vec2(100, 200), new Vec2(300, 400))
+      const result = Rect.intersection(r1, r2)
+      assert.equal(result, undefined)
+    })
+  })
+})
