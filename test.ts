@@ -224,3 +224,60 @@ describe("Rect", () => {
     })
   })
 })
+
+describe("Transform", () => {
+  describe("equals", () => {
+    it("compares 2 transforms", () => {
+      const t1 = Transform.translate(new Vec2(10)).merge(Transform.rotate(Math.PI / 2))
+      const t2 = Transform.translate(new Vec2(10)).merge(Transform.rotate(Math.PI / 2))
+      assert(t1.equals(t2))
+    })
+  })
+  describe("invert", () => {
+    it("inverts transform", () => {
+      const t1 = Transform.translate(new Vec2(10)).merge(Transform.rotate(Math.PI / 2))
+      const t2 = Transform.rotate(-Math.PI/2).merge(Transform.translate(new Vec2(-10)))
+      assert(t1.invert()!.equals(t2))
+    })
+  })
+  describe("scale", () => {
+    it("returns scale transform", () => {
+      const v1 = new Vec2(100, 200)
+      const t1 = Transform.scale(new Vec2(0.5, 1.5))
+      const result = v1.transform(t1)
+      assert.equal(result.x, 50)
+      assert.equal(result.y, 300)
+    })
+  })
+  describe("rotate", () => {
+    it("returns rotation transform", () => {
+      const v1 = new Vec2(100, 200)
+      const t1 = Transform.rotate(Math.PI / 2)
+      const result = v1.transform(t1)
+      assert(almostEqual(result.x, -200))
+      assert(almostEqual(result.y, 100))
+    })
+  })
+  describe("translate", () => {
+    it("returns translation transform", () => {
+      const v1 = new Vec2(100, 200)
+      const t1 = Transform.translate(new Vec2(300, 500))
+      const result = v1.transform(t1)
+      assert.equal(result.x, 400)
+      assert.equal(result.y, 700)
+    })
+  })
+  describe("merge", () => {
+    it("merges transforms", () => {
+      const v1 = new Vec2(100, 200)
+      const t1 = Transform.translate(new Vec2(10, 5)).merge(Transform.rotate(Math.PI / 2))
+      const result = v1.transform(t1)
+      assert(almostEqual(result.x, -205))
+      assert(almostEqual(result.y, 110))
+    })
+  })
+})
+
+function almostEqual(x: number, y: number) {
+  return Math.abs(x - y) < 1e-5
+}
