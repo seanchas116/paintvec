@@ -6,7 +6,11 @@
         "strictNullChecks": true,
         "sourceMap": false,
         "declaration": true,
-        "removeComments": false
+        "removeComments": false,
+        "types": [
+            "node",
+            "mocha"
+        ]
     },
     "exclude": [
         "node_modules"

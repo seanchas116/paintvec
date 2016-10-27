@@ -39,3 +39,5 @@ jspm_packages
 index.ts
 *.md
 tsconfig.json
+
+/test.*
