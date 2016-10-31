@@ -232,6 +232,10 @@ class Rect {
     return new Rect(this.topLeft.floor(), this.bottomRight.ceil())
   }
 
+  translate(offset: Vec2) {
+    return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset))
+  }
+
   /**
     Transforms each corners by transform and returns the bounding rectangle.
   */

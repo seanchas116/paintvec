@@ -195,6 +195,16 @@ describe("Rect", () => {
        assert.equal(result.bottom, 5)
     })
   })
+  describe("translate", () => {
+    it("translates rect", () => {
+       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
+       const result = r1.translate(new Vec2(0.5, 0.3))
+       assert.equal(result.left, 1.4)
+       assert.equal(result.top, 1.8)
+       assert.equal(result.right, 6.1)
+       assert.equal(result.bottom, 4.6)
+    })
+  })
   describe("union", () => {
     it("returns union rect", () => {
       const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))

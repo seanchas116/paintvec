@@ -154,6 +154,7 @@ export declare class Rect {
       Calculates the smallest integer rectangle which includes this rectangle.
     */
     intBounding(): Rect;
+    translate(offset: Vec2): Rect;
     /**
       Transforms each corners by transform and returns the bounding rectangle.
     */
