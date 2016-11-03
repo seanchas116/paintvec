@@ -224,6 +224,8 @@ export declare class Transform {
       Inverts the transform. Returns undefined if this transform is not invertible.
     */
     invert(): Transform | undefined;
+    isAffine(): boolean;
+    isTranslation(): boolean;
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */

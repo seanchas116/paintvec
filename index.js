@@ -400,6 +400,12 @@ class Transform {
         const m22 = (a11 * a00 - a01 * a10) * detInv;
         return new Transform(m00, m01, m02, m10, m11, m12, m20, m21, m22);
     }
+    isAffine() {
+        return this.m02 == 0 && this.m12 == 0 && this.m22 == 1;
+    }
+    isTranslation() {
+        return this.isAffine() && this.m00 == 1 && this.m01 == 0 && this.m10 == 0 && this.m11 == 1;
+    }
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */
