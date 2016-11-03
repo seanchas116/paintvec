@@ -250,6 +250,22 @@ describe("Transform", () => {
       assert(t1.invert()!.equals(t2))
     })
   })
+  describe("isAffine", () => {
+    it("returns if affine", () => {
+      const t1 = new Transform(1, 1, 1, 1, 1, 1, 1, 1, 1)
+      const t2 = Transform.rotate(-Math.PI/2).merge(Transform.translate(new Vec2(-10)))
+      assert(!t1.isAffine())
+      assert(t2.isAffine())
+    })
+  })
+  describe("isTranslation", () => {
+    it("returns if translation", () => {
+      const t1 = Transform.translate(new Vec2(100, 200))
+      const t2 = Transform.rotate(-Math.PI/2).merge(Transform.translate(new Vec2(-10)))
+      assert(t1.isTranslation())
+      assert(!t2.isTranslation())
+    })
+  })
   describe("scale", () => {
     it("returns scale transform", () => {
       const v1 = new Vec2(100, 200)
