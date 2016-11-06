@@ -205,6 +205,17 @@ describe("Rect", () => {
        assert.equal(result.bottom, 4.6)
     })
   })
+  describe("includes", () => {
+    it("returns if the point is inside the rect", () => {
+       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
+       const p1 = new Vec2(1, 2)
+       const p2 = new Vec2(-1, 2)
+       const p3 = new Vec2(3, 5)
+       assert(r1.includes(p1))
+       assert(!r1.includes(p2))
+       assert(!r1.includes(p3))
+    })
+  })
   describe("union", () => {
     it("returns union rect", () => {
       const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))

@@ -236,6 +236,10 @@ class Rect {
     return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset))
   }
 
+  includes(pos: Vec2) {
+    return this.left <= pos.x && pos.x <= this.right && this.top <= pos.y && pos.y <= this.bottom
+  }
+
   /**
     Transforms each corners by transform and returns the bounding rectangle.
   */
