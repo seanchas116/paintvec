@@ -474,6 +474,18 @@ class Transform {
         const f = y0;
         return new Transform(a, d, g, b, e, h, c, f, 1);
     }
+    static quadToQuad(from, to) {
+        const unitToFrom = this.unitToQuad(from);
+        const unitToTo = this.unitToQuad(to);
+        if (!unitToFrom || !unitToTo) {
+            return;
+        }
+        const fromToUnit = unitToFrom.invert();
+        if (!fromToUnit) {
+            return;
+        }
+        return fromToUnit.merge(unitToTo);
+    }
     /**
       Merges all transforms.
     */

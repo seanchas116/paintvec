@@ -528,6 +528,19 @@ class Transform {
     return new Transform(a, d, g, b, e, h, c, f, 1)
   }
 
+  static quadToQuad(from: [Vec2, Vec2, Vec2, Vec2], to: [Vec2, Vec2, Vec2, Vec2]) {
+    const unitToFrom = this.unitToQuad(from)
+    const unitToTo = this.unitToQuad(to)
+    if (!unitToFrom || !unitToTo) {
+      return
+    }
+    const fromToUnit = unitToFrom.invert()
+    if (!fromToUnit) {
+      return
+    }
+    return fromToUnit.merge(unitToTo)
+  }
+
   /**
     Merges all transforms.
   */
