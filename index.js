@@ -431,6 +431,15 @@ class Transform {
     toString() {
         return `Transform(${this.members().join(",")})`;
     }
+    scale(scale) {
+        return this.merge(Transform.scale(scale));
+    }
+    translate(offset) {
+        return this.merge(Transform.translate(offset));
+    }
+    rotate(angle) {
+        return this.merge(Transform.rotate(angle));
+    }
     /**
       Returns the transform that represents scaling.
     */

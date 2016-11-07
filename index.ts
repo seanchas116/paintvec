@@ -463,6 +463,18 @@ class Transform {
     return `Transform(${this.members().join(",")})`
   }
 
+  scale(scale: Vec2) {
+    return this.merge(Transform.scale(scale))
+  }
+
+  translate(offset: Vec2) {
+    return this.merge(Transform.translate(offset))
+  }
+
+  rotate(angle: number) {
+    return this.merge(Transform.rotate(angle))
+  }
+
   /**
     Returns the transform that represents scaling.
   */
