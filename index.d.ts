@@ -254,6 +254,7 @@ export declare class Transform {
      */
     static unitToQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Transform | undefined;
     static quadToQuad(from: [Vec2, Vec2, Vec2, Vec2], to: [Vec2, Vec2, Vec2, Vec2]): Transform | undefined;
+    static rectToRect(from: Rect, to: Rect): Transform | undefined;
     /**
       Merges all transforms.
     */

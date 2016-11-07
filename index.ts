@@ -557,6 +557,10 @@ class Transform {
     return fromToUnit.merge(unitToTo)
   }
 
+  static rectToRect(from: Rect, to: Rect) {
+    return this.quadToQuad(from.vertices(), to.vertices())
+  }
+
   /**
     Merges all transforms.
   */
