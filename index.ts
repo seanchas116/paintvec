@@ -225,6 +225,10 @@ class Rect {
     return this.size.y
   }
 
+  get center() {
+    return this.topLeft.add(this.bottomRight).divScalar(2)
+  }
+
   /**
     Calculates the smallest integer rectangle which includes this rectangle.
   */

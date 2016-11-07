@@ -150,6 +150,7 @@ export declare class Rect {
       The width of this rectangle.
     */
     readonly height: number;
+    readonly center: Vec2;
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */

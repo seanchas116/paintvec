@@ -185,6 +185,14 @@ describe("Rect", () => {
        assert.equal(r1.height, 28)
     })
   })
+  describe("center", () => {
+    it("returns center", () => {
+       const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30))
+       const result = r1.center
+       assert.equal(result.x, 5.5)
+       assert.equal(result.y, 16)
+    })
+  })
   describe("intBounding", () => {
     it("returns integer bounding rect", () => {
        const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
