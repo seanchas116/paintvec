@@ -156,6 +156,7 @@ export declare class Rect {
     */
     intBounding(): Rect;
     translate(offset: Vec2): Rect;
+    inflate(offset: number): Rect;
     includes(pos: Vec2): boolean;
     /**
       Transforms each corners by transform and returns the bounding rectangle.

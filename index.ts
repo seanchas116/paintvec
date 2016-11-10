@@ -240,6 +240,11 @@ class Rect {
     return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset))
   }
 
+  inflate(offset: number) {
+    const d = new Vec2(offset)
+    return new Rect(this.topLeft.sub(d), this.bottomRight.add(d))
+  }
+
   includes(pos: Vec2) {
     return this.left <= pos.x && pos.x <= this.right && this.top <= pos.y && pos.y <= this.bottom
   }

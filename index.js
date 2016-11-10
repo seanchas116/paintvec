@@ -227,6 +227,10 @@ class Rect {
     translate(offset) {
         return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset));
     }
+    inflate(offset) {
+        const d = new Vec2(offset);
+        return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
+    }
     includes(pos) {
         return this.left <= pos.x && pos.x <= this.right && this.top <= pos.y && pos.y <= this.bottom;
     }

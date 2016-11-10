@@ -213,6 +213,16 @@ describe("Rect", () => {
        assert.equal(result.bottom, 4.6)
     })
   })
+  describe("inflate", () => {
+    it("inflates rect", () => {
+       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
+       const result = r1.inflate(0.5)
+       assert.equal(result.left, 0.4)
+       assert.equal(result.top, 1)
+       assert.equal(result.right, 6.1)
+       assert.equal(result.bottom, 4.8)
+    })
+  })
   describe("includes", () => {
     it("returns if the point is inside the rect", () => {
        const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3))
