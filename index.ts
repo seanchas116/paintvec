@@ -416,8 +416,8 @@ class Transform {
     const b21 = a21 * a10 - a11 * a20
     const det = a00 * b01 + a01 * b11 + a02 * b21
 
-    if (!det) {
-      return undefined
+    if (Math.abs(det) < 1e-4) {
+      return
     }
 
     const detInv = 1.0 / det;
@@ -530,7 +530,7 @@ class Transform {
     const sy = y0 - y1 + y2 - y3
 
     const det = dx1 * dy2 - dx2 * dy1
-    if (det == 0) {
+    if (Math.abs(det) < 1e-4) {
       return
     }
     const g = (sx * dy2 - sy * dx2) / det
