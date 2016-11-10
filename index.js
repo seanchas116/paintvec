@@ -252,14 +252,14 @@ class Rect {
         const left = Math.min(this.left, other.left);
         const top = Math.min(this.top, other.top);
         const right = Math.max(this.right, other.right);
-        const bottom = Math.max(this.right, other.right);
+        const bottom = Math.max(this.bottom, other.bottom);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
     intersection(other) {
         const left = Math.max(this.left, other.left);
         const top = Math.max(this.top, other.top);
         const right = Math.min(this.right, other.right);
-        const bottom = Math.min(this.right, other.right);
+        const bottom = Math.min(this.bottom, other.bottom);
         if (left < right && top < bottom) {
             return new Rect(new Vec2(left, top), new Vec2(right, bottom));
         }

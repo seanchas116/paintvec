@@ -238,7 +238,7 @@ describe("Rect", () => {
     it("returns union rect", () => {
       const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
       const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
-      const result = Rect.union(r1, r2)!
+      const result = r1.union(r2)
       assert.equal(result.left, 10)
       assert.equal(result.top, 0)
       assert.equal(result.right, 100)
@@ -246,6 +246,34 @@ describe("Rect", () => {
     })
   })
   describe("intersection", () => {
+    it("returns intersection rect", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
+      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
+      const result = r1.intersection(r2)!
+      assert.equal(result.left, 30)
+      assert.equal(result.top, 20)
+      assert.equal(result.right, 50)
+      assert.equal(result.bottom, 60)
+    })
+    it("returns undefined if no intersection exists", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(30, 40))
+      const r2 = new Rect(new Vec2(100, 200), new Vec2(300, 400))
+      const result = r1.intersection(r2)!
+      assert.equal(result, undefined)
+    })
+  })
+  describe(".union", () => {
+    it("returns union rect", () => {
+      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
+      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
+      const result = Rect.union(r1, r2)!
+      assert.equal(result.left, 10)
+      assert.equal(result.top, 0)
+      assert.equal(result.right, 100)
+      assert.equal(result.bottom, 120)
+    })
+  })
+  describe(".intersection", () => {
     it("returns intersection rect", () => {
       const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120))
       const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60))
