@@ -248,11 +248,21 @@ class Rect {
         const bottom = Math.max(topLeft.y, topRight.y, bottomLeft.y, bottomRight.y);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
-    union(...others) {
-        return Rect.union(this, ...others);
+    union(other) {
+        const left = Math.min(this.left, other.left);
+        const top = Math.min(this.top, other.top);
+        const right = Math.max(this.right, other.right);
+        const bottom = Math.max(this.right, other.right);
+        return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
-    intersection(...others) {
-        return Rect.intersection(this, ...others);
+    intersection(other) {
+        const left = Math.max(this.left, other.left);
+        const top = Math.max(this.top, other.top);
+        const right = Math.min(this.right, other.right);
+        const bottom = Math.min(this.right, other.right);
+        if (left < right && top < bottom) {
+            return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+        }
     }
     toString() {
         return `Rect(${this.topLeft},${this.bottomRight})`;
