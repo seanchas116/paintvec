@@ -249,7 +249,7 @@ export declare class Transform {
     */
     static translate(translation: Vec2): Transform;
     /**
-     * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
+     * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (0, 1), (1, 1)]) to the specified quadrangle.
      * Reference: Projective Mappings for Image Warping
      */
     static unitToQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Transform | undefined;

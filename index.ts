@@ -511,15 +511,15 @@ class Transform {
   }
 
   /**
-   * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
+   * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (0, 1), (1, 1)]) to the specified quadrangle.
    * Reference: Projective Mappings for Image Warping
    */
   static unitToQuad(quad: [Vec2, Vec2, Vec2, Vec2]) {
     const [
       {x: x0, y: y0},
       {x: x1, y: y1},
-      {x: x2, y: y2},
       {x: x3, y: y3},
+      {x: x2, y: y2},
     ] = quad
 
     const dx1 = x1 - x2

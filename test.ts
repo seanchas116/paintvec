@@ -316,7 +316,7 @@ describe("Transform", () => {
     it("returns transform to quad", () => {
       const v1 = new Vec2(1, 0)
       const v2 = new Vec2(1, 1)
-      const t1 = Transform.unitToQuad([new Vec2(0), new Vec2(100, 0), new Vec2(200, 300), new Vec2(0, 200)])!
+      const t1 = Transform.unitToQuad([new Vec2(0), new Vec2(100, 0), new Vec2(0, 200), new Vec2(200, 300)])!
       const r1 = v1.transform(t1)
       const r2 = v2.transform(t1)
       assert(almostEqual(r1.x, 100))

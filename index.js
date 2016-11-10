@@ -461,11 +461,11 @@ class Transform {
         return new Transform(1, 0, 0, 0, 1, 0, translation.x, translation.y, 1);
     }
     /**
-     * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
+     * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (0, 1), (1, 1)]) to the specified quadrangle.
      * Reference: Projective Mappings for Image Warping
      */
     static unitToQuad(quad) {
-        const [{ x: x0, y: y0 }, { x: x1, y: y1 }, { x: x2, y: y2 }, { x: x3, y: y3 },] = quad;
+        const [{ x: x0, y: y0 }, { x: x1, y: y1 }, { x: x3, y: y3 }, { x: x2, y: y2 },] = quad;
         const dx1 = x1 - x2;
         const dx2 = x3 - x2;
         const sx = x0 - x1 + x2 - x3;
