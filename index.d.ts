@@ -162,6 +162,7 @@ export declare class Rect {
       Transforms each corners by transform and returns the bounding rectangle.
     */
     transform(transform: Transform): Rect;
+    fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
     union(other: Rect): Rect;
     intersection(other: Rect): Rect | undefined;
     toString(): string;
