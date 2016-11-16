@@ -257,16 +257,7 @@ class Rect {
     const topRight = this.topRight.transform(transform)
     const bottomLeft = this.bottomLeft.transform(transform)
     const bottomRight = this.bottomRight.transform(transform)
-    return this.fromQuad([topLeft, topRight, bottomLeft, bottomRight])
-  }
-
-  fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]) {
-    const [v0, v1, v2, v3] = quad
-    const left = Math.min(v0.x, v1.x, v2.x, v3.x)
-    const right = Math.max(v0.x, v1.x, v2.x, v3.x)
-    const top = Math.min(v0.y, v1.y, v2.y, v3.y)
-    const bottom = Math.max(v0.y, v1.y, v2.y, v3.y)
-    return new Rect(new Vec2(left, top), new Vec2(right, bottom))
+    return Rect.fromQuad([topLeft, topRight, bottomLeft, bottomRight])
   }
 
   union(other: Rect) {
@@ -326,6 +317,15 @@ class Rect {
     if (left < right && top < bottom) {
       return new Rect(new Vec2(left, top), new Vec2(right, bottom))
     }
+  }
+
+  static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]) {
+    const [v0, v1, v2, v3] = quad
+    const left = Math.min(v0.x, v1.x, v2.x, v3.x)
+    const right = Math.max(v0.x, v1.x, v2.x, v3.x)
+    const top = Math.min(v0.y, v1.y, v2.y, v3.y)
+    const bottom = Math.max(v0.y, v1.y, v2.y, v3.y)
+    return new Rect(new Vec2(left, top), new Vec2(right, bottom))
   }
 }
 
