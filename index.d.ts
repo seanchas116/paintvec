@@ -165,6 +165,9 @@ export declare class Rect {
     union(other: Rect): Rect;
     intersection(other: Rect): Rect | undefined;
     toString(): string;
+    /**
+     * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
+     */
     vertices(): [Vec2, Vec2, Vec2, Vec2];
     /**
       Calculates the bounding rectangle of given rectangles.

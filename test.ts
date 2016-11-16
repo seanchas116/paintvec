@@ -354,13 +354,24 @@ describe("Transform", () => {
     it("returns transform to quad", () => {
       const v1 = new Vec2(1, 0)
       const v2 = new Vec2(1, 1)
-      const t1 = Transform.unitToQuad([new Vec2(0), new Vec2(100, 0), new Vec2(0, 200), new Vec2(200, 300)])!
+      const t1 = Transform.unitToQuad([new Vec2(0), new Vec2(100, 0), new Vec2(200, 300), new Vec2(0, 200)])!
       const r1 = v1.transform(t1)
       const r2 = v2.transform(t1)
       assert(almostEqual(r1.x, 100))
       assert(almostEqual(r1.y, 0))
       assert(almostEqual(r2.x, 200))
       assert(almostEqual(r2.y, 300))
+    })
+  })
+  describe("rectToRect", () => {
+    it("returns transform from rect to quad", () => {
+      const r1 = new Rect(new Vec2(0, 100), new Vec2(100, 300))
+      const r2 = new Rect(new Vec2(-50, 0), new Vec2(0, 20))
+      const t = Transform.rectToRect(r1, r2)
+      const p = new Vec2(25, 150)
+      const result = p.transform(t!)
+      assert.equal(result.x, -37.5)
+      assert.equal(result.y, 5)
     })
   })
   describe("merge", () => {

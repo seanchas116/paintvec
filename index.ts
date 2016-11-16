@@ -286,8 +286,11 @@ class Rect {
     return `Rect(${this.topLeft},${this.bottomRight})`
   }
 
+  /**
+   * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
+   */
   vertices(): [Vec2, Vec2, Vec2, Vec2] {
-    return [this.topLeft, this.topRight, this.bottomLeft, this.bottomRight]
+    return [this.topLeft, this.topRight, this.bottomRight, this.bottomLeft]
   }
 
   /**
@@ -533,8 +536,8 @@ class Transform {
     const [
       {x: x0, y: y0},
       {x: x1, y: y1},
-      {x: x3, y: y3},
       {x: x2, y: y2},
+      {x: x3, y: y3},
     ] = quad
 
     const dx1 = x1 - x2

@@ -267,8 +267,11 @@ class Rect {
     toString() {
         return `Rect(${this.topLeft},${this.bottomRight})`;
     }
+    /**
+     * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
+     */
     vertices() {
-        return [this.topLeft, this.topRight, this.bottomLeft, this.bottomRight];
+        return [this.topLeft, this.topRight, this.bottomRight, this.bottomLeft];
     }
     /**
       Calculates the bounding rectangle of given rectangles.
@@ -479,7 +482,7 @@ class Transform {
      * Reference: Projective Mappings for Image Warping
      */
     static unitToQuad(quad) {
-        const [{ x: x0, y: y0 }, { x: x1, y: y1 }, { x: x3, y: y3 }, { x: x2, y: y2 },] = quad;
+        const [{ x: x0, y: y0 }, { x: x1, y: y1 }, { x: x2, y: y2 }, { x: x3, y: y3 },] = quad;
         const dx1 = x1 - x2;
         const dx2 = x3 - x2;
         const sx = x0 - x1 + x2 - x3;
