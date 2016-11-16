@@ -92,6 +92,12 @@ class Vec2 {
     angle() {
         return Math.atan2(this.y, this.x);
     }
+    dot(other) {
+        return this.x * other.x + this.y * other.y;
+    }
+    cross(other) {
+        return this.x * other.y - this.y * other.x;
+    }
     /**
       Rounds down the components of this vector.
     */

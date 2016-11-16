@@ -64,6 +64,8 @@ export declare class Vec2 {
       Calculates the angle of this vector from positive x-axis in [-PI, PI].
     */
     angle(): number;
+    dot(other: Vec2): number;
+    cross(other: Vec2): number;
     /**
       Rounds down the components of this vector.
     */
