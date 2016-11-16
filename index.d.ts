@@ -66,6 +66,7 @@ export declare class Vec2 {
     angle(): number;
     dot(other: Vec2): number;
     cross(other: Vec2): number;
+    mix(other: Vec2, ratio: number): Vec2;
     /**
       Rounds down the components of this vector.
     */

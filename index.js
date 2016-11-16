@@ -98,6 +98,9 @@ class Vec2 {
     cross(other) {
         return this.x * other.y - this.y * other.x;
     }
+    mix(other, ratio) {
+        return new Vec2(this.x * (1 - ratio) + other.x * ratio, this.y * (1 - ratio) + other.y * ratio);
+    }
     /**
       Rounds down the components of this vector.
     */
