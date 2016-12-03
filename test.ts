@@ -369,7 +369,7 @@ describe("Transform", () => {
       const r2 = new Rect(new Vec2(-50, 0), new Vec2(0, 20))
       const t = Transform.rectToRect(r1, r2)
       const p = new Vec2(25, 150)
-      const result = p.transform(t!)
+      const result = p.transform(t)
       assert.equal(result.x, -37.5)
       assert.equal(result.y, 5)
     })

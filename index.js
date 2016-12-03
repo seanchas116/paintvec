@@ -529,7 +529,7 @@ class Transform {
         return fromToUnit.merge(unitToTo);
     }
     static rectToRect(from, to) {
-        return this.quadToQuad(from.vertices(), to.vertices());
+        return Transform.translate(from.topLeft.neg()).scale(to.size.div(from.size)).translate(to.topLeft);
     }
     /**
       Merges all transforms.

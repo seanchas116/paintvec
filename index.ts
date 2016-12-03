@@ -596,7 +596,7 @@ class Transform {
   }
 
   static rectToRect(from: Rect, to: Rect) {
-    return this.quadToQuad(from.vertices(), to.vertices())
+    return Transform.translate(from.topLeft.neg()).scale(to.size.div(from.size)).translate(to.topLeft)
   }
 
   /**
