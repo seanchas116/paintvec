@@ -334,6 +334,14 @@ class Rect {
     }
   }
 
+  static fromTwoPoints(p0: Vec2, p1: Vec2) {
+    const left = Math.min(p0.x, p1.x)
+    const right = Math.max(p0.x, p1.x)
+    const top = Math.min(p0.y, p1.y)
+    const bottom = Math.max(p0.y, p1.y)
+    return new Rect(new Vec2(left, top), new Vec2(right, bottom))
+  }
+
   static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]) {
     const [v0, v1, v2, v3] = quad
     const left = Math.min(v0.x, v1.x, v2.x, v3.x)

@@ -180,6 +180,7 @@ export declare class Rect {
       Calculates the rectangle that represents the shared region of given rectangles.
     */
     static intersection(...rects: Rect[]): Rect | undefined;
+    static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
 }
 /**
