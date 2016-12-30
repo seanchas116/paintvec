@@ -306,6 +306,12 @@ class Rect {
             return new Rect(new Vec2(left, top), new Vec2(right, bottom));
         }
     }
+    static fromWidthHeight(x, y, width, height) {
+        return new Rect(new Vec2(x, y), new Vec2(x + width, y + height));
+    }
+    static fromSize(topLeft, size) {
+        return new Rect(topLeft, topLeft.add(size));
+    }
     static fromTwoPoints(p0, p1) {
         const left = Math.min(p0.x, p1.x);
         const right = Math.max(p0.x, p1.x);

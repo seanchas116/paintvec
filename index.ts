@@ -334,6 +334,14 @@ class Rect {
     }
   }
 
+  static fromWidthHeight(x: number, y: number, width: number, height: number) {
+    return new Rect(new Vec2(x, y), new Vec2(x + width, y + height))
+  }
+
+  static fromSize(topLeft: Vec2, size: Vec2) {
+    return new Rect(topLeft, topLeft.add(size))
+  }
+
   static fromTwoPoints(p0: Vec2, p1: Vec2) {
     const left = Math.min(p0.x, p1.x)
     const right = Math.max(p0.x, p1.x)

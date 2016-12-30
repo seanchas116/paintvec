@@ -301,6 +301,24 @@ describe("Rect", () => {
       assert.equal(result.bottom, 400)
     })
   })
+  describe(".fromWidthHeight", () => {
+    it("creates rect from x, y, width, height", () => {
+      const result = Rect.fromWidthHeight(100, 200, 300, 400)
+      assert.equal(result.left, 100)
+      assert.equal(result.top, 200)
+      assert.equal(result.right, 400)
+      assert.equal(result.bottom, 600)
+    })
+  })
+  describe(".fromSize", () => {
+    it("creates rect from topLeft and size", () => {
+      const result = Rect.fromSize(new Vec2(100, 200), new Vec2(300, 400))
+      assert.equal(result.left, 100)
+      assert.equal(result.top, 200)
+      assert.equal(result.right, 400)
+      assert.equal(result.bottom, 600)
+    })
+  })
 })
 
 describe("Transform", () => {
