@@ -297,6 +297,35 @@ describe("Rect", () => {
       assert.equal(result, undefined)
     })
   })
+  describe(".fromTwoRects", () => {
+    it("creates rect from two points", () => {
+      const p1 = new Vec2(100, 200)
+      const p2 = new Vec2(0, 400)
+      const result = Rect.fromTwoPoints(p1, p2)
+      assert.equal(result.left, 0)
+      assert.equal(result.top, 200)
+      assert.equal(result.right, 100)
+      assert.equal(result.bottom, 400)
+    })
+  })
+  describe(".fromWidthHeight", () => {
+    it("creates rect from x, y, width, height", () => {
+      const result = Rect.fromWidthHeight(100, 200, 300, 400)
+      assert.equal(result.left, 100)
+      assert.equal(result.top, 200)
+      assert.equal(result.right, 400)
+      assert.equal(result.bottom, 600)
+    })
+  })
+  describe(".fromSize", () => {
+    it("creates rect from topLeft and size", () => {
+      const result = Rect.fromSize(new Vec2(100, 200), new Vec2(300, 400))
+      assert.equal(result.left, 100)
+      assert.equal(result.top, 200)
+      assert.equal(result.right, 400)
+      assert.equal(result.bottom, 600)
+    })
+  })
 })
 
 describe("Transform", () => {
