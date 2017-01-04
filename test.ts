@@ -126,6 +126,13 @@ describe("Vec2", () => {
       assert.equal(result.y, -1)
     })
   })
+  describe("abs", () => {
+    it("returns absolute values", () => {
+      const result = new Vec2(-10, -20).abs()
+      assert.equal(result.x, 10)
+      assert.equal(result.y, 20)
+    })
+  })
   describe("members", () => {
     it("returns members as array", () => {
       const v1 = new Vec2(3.4, -1.3)

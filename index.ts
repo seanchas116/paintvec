@@ -132,6 +132,13 @@ class Vec2 {
   }
 
   /**
+   * Returns absolute values of this vector.
+   */
+  abs() {
+    return new Vec2(Math.abs(this.x), Math.abs(this.y))
+  }
+
+  /**
     Transforms this vector with transform.
   */
   transform(transform: Transform) {

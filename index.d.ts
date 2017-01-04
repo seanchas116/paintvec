@@ -80,6 +80,10 @@ export declare class Vec2 {
     */
     round(): Vec2;
     /**
+     * Returns absolute values of this vector.
+     */
+    abs(): Vec2;
+    /**
       Transforms this vector with transform.
     */
     transform(transform: Transform): Vec2;

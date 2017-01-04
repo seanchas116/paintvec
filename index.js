@@ -120,6 +120,12 @@ class Vec2 {
         return new Vec2(Math.round(this.x), Math.round(this.y));
     }
     /**
+     * Returns absolute values of this vector.
+     */
+    abs() {
+        return new Vec2(Math.abs(this.x), Math.abs(this.y));
+    }
+    /**
       Transforms this vector with transform.
     */
     transform(transform) {
