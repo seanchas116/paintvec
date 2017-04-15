@@ -40,10 +40,10 @@
 						<a href="rect.html#bottomleft" class="tsd-kind-icon">bottom<wbr>Left</a>
 					</li>
 					<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-						<a href="rect.html#height" class="tsd-kind-icon">height</a>
+						<a href="rect.html#center" class="tsd-kind-icon">center</a>
 					</li>
 					<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-						<a href="rect.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+						<a href="rect.html#height" class="tsd-kind-icon">height</a>
 					</li>
 					<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 						<a href="rect.html#left" class="tsd-kind-icon">left</a>
@@ -67,6 +67,12 @@
 						<a href="rect.html#equals" class="tsd-kind-icon">equals</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="rect.html#includes" class="tsd-kind-icon">includes</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="rect.html#inflate" class="tsd-kind-icon">inflate</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="rect.html#intbounding" class="tsd-kind-icon">int<wbr>Bounding</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -79,7 +85,25 @@
 						<a href="rect.html#transform" class="tsd-kind-icon">transform</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="rect.html#translate" class="tsd-kind-icon">translate</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="rect.html#union" class="tsd-kind-icon">union</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="rect.html#vertices" class="tsd-kind-icon">vertices</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="rect.html#fromquad" class="tsd-kind-icon">from<wbr>Quad</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="rect.html#fromsize" class="tsd-kind-icon">from<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="rect.html#fromtwopoints" class="tsd-kind-icon">from<wbr>Two<wbr>Points</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="rect.html#fromwidthheight" class="tsd-kind-icon">from<wbr>Width<wbr>Height</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<a href="rect.html#intersection-1" class="tsd-kind-icon">intersection</a>
@@ -96,6 +120,9 @@
 			</li>
 			<li class=" tsd-kind-class">
 				<a href="vec2.html" class="tsd-kind-icon">Vec2</a>
+			</li>
+			<li class=" tsd-kind-function tsd-is-not-exported">
+				<a href="../globals.html#almostequal" class="tsd-kind-icon">almost<wbr>Equal</a>
 			</li>
 		</ul>
 	</nav>
@@ -161,11 +188,11 @@
 			<section class="member tsd-kind-get-signature tsd-parent-kind-class" id="bottomleft">
 				<h3 class="member-title tsd-kind-get-signature tsd-parent-kind-class"><span>get</span> bottomLeft<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>            </h3><div class="comment"><div class="lead"><p>The bottom-lect position (in top-left origin coordinates) of this rectangle.</p></div></div>
 			</section>
+			<section class="member tsd-kind-get-signature tsd-parent-kind-class" id="center">
+				<h3 class="member-title tsd-kind-get-signature tsd-parent-kind-class"><span>get</span> center<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>            </h3>
+			</section>
 			<section class="member tsd-kind-get-signature tsd-parent-kind-class" id="height">
 				<h3 class="member-title tsd-kind-get-signature tsd-parent-kind-class"><span>get</span> height<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>            </h3><div class="comment"><div class="lead"><p>The width of this rectangle.</p></div></div>
-			</section>
-			<section class="member tsd-kind-get-signature tsd-parent-kind-class" id="isempty">
-				<h3 class="member-title tsd-kind-get-signature tsd-parent-kind-class"><span>get</span> isEmpty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>            </h3><div class="comment"><div class="lead"><p>Checks if the rectangle is empty (right &lt;= left or bottom &lt;= top).</p></div></div>
 			</section>
 			<section class="member tsd-kind-get-signature tsd-parent-kind-class" id="left">
 				<h3 class="member-title tsd-kind-get-signature tsd-parent-kind-class"><span>get</span> left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>            </h3><div class="comment"><div class="lead"><p>The left coordinate (in top-left origin coordinates) of this rectangle.</p></div></div>
@@ -198,6 +225,16 @@
 				<ul class="parameters">
 				</ul>
 			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="includes">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">includes<span class="tsd-signature-symbol">(</span>pos<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="inflate">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">inflate<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="intbounding">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">int<wbr>Bounding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
 				<div class="comment">
@@ -207,7 +244,7 @@
 				</div>
 			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="intersection">
-				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">intersection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">intersection<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
 				<ul class="parameters">
 				</ul>
 			</section>
@@ -224,13 +261,46 @@
 				<ul class="parameters">
 				</ul>
 			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="translate">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">translate<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="union">
-				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">union<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">union<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="vertices">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">vertices<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">]</span></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Returns array of <code>[topLeft, topRight, bottomRight, bottomLeft]</code>.</p>
+					</div>
+				</div>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="fromquad">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">from<wbr>Quad<span class="tsd-signature-symbol">(</span>quad<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="fromsize">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">from<wbr>Size<span class="tsd-signature-symbol">(</span>topLeft<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>, size<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="fromtwopoints">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">from<wbr>Two<wbr>Points<span class="tsd-signature-symbol">(</span>p0<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>, p1<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="fromwidthheight">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">from<wbr>Width<wbr>Height<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
 				<ul class="parameters">
 				</ul>
 			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="intersection-1">
-				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">intersection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">intersection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
 				<div class="comment">
 					<div class="lead">
 						<p>Calculates the rectangle that represents the shared region of given rectangles.</p>
@@ -240,7 +310,7 @@
 				</ul>
 			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="union-1">
-				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">union<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">union<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rects<span class="tsd-signature-symbol">: </span><a href="rect.html" class="tsd-signature-type">Rect</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="rect.html" class="tsd-signature-type">Rect</a></h3>
 				<div class="comment">
 					<div class="lead">
 						<p>Calculates the bounding rectangle of given rectangles.</p>

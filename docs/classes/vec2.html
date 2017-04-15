@@ -46,6 +46,9 @@
 						<a href="vec2.html#width" class="tsd-kind-icon">width</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="vec2.html#abs" class="tsd-kind-icon">abs</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#add" class="tsd-kind-icon">add</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -55,10 +58,16 @@
 						<a href="vec2.html#ceil" class="tsd-kind-icon">ceil</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="vec2.html#cross" class="tsd-kind-icon">cross</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#div" class="tsd-kind-icon">div</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#divscalar" class="tsd-kind-icon">div<wbr>Scalar</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="vec2.html#dot" class="tsd-kind-icon">dot</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#equals" class="tsd-kind-icon">equals</a>
@@ -71,6 +80,9 @@
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#members" class="tsd-kind-icon">members</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="vec2.html#mix" class="tsd-kind-icon">mix</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#mul" class="tsd-kind-icon">mul</a>
@@ -100,6 +112,9 @@
 			</li>
 		</ul>
 		<ul class="after-current">
+			<li class=" tsd-kind-function tsd-is-not-exported">
+				<a href="../globals.html#almostequal" class="tsd-kind-icon">almost<wbr>Equal</a>
+			</li>
 		</ul>
 	</nav>
 	<div class="content">
@@ -161,6 +176,14 @@ b.length() <span class="hljs-comment">//=&gt; 5</span>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2 class="member-group-title">Methods</h2>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="abs">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">abs<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Returns absolute values of this vector.</p>
+					</div>
+				</div>
+			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="add">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">add<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
 				<div class="comment">
@@ -187,6 +210,11 @@ b.length() <span class="hljs-comment">//=&gt; 5</span>
 					</div>
 				</div>
 			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="cross">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">cross<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h3>
+				<ul class="parameters">
+				</ul>
+			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="div">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">div<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
 				<div class="comment">
@@ -204,6 +232,11 @@ b.length() <span class="hljs-comment">//=&gt; 5</span>
 						<p>Divides this vector by scalar s.</p>
 					</div>
 				</div>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="dot">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">dot<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h3>
 				<ul class="parameters">
 				</ul>
 			</section>
@@ -240,6 +273,11 @@ b.length() <span class="hljs-comment">//=&gt; 5</span>
 						<p>Gets an array of [x, y].</p>
 					</div>
 				</div>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="mix">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">mix<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>, ratio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
+				<ul class="parameters">
+				</ul>
 			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="mul">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">mul<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
