@@ -1,6 +1,12 @@
 # paintvec
 
-paintvec is a JavaScript 2D vector math library.
+paintvec is a simple JavaScript 2D vector math library.
+
+## Features
+
+- 2D point / vector (`Vec2`)
+- 2D rectangle (`Rect`)
+- 2D affine transform  (`Transform`)
 
 ```js
 import {Rect, Vec2, Transform} from 'paintvec'
