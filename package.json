@@ -2,6 +2,12 @@
   "name": "paintvec",
   "version": "0.1.0",
   "description": "JavaScript 2D vector math library",
+  "keywords": [
+    "geometry",
+    "vector",
+    "rectangle",
+    "affine"
+  ],
   "main": "index.js",
   "scripts": {
     "build": "tsc",
