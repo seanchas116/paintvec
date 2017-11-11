@@ -33,9 +33,53 @@
 	<div class="content">
 		<div class="tsd-panel tsd-typography">
 			<h1 id="paintvec">paintvec</h1>
-			<p>paintvec is a JavaScript 2D vector math library.</p>
-			<h1 id="install">Install</h1>
-			<pre><code>npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save github:sketchglass/paintvec</span>
+			<p>paintvec is a simple JavaScript 2D vector math library.</p>
+			<pre><code>npm <span class="hljs-keyword">install</span> paintvec
+</code></pre><h2 id="features">Features</h2>
+			<ul>
+				<li>2D point / vector (<code>Vec2</code>)</li>
+				<li>2D rectangle (<code>Rect</code>)</li>
+				<li>2D affine transform  (<code>Transform</code>)</li>
+			</ul>
+			<p><a href="https://sketchglass.github.io/paintvec/">Documentation</a></p>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> {Rect, Vec2, Transform} <span class="hljs-keyword">from</span> <span class="hljs-string">'paintvec'</span>
+
+
+<span class="hljs-comment">/// Vec2</span>
+
+<span class="hljs-comment">// point at (100, 200)</span>
+<span class="hljs-keyword">const</span> pos = <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
+
+<span class="hljs-comment">// arithmetics</span>
+<span class="hljs-keyword">const</span> pos2 = pos.add(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">50</span>, <span class="hljs-number">30</span>)).mul(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>));
+
+<span class="hljs-comment">// math functions</span>
+pos.ceil().abs();
+
+
+<span class="hljs-comment">/// Rect</span>
+
+<span class="hljs-comment">// create rect from top left position and bottom right position</span>
+<span class="hljs-keyword">const</span> rect = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>));
+
+
+<span class="hljs-comment">/// Transform</span>
+
+<span class="hljs-comment">// translate by (100, 200)</span>
+<span class="hljs-keyword">const</span> translate = Transform.translate(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>))
+
+<span class="hljs-comment">// 2x scale</span>
+<span class="hljs-keyword">const</span> scale = Transform.scale(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">2</span>))
+
+<span class="hljs-comment">// rotate 45 degrees</span>
+<span class="hljs-keyword">const</span> rotate = Transform.rotate(<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">4</span>)
+
+<span class="hljs-comment">// translate then scale then rotate</span>
+<span class="hljs-keyword">const</span> transform = translate.merge(scale).merge(rotate)
+
+<span class="hljs-comment">// apply transform to Vec2/Rect</span>
+pos.transform(transform);
+rect.transform(transform);
 </code></pre>
 		</div>
 	</div>

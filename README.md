@@ -12,6 +12,8 @@ npm install paintvec
 - 2D rectangle (`Rect`)
 - 2D affine transform  (`Transform`)
 
+[Documentation](https://sketchglass.github.io/paintvec/)
+
 ```js
 import {Rect, Vec2, Transform} from 'paintvec'
 
