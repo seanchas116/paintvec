@@ -2,6 +2,10 @@
 
 paintvec is a simple JavaScript 2D vector math library.
 
+```
+npm install paintvec
+```
+
 ## Features
 
 - 2D point / vector (`Vec2`)
@@ -47,10 +51,4 @@ const transform = translate.merge(scale).merge(rotate)
 // apply transform to Vec2/Rect
 pos.transform(transform);
 rect.transform(transform);
-```
-
-# Install
-
-```
-npm install --save github:sketchglass/paintvec
 ```
