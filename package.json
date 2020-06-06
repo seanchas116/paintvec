@@ -1,6 +1,6 @@
 {
   "name": "paintvec",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript 2D vector math library",
   "keywords": [
     "geometry",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sketchglass/paintvec.git"
+    "url": "git+https://github.com/seanchas116/paintvec.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sketchglass/paintvec/issues"
+    "url": "https://github.com/seanchas116/paintvec/issues"
   },
-  "homepage": "https://github.com/sketchglass/paintvec#readme",
+  "homepage": "https://github.com/seanchas116/paintvec#readme",
   "devDependencies": {
     "@types/mocha": "^7.0.2",
     "@types/node": "^14.0.11",
