@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transform = exports.Rect = exports.Vec2 = void 0;
 /**
   Vec2 represents 2D vector, point or size.
 

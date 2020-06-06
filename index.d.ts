@@ -18,8 +18,8 @@ export declare class Vec2 {
       @param y The y component of this vector.
     */
     constructor(x?: number, y?: number);
-    readonly width: number;
-    readonly height: number;
+    get width(): number;
+    get height(): number;
     /**
       Checks if the vectors has same values.
     */
@@ -124,40 +124,40 @@ export declare class Rect {
     /**
       The size of this rectangle.
     */
-    readonly size: Vec2;
+    get size(): Vec2;
     /**
       The top-right position (in top-left origin coordinates) of this rectangle.
     */
-    readonly topRight: Vec2;
+    get topRight(): Vec2;
     /**
       The bottom-lect position (in top-left origin coordinates) of this rectangle.
     */
-    readonly bottomLeft: Vec2;
+    get bottomLeft(): Vec2;
     /**
       The left coordinate (in top-left origin coordinates) of this rectangle.
     */
-    readonly left: number;
+    get left(): number;
     /**
       The top coordinate (in top-left origin coordinates) of this rectangle.
     */
-    readonly top: number;
+    get top(): number;
     /**
       The right coordinate (in top-left origin coordinates) of this rectangle.
     */
-    readonly right: number;
+    get right(): number;
     /**
       The bottom coordinate (in top-left origin coordinates) of this rectangle.
     */
-    readonly bottom: number;
+    get bottom(): number;
     /**
       The width of this rectangle.
     */
-    readonly width: number;
+    get width(): number;
     /**
       The width of this rectangle.
     */
-    readonly height: number;
-    readonly center: Vec2;
+    get height(): number;
+    get center(): Vec2;
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */
