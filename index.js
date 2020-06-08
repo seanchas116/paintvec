@@ -176,7 +176,8 @@ class Rect {
       Checks if the rectangles has same values.
     */
     equals(other) {
-        return this.topLeft.equals(other.topLeft) && this.bottomRight.equals(other.bottomRight);
+        return (this.topLeft.equals(other.topLeft) &&
+            this.bottomRight.equals(other.bottomRight));
     }
     /**
       The size of this rectangle.
@@ -249,7 +250,10 @@ class Rect {
         return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
     }
     includes(pos) {
-        return this.left <= pos.x && pos.x <= this.right && this.top <= pos.y && pos.y <= this.bottom;
+        return (this.left <= pos.x &&
+            pos.x <= this.right &&
+            this.top <= pos.y &&
+            pos.y <= this.bottom);
     }
     /**
       Transforms each corners by transform and returns the bounding rectangle.
@@ -293,10 +297,10 @@ class Rect {
         if (rects.length == 0) {
             return;
         }
-        const left = Math.min(...rects.map(r => r.left));
-        const top = Math.min(...rects.map(r => r.top));
-        const right = Math.max(...rects.map(r => r.right));
-        const bottom = Math.max(...rects.map(r => r.bottom));
+        const left = Math.min(...rects.map((r) => r.left));
+        const top = Math.min(...rects.map((r) => r.top));
+        const right = Math.max(...rects.map((r) => r.right));
+        const bottom = Math.max(...rects.map((r) => r.bottom));
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
     /**
@@ -306,10 +310,10 @@ class Rect {
         if (rects.length == 0) {
             return;
         }
-        const left = Math.max(...rects.map(r => r.left));
-        const top = Math.max(...rects.map(r => r.top));
-        const right = Math.min(...rects.map(r => r.right));
-        const bottom = Math.min(...rects.map(r => r.bottom));
+        const left = Math.max(...rects.map((r) => r.left));
+        const top = Math.max(...rects.map((r) => r.top));
+        const right = Math.min(...rects.map((r) => r.right));
+        const bottom = Math.min(...rects.map((r) => r.bottom));
         if (left < right && top < bottom) {
             return new Rect(new Vec2(left, top), new Vec2(right, bottom));
         }
@@ -461,7 +465,11 @@ class Transform {
         return this.m02 == 0 && this.m12 == 0 && this.m22 == 1;
     }
     isTranslation() {
-        return this.isAffine() && this.m00 == 1 && this.m01 == 0 && this.m10 == 0 && this.m11 == 1;
+        return (this.isAffine() &&
+            this.m00 == 1 &&
+            this.m01 == 0 &&
+            this.m10 == 0 &&
+            this.m11 == 1);
     }
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
@@ -550,7 +558,9 @@ class Transform {
         return fromToUnit.merge(unitToTo);
     }
     static rectToRect(from, to) {
-        return Transform.translate(from.topLeft.neg()).scale(to.size.div(from.size)).translate(to.topLeft);
+        return Transform.translate(from.topLeft.neg())
+            .scale(to.size.div(from.size))
+            .translate(to.topLeft);
     }
     /**
       Merges all transforms.
