@@ -90,7 +90,7 @@ export declare class Vec2 {
     /**
       Gets an array of [x, y].
     */
-    members(): number[];
+    members(): [number, number];
     toString(): string;
 }
 /**

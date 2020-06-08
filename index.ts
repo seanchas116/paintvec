@@ -148,7 +148,7 @@ export class Vec2 {
   /**
     Gets an array of [x, y].
   */
-  members() {
+  members(): [number, number] {
     return [this.x, this.y];
   }
 
