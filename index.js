@@ -284,6 +284,9 @@ class Rect {
     toString() {
         return `Rect(${this.topLeft},${this.bottomRight})`;
     }
+    toDOMRect() {
+        return new DOMRect(this.left, this.top, this.width, this.height);
+    }
     /**
      * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
      */
@@ -338,6 +341,9 @@ class Rect {
         const top = Math.min(v0.y, v1.y, v2.y, v3.y);
         const bottom = Math.max(v0.y, v1.y, v2.y, v3.y);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    }
+    static fromDOMRect(domRect) {
+        return this.fromWidthHeight(domRect.x, domRect.y, domRect.width, domRect.height);
     }
 }
 exports.Rect = Rect;

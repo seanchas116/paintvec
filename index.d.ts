@@ -172,6 +172,7 @@ export declare class Rect {
     union(other: Rect): Rect;
     intersection(other: Rect): Rect | undefined;
     toString(): string;
+    toDOMRect(): DOMRect;
     /**
      * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
      */
@@ -188,6 +189,7 @@ export declare class Rect {
     static fromSize(topLeft: Vec2, size: Vec2): Rect;
     static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
+    static fromDOMRect(domRect: DOMRect): Rect;
 }
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
