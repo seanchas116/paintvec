@@ -190,6 +190,8 @@ export declare class Rect {
      */
     translate(offset: Vec2): Rect;
     inflate(offset: number): Rect;
+    inset(offsets: EdgeOffsets): Rect;
+    insetsTo(other: Rect): EdgeOffsets;
     /**
      * Returns if this rectangle include pos.
      * @param pos
@@ -245,6 +247,29 @@ export declare class Rect {
     static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
     static fromDOMRect(domRect: DOMRect): Rect;
+}
+interface EdgeOffsetsOptions {
+    left?: number;
+    top?: number;
+    bottom?: number;
+    right?: number;
+    topLeft?: Vec2;
+    bottomRight?: Vec2;
+}
+/**
+ * EdgeOffsets represents edge offsets which are applied to rectangles.
+ */
+export declare class EdgeOffsets {
+    constructor(options?: EdgeOffsetsOptions);
+    readonly topLeft: Vec2;
+    readonly bottomRight: Vec2;
+    get left(): number;
+    get top(): number;
+    get right(): number;
+    get bottom(): number;
+    get neg(): EdgeOffsets;
+    equals(other: EdgeOffsets): boolean;
+    toString(): string;
 }
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
@@ -336,3 +361,4 @@ export declare class Transform {
     */
     static merge(...transforms: Transform[]): Transform;
 }
+export {};

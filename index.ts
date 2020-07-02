@@ -291,6 +291,20 @@ export class Rect {
     return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
   }
 
+  inset(offsets: EdgeOffsets) {
+    return new Rect(
+      this.topLeft.add(offsets.topLeft),
+      this.bottomRight.sub(offsets.bottomRight)
+    );
+  }
+
+  insetsTo(other: Rect) {
+    return new EdgeOffsets({
+      topLeft: other.topLeft.sub(this.topLeft),
+      bottomRight: this.bottomRight.sub(other.bottomRight),
+    });
+  }
+
   /**
    * Returns if this rectangle include pos.
    * @param pos
@@ -435,6 +449,61 @@ export class Rect {
       domRect.width,
       domRect.height
     );
+  }
+}
+
+interface EdgeOffsetsOptions {
+  left?: number;
+  top?: number;
+  bottom?: number;
+  right?: number;
+  topLeft?: Vec2;
+  bottomRight?: Vec2;
+}
+
+/**
+ * EdgeOffsets represents edge offsets which are applied to rectangles.
+ */
+export class EdgeOffsets {
+  constructor(options: EdgeOffsetsOptions = {}) {
+    this.topLeft =
+      options.topLeft ?? new Vec2(options.left ?? 0, options.top ?? 0);
+    this.bottomRight =
+      options.bottomRight ?? new Vec2(options.right ?? 0, options.bottom ?? 0);
+  }
+
+  readonly topLeft: Vec2;
+  readonly bottomRight: Vec2;
+
+  get left() {
+    return this.topLeft.x;
+  }
+  get top() {
+    return this.topLeft.y;
+  }
+  get right() {
+    return this.bottomRight.x;
+  }
+  get bottom() {
+    return this.bottomRight.y;
+  }
+
+  get neg() {
+    return new EdgeOffsets({
+      topLeft: this.topLeft.neg,
+      bottomRight: this.bottomRight.neg,
+    });
+  }
+
+  equals(other: EdgeOffsets) {
+    return (
+      this.topLeft.equals(other.topLeft) &&
+      this.bottomRight.equals(other.bottomRight)
+    );
+  }
+
+  toString() {
+    return `EdgeOffsets(${this.left},${this.top},${this.right},${this.bottom})`;
   }
 }
 

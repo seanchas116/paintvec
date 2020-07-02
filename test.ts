@@ -1,6 +1,6 @@
 import assert = require("assert");
 
-import { Vec2, Rect, Transform } from "./";
+import { Vec2, Rect, Transform, EdgeOffsets } from "./";
 
 describe("Vec2", () => {
   describe("width / height", () => {
@@ -230,6 +230,33 @@ describe("Rect", () => {
       assert.equal(result.bottom, 4.8);
     });
   });
+  describe("inset", () => {
+    it("insets rect by EdgeOffsets", () => {
+      const r1 = new Rect(new Vec2(9, 15), new Vec2(56, 43));
+      const offset = new EdgeOffsets({
+        left: 1,
+        right: 2,
+        top: 3,
+        bottom: 4,
+      });
+      const result = r1.inset(offset);
+      assert.equal(result.left, 10);
+      assert.equal(result.right, 54);
+      assert.equal(result.top, 18);
+      assert.equal(result.bottom, 39);
+    });
+  });
+  describe("insetsTo", () => {
+    it("returns inset offsets to other Rect", () => {
+      const r1 = new Rect(new Vec2(9, 15), new Vec2(56, 43));
+      const r2 = new Rect(new Vec2(13, 18), new Vec2(40, 37));
+      const result = r1.insetsTo(r2);
+      assert.equal(result.left, 4);
+      assert.equal(result.right, 16);
+      assert.equal(result.top, 3);
+      assert.equal(result.bottom, 6);
+    });
+  });
   describe("includes", () => {
     it("returns if the point is inside the rect", () => {
       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
@@ -324,6 +351,32 @@ describe("Rect", () => {
       assert.equal(result.top, 200);
       assert.equal(result.right, 400);
       assert.equal(result.bottom, 600);
+    });
+  });
+});
+
+describe("EdgeOffsets", () => {
+  describe("equals", () => {
+    it("compares 2 EdgeOffsets", () => {
+      const e1 = new EdgeOffsets({ left: 3, right: 4, top: 5, bottom: 6 });
+      const e2 = new EdgeOffsets({
+        topLeft: new Vec2(3, 5),
+        bottomRight: new Vec2(4, 6),
+      });
+      const e3 = new EdgeOffsets({ left: 3, right: 5, top: 6, bottom: 5 });
+      assert(e1.equals(e2));
+      assert(!e1.equals(e3));
+      assert(!e2.equals(e3));
+    });
+  });
+  describe("neg", () => {
+    it("negates the EdgeOffset", () => {
+      const e1 = new EdgeOffsets({ left: 3, right: 4, top: 5, bottom: 6 });
+      const e2 = e1.neg;
+      assert.equal(e2.left, -3);
+      assert.equal(e2.right, -4);
+      assert.equal(e2.top, -5);
+      assert.equal(e2.bottom, -6);
     });
   });
 });

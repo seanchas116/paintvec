@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transform = exports.Rect = exports.Vec2 = void 0;
+exports.Transform = exports.EdgeOffsets = exports.Rect = exports.Vec2 = void 0;
 /**
   Vec2 represents 2D vector, point or size.
 
@@ -275,6 +275,15 @@ class Rect {
         const d = new Vec2(offset);
         return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
     }
+    inset(offsets) {
+        return new Rect(this.topLeft.add(offsets.topLeft), this.bottomRight.sub(offsets.bottomRight));
+    }
+    insetsTo(other) {
+        return new EdgeOffsets({
+            topLeft: other.topLeft.sub(this.topLeft),
+            bottomRight: this.bottomRight.sub(other.bottomRight),
+        });
+    }
     /**
      * Returns if this rectangle include pos.
      * @param pos
@@ -402,6 +411,42 @@ class Rect {
     }
 }
 exports.Rect = Rect;
+/**
+ * EdgeOffsets represents edge offsets which are applied to rectangles.
+ */
+class EdgeOffsets {
+    constructor(options = {}) {
+        var _a, _b, _c, _d, _e, _f;
+        this.topLeft = (_a = options.topLeft) !== null && _a !== void 0 ? _a : new Vec2((_b = options.left) !== null && _b !== void 0 ? _b : 0, (_c = options.top) !== null && _c !== void 0 ? _c : 0);
+        this.bottomRight = (_d = options.bottomRight) !== null && _d !== void 0 ? _d : new Vec2((_e = options.right) !== null && _e !== void 0 ? _e : 0, (_f = options.bottom) !== null && _f !== void 0 ? _f : 0);
+    }
+    get left() {
+        return this.topLeft.x;
+    }
+    get top() {
+        return this.topLeft.y;
+    }
+    get right() {
+        return this.bottomRight.x;
+    }
+    get bottom() {
+        return this.bottomRight.y;
+    }
+    get neg() {
+        return new EdgeOffsets({
+            topLeft: this.topLeft.neg,
+            bottomRight: this.bottomRight.neg,
+        });
+    }
+    equals(other) {
+        return (this.topLeft.equals(other.topLeft) &&
+            this.bottomRight.equals(other.bottomRight));
+    }
+    toString() {
+        return `EdgeOffsets(${this.left},${this.top},${this.right},${this.bottom})`;
+    }
+}
+exports.EdgeOffsets = EdgeOffsets;
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
 
