@@ -17,9 +17,15 @@ export class Vec2 {
   */
   constructor(public x = 0, public y = x) {}
 
+  /**
+   * Returns x.
+   */
   get width() {
     return this.x;
   }
+  /**
+   * Returns y.
+   */
   get height() {
     return this.y;
   }
@@ -94,14 +100,27 @@ export class Vec2 {
     return Math.atan2(this.y, this.x);
   }
 
+  /**
+   * Returns the dot product of this and other.
+   * @param other
+   */
   dot(other: Vec2) {
     return this.x * other.x + this.y * other.y;
   }
 
+  /**
+   * Returns the cross product of this and other.
+   * @param other
+   */
   cross(other: Vec2) {
     return this.x * other.y - this.y * other.x;
   }
 
+  /**
+   * Returns this * (1 - ratio) + other * ratio.
+   * @param other
+   * @param ratio
+   */
   mix(other: Vec2, ratio: number) {
     return new Vec2(
       this.x * (1 - ratio) + other.x * ratio,
@@ -245,6 +264,9 @@ export class Rect {
     return this.size.y;
   }
 
+  /**
+   * The center of this rectangle.
+   */
   get center() {
     return this.topLeft.add(this.bottomRight).divScalar(2);
   }
@@ -256,6 +278,10 @@ export class Rect {
     return new Rect(this.topLeft.floor, this.bottomRight.ceil);
   }
 
+  /**
+   * Translates this rectangle by offset.
+   * @param offset
+   */
   translate(offset: Vec2) {
     return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset));
   }
@@ -265,6 +291,10 @@ export class Rect {
     return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
   }
 
+  /**
+   * Returns if this rectangle include pos.
+   * @param pos
+   */
   includes(pos: Vec2) {
     return (
       this.left <= pos.x &&
@@ -285,6 +315,10 @@ export class Rect {
     return Rect.fromQuad([topLeft, topRight, bottomLeft, bottomRight]);
   }
 
+  /**
+   * Returns the smallest rectangle which contains both this and other.
+   * @param other
+   */
   union(other: Rect) {
     const left = Math.min(this.left, other.left);
     const top = Math.min(this.top, other.top);
@@ -293,6 +327,10 @@ export class Rect {
     return new Rect(new Vec2(left, top), new Vec2(right, bottom));
   }
 
+  /**
+   * Returns the largest rectangle contained in both this and other.
+   * @param other
+   */
   intersection(other: Rect) {
     const left = Math.max(this.left, other.left);
     const top = Math.max(this.top, other.top);
@@ -348,14 +386,31 @@ export class Rect {
     }
   }
 
+  /**
+   * Creates a Rect with x, y, width and height.
+   * @param x The left coordinate
+   * @param y The top coordinate
+   * @param width
+   * @param height
+   */
   static fromWidthHeight(x: number, y: number, width: number, height: number) {
     return new Rect(new Vec2(x, y), new Vec2(x + width, y + height));
   }
 
+  /**
+   * Creates a Rect from the top left position and size.
+   * @param topLeft
+   * @param size
+   */
   static fromSize(topLeft: Vec2, size: Vec2) {
     return new Rect(topLeft, topLeft.add(size));
   }
 
+  /**
+   * Creates a Rect from the two points.
+   * @param p0
+   * @param p1
+   */
   static fromTwoPoints(p0: Vec2, p1: Vec2) {
     const left = Math.min(p0.x, p1.x);
     const right = Math.max(p0.x, p1.x);

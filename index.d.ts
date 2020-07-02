@@ -6,7 +6,7 @@
   const b = new Vec2(3, 4)
   a.add(b) //=> Vec2(4, 6)
   a.sub(b) //=> Vec2(-2, -2)
-  b.length() //=> 5
+  b.length //=> 5
   ...
   ```
 */
@@ -18,7 +18,13 @@ export declare class Vec2 {
       @param y The y component of this vector.
     */
     constructor(x?: number, y?: number);
+    /**
+     * Returns x.
+     */
     get width(): number;
+    /**
+     * Returns y.
+     */
     get height(): number;
     /**
       Checks if the vectors has same values.
@@ -64,8 +70,21 @@ export declare class Vec2 {
       Calculates the angle of this vector from positive x-axis in [-PI, PI].
     */
     get angle(): number;
+    /**
+     * Returns the dot product of this and other.
+     * @param other
+     */
     dot(other: Vec2): number;
+    /**
+     * Returns the cross product of this and other.
+     * @param other
+     */
     cross(other: Vec2): number;
+    /**
+     * Returns this * (1 - ratio) + other * ratio.
+     * @param other
+     * @param ratio
+     */
     mix(other: Vec2, ratio: number): Vec2;
     /**
       Rounds down the components of this vector.
@@ -157,19 +176,38 @@ export declare class Rect {
       The width of this rectangle.
     */
     get height(): number;
+    /**
+     * The center of this rectangle.
+     */
     get center(): Vec2;
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */
     toIntBounding(): Rect;
+    /**
+     * Translates this rectangle by offset.
+     * @param offset
+     */
     translate(offset: Vec2): Rect;
     inflate(offset: number): Rect;
+    /**
+     * Returns if this rectangle include pos.
+     * @param pos
+     */
     includes(pos: Vec2): boolean;
     /**
       Transforms each corners by transform and returns the bounding rectangle.
     */
     transform(transform: Transform): Rect;
+    /**
+     * Returns the smallest rectangle which contains both this and other.
+     * @param other
+     */
     union(other: Rect): Rect;
+    /**
+     * Returns the largest rectangle contained in both this and other.
+     * @param other
+     */
     intersection(other: Rect): Rect | undefined;
     toString(): string;
     toDOMRect(): DOMRect;
@@ -185,8 +223,25 @@ export declare class Rect {
       Calculates the rectangle that represents the shared region of given rectangles.
     */
     static intersection(...rects: Rect[]): Rect | undefined;
+    /**
+     * Creates a Rect with x, y, width and height.
+     * @param x The left coordinate
+     * @param y The top coordinate
+     * @param width
+     * @param height
+     */
     static fromWidthHeight(x: number, y: number, width: number, height: number): Rect;
+    /**
+     * Creates a Rect from the top left position and size.
+     * @param topLeft
+     * @param size
+     */
     static fromSize(topLeft: Vec2, size: Vec2): Rect;
+    /**
+     * Creates a Rect from the two points.
+     * @param p0
+     * @param p1
+     */
     static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
     static fromDOMRect(domRect: DOMRect): Rect;

@@ -9,7 +9,7 @@ exports.Transform = exports.Rect = exports.Vec2 = void 0;
   const b = new Vec2(3, 4)
   a.add(b) //=> Vec2(4, 6)
   a.sub(b) //=> Vec2(-2, -2)
-  b.length() //=> 5
+  b.length //=> 5
   ...
   ```
 */
@@ -22,9 +22,15 @@ class Vec2 {
         this.x = x;
         this.y = y;
     }
+    /**
+     * Returns x.
+     */
     get width() {
         return this.x;
     }
+    /**
+     * Returns y.
+     */
     get height() {
         return this.y;
     }
@@ -94,12 +100,25 @@ class Vec2 {
     get angle() {
         return Math.atan2(this.y, this.x);
     }
+    /**
+     * Returns the dot product of this and other.
+     * @param other
+     */
     dot(other) {
         return this.x * other.x + this.y * other.y;
     }
+    /**
+     * Returns the cross product of this and other.
+     * @param other
+     */
     cross(other) {
         return this.x * other.y - this.y * other.x;
     }
+    /**
+     * Returns this * (1 - ratio) + other * ratio.
+     * @param other
+     * @param ratio
+     */
     mix(other, ratio) {
         return new Vec2(this.x * (1 - ratio) + other.x * ratio, this.y * (1 - ratio) + other.y * ratio);
     }
@@ -233,6 +252,9 @@ class Rect {
     get height() {
         return this.size.y;
     }
+    /**
+     * The center of this rectangle.
+     */
     get center() {
         return this.topLeft.add(this.bottomRight).divScalar(2);
     }
@@ -242,6 +264,10 @@ class Rect {
     toIntBounding() {
         return new Rect(this.topLeft.floor, this.bottomRight.ceil);
     }
+    /**
+     * Translates this rectangle by offset.
+     * @param offset
+     */
     translate(offset) {
         return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset));
     }
@@ -249,6 +275,10 @@ class Rect {
         const d = new Vec2(offset);
         return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
     }
+    /**
+     * Returns if this rectangle include pos.
+     * @param pos
+     */
     includes(pos) {
         return (this.left <= pos.x &&
             pos.x <= this.right &&
@@ -265,6 +295,10 @@ class Rect {
         const bottomRight = this.bottomRight.transform(transform);
         return Rect.fromQuad([topLeft, topRight, bottomLeft, bottomRight]);
     }
+    /**
+     * Returns the smallest rectangle which contains both this and other.
+     * @param other
+     */
     union(other) {
         const left = Math.min(this.left, other.left);
         const top = Math.min(this.top, other.top);
@@ -272,6 +306,10 @@ class Rect {
         const bottom = Math.max(this.bottom, other.bottom);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
+    /**
+     * Returns the largest rectangle contained in both this and other.
+     * @param other
+     */
     intersection(other) {
         const left = Math.max(this.left, other.left);
         const top = Math.max(this.top, other.top);
@@ -321,12 +359,29 @@ class Rect {
             return new Rect(new Vec2(left, top), new Vec2(right, bottom));
         }
     }
+    /**
+     * Creates a Rect with x, y, width and height.
+     * @param x The left coordinate
+     * @param y The top coordinate
+     * @param width
+     * @param height
+     */
     static fromWidthHeight(x, y, width, height) {
         return new Rect(new Vec2(x, y), new Vec2(x + width, y + height));
     }
+    /**
+     * Creates a Rect from the top left position and size.
+     * @param topLeft
+     * @param size
+     */
     static fromSize(topLeft, size) {
         return new Rect(topLeft, topLeft.add(size));
     }
+    /**
+     * Creates a Rect from the two points.
+     * @param p0
+     * @param p1
+     */
     static fromTwoPoints(p0, p1) {
         const left = Math.min(p0.x, p1.x);
         const right = Math.max(p0.x, p1.x);
