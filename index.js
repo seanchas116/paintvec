@@ -496,6 +496,13 @@ class Transform {
     toString() {
         return `Transform(${this.members().join(",")})`;
     }
+    /**
+     * Returns the CSS matrix() transform as string
+     */
+    toCSSMatrixString() {
+        const { m00, m01, m10, m11, m20, m21 } = this;
+        return `matrix(${m00},${m01},${m10},${m11},${m20},${m21})`;
+    }
     scale(scale) {
         return this.merge(Transform.scale(scale));
     }

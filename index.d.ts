@@ -250,6 +250,10 @@ export declare class Transform {
     */
     members(): number[];
     toString(): string;
+    /**
+     * Returns the CSS matrix() transform as string
+     */
+    toCSSMatrixString(): string;
     scale(scale: Vec2): Transform;
     translate(offset: Vec2): Transform;
     rotate(angle: number): Transform;
