@@ -10,7 +10,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "prettier --write index.ts && tsc",
+    "build": "prettier --write *.ts && tsc",
     "docs": "typedoc --theme node_modules/typedoc-theme-clean/bin --mode file --out docs index.ts",
     "test": "npm run build && mocha test.js"
   },
