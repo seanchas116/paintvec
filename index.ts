@@ -6,7 +6,7 @@
   const b = new Vec2(3, 4)
   a.add(b) //=> Vec2(4, 6)
   a.sub(b) //=> Vec2(-2, -2)
-  b.length() //=> 5
+  b.length //=> 5
   ...
   ```
 */
