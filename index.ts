@@ -400,31 +400,46 @@ export class Rect {
     }
   }
 
-  /**
-   * Creates a Rect with x, y, width and height.
-   * @param x The left coordinate
-   * @param y The top coordinate
-   * @param width
-   * @param height
-   */
-  static fromWidthHeight(x: number, y: number, width: number, height: number) {
-    return new Rect(new Vec2(x, y), new Vec2(x + width, y + height));
+  static from(
+    options:
+      | {
+          left: number;
+          top: number;
+          right: number;
+          bottom: number;
+        }
+      | {
+          left: number;
+          top: number;
+          width: number;
+          height: number;
+        }
+      | {
+          topLeft: Vec2;
+          bottomRight: Vec2;
+        }
+      | {
+          topLeft: Vec2;
+          size: Vec2;
+        }
+  ) {
+    if ("right" in options) {
+      return new Rect(
+        new Vec2(options.left, options.top),
+        new Vec2(options.right, options.bottom)
+      );
+    } else if ("width" in options) {
+      return new Rect(
+        new Vec2(options.left, options.top),
+        new Vec2(options.left + options.width, options.top + options.height)
+      );
+    } else if ("bottomRight" in options) {
+      return new Rect(options.topLeft, options.bottomRight);
+    } else {
+      return new Rect(options.topLeft, options.topLeft.add(options.size));
+    }
   }
 
-  /**
-   * Creates a Rect from the top left position and size.
-   * @param topLeft
-   * @param size
-   */
-  static fromSize(topLeft: Vec2, size: Vec2) {
-    return new Rect(topLeft, topLeft.add(size));
-  }
-
-  /**
-   * Creates a Rect from the two points.
-   * @param p0
-   * @param p1
-   */
   static fromTwoPoints(p0: Vec2, p1: Vec2) {
     const left = Math.min(p0.x, p1.x);
     const right = Math.max(p0.x, p1.x);
@@ -443,12 +458,12 @@ export class Rect {
   }
 
   static fromDOMRect(domRect: DOMRect) {
-    return this.fromWidthHeight(
-      domRect.x,
-      domRect.y,
-      domRect.width,
-      domRect.height
-    );
+    return this.from({
+      left: domRect.x,
+      top: domRect.y,
+      width: domRect.width,
+      height: domRect.height,
+    });
   }
 }
 

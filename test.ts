@@ -232,7 +232,7 @@ describe("Rect", () => {
   });
   describe("inset", () => {
     it("insets rect by EdgeOffsets", () => {
-      const r1 = new Rect(new Vec2(9, 15), new Vec2(56, 43));
+      const r1 = Rect.from({ left: 9, right: 56, top: 15, bottom: 43 });
       const offset = new EdgeOffsets({
         left: 1,
         right: 2,
@@ -248,8 +248,8 @@ describe("Rect", () => {
   });
   describe("insetsTo", () => {
     it("returns inset offsets to other Rect", () => {
-      const r1 = new Rect(new Vec2(9, 15), new Vec2(56, 43));
-      const r2 = new Rect(new Vec2(13, 18), new Vec2(40, 37));
+      const r1 = Rect.from({ left: 9, right: 56, top: 15, bottom: 43 });
+      const r2 = Rect.from({ left: 13, right: 40, top: 18, bottom: 37 });
       const result = r1.insetsTo(r2);
       assert.equal(result.left, 4);
       assert.equal(result.right, 16);
@@ -337,7 +337,12 @@ describe("Rect", () => {
   });
   describe(".fromWidthHeight", () => {
     it("creates rect from x, y, width, height", () => {
-      const result = Rect.fromWidthHeight(100, 200, 300, 400);
+      const result = Rect.from({
+        left: 100,
+        top: 200,
+        width: 300,
+        height: 400,
+      });
       assert.equal(result.left, 100);
       assert.equal(result.top, 200);
       assert.equal(result.right, 400);
@@ -346,7 +351,10 @@ describe("Rect", () => {
   });
   describe(".fromSize", () => {
     it("creates rect from topLeft and size", () => {
-      const result = Rect.fromSize(new Vec2(100, 200), new Vec2(300, 400));
+      const result = Rect.from({
+        topLeft: new Vec2(100, 200),
+        size: new Vec2(300, 400),
+      });
       assert.equal(result.left, 100);
       assert.equal(result.top, 200);
       assert.equal(result.right, 400);

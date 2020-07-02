@@ -225,25 +225,23 @@ export declare class Rect {
       Calculates the rectangle that represents the shared region of given rectangles.
     */
     static intersection(...rects: Rect[]): Rect | undefined;
-    /**
-     * Creates a Rect with x, y, width and height.
-     * @param x The left coordinate
-     * @param y The top coordinate
-     * @param width
-     * @param height
-     */
-    static fromWidthHeight(x: number, y: number, width: number, height: number): Rect;
-    /**
-     * Creates a Rect from the top left position and size.
-     * @param topLeft
-     * @param size
-     */
-    static fromSize(topLeft: Vec2, size: Vec2): Rect;
-    /**
-     * Creates a Rect from the two points.
-     * @param p0
-     * @param p1
-     */
+    static from(options: {
+        left: number;
+        top: number;
+        right: number;
+        bottom: number;
+    } | {
+        left: number;
+        top: number;
+        width: number;
+        height: number;
+    } | {
+        topLeft: Vec2;
+        bottomRight: Vec2;
+    } | {
+        topLeft: Vec2;
+        size: Vec2;
+    }): Rect;
     static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
     static fromDOMRect(domRect: DOMRect): Rect;
