@@ -51,38 +51,38 @@ export declare class Vec2 {
     /**
       Inverts this vector.
     */
-    neg(): Vec2;
+    get neg(): Vec2;
     /**
       Calculates the length of this vector.
     */
-    length(): number;
+    get length(): number;
     /**
       Calculates the squared length of this vector.
     */
-    squaredLength(): number;
+    get squaredLength(): number;
     /**
       Calculates the angle of this vector from positive x-axis in [-PI, PI].
     */
-    angle(): number;
+    get angle(): number;
     dot(other: Vec2): number;
     cross(other: Vec2): number;
     mix(other: Vec2, ratio: number): Vec2;
     /**
       Rounds down the components of this vector.
     */
-    floor(): Vec2;
+    get floor(): Vec2;
     /**
       Rounds up the components of this vector.
     */
-    ceil(): Vec2;
+    get ceil(): Vec2;
     /**
       Rounds the components of this vector to nearest integer.
     */
-    round(): Vec2;
+    get round(): Vec2;
     /**
      * Returns absolute values of this vector.
      */
-    abs(): Vec2;
+    get abs(): Vec2;
     /**
       Transforms this vector with transform.
     */
@@ -90,7 +90,7 @@ export declare class Vec2 {
     /**
       Gets an array of [x, y].
     */
-    members(): [number, number];
+    get members(): [number, number];
     toString(): string;
 }
 /**
@@ -161,7 +161,7 @@ export declare class Rect {
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */
-    intBounding(): Rect;
+    toIntBounding(): Rect;
     translate(offset: Vec2): Rect;
     inflate(offset: number): Rect;
     includes(pos: Vec2): boolean;
@@ -176,7 +176,7 @@ export declare class Rect {
     /**
      * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
      */
-    vertices(): [Vec2, Vec2, Vec2, Vec2];
+    get vertices(): [Vec2, Vec2, Vec2, Vec2];
     /**
       Calculates the bounding rectangle of given rectangles.
     */
@@ -243,12 +243,12 @@ export declare class Transform {
       Inverts the transform. Returns undefined if this transform is not invertible.
     */
     invert(): Transform | undefined;
-    isAffine(): boolean;
-    isTranslation(): boolean;
+    get isAffine(): boolean;
+    get isTranslation(): boolean;
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */
-    members(): number[];
+    get members(): number[];
     toString(): string;
     /**
      * Returns the CSS matrix() transform as string

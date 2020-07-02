@@ -76,7 +76,7 @@ describe("Vec2", () => {
   describe("neg", () => {
     it("inverts vector", () => {
       const v1 = new Vec2(100, 200);
-      const result = v1.neg();
+      const result = v1.neg;
       assert.equal(result.x, -100);
       assert.equal(result.y, -200);
     });
@@ -84,28 +84,28 @@ describe("Vec2", () => {
   describe("length", () => {
     it("returns length", () => {
       const v1 = new Vec2(300, 400);
-      const result = v1.length();
+      const result = v1.length;
       assert.equal(result, 500);
     });
   });
   describe("squaredLength", () => {
     it("returns squared length", () => {
       const v1 = new Vec2(300, 400);
-      const result = v1.squaredLength();
+      const result = v1.squaredLength;
       assert.equal(result, 250000);
     });
   });
   describe("angle", () => {
     it("returns angle from positive x-axis", () => {
       const v1 = new Vec2(0.5, Math.sqrt(3) / 2);
-      const result = v1.angle();
+      const result = v1.angle;
       assert.equal(result, Math.PI / 3);
     });
   });
   describe("floor", () => {
     it("returns floor'ed vector", () => {
       const v1 = new Vec2(3.4, -1.7);
-      const result = v1.floor();
+      const result = v1.floor;
       assert.equal(result.x, 3);
       assert.equal(result.y, -2);
     });
@@ -113,7 +113,7 @@ describe("Vec2", () => {
   describe("ceil", () => {
     it("returns ceil'ed vector", () => {
       const v1 = new Vec2(3.4, -1.7);
-      const result = v1.ceil();
+      const result = v1.ceil;
       assert.equal(result.x, 4);
       assert.equal(result.y, -1);
     });
@@ -121,14 +121,14 @@ describe("Vec2", () => {
   describe("round", () => {
     it("returns rounded vector", () => {
       const v1 = new Vec2(3.4, -1.3);
-      const result = v1.round();
+      const result = v1.round;
       assert.equal(result.x, 3);
       assert.equal(result.y, -1);
     });
   });
   describe("abs", () => {
     it("returns absolute values", () => {
-      const result = new Vec2(-10, -20).abs();
+      const result = new Vec2(-10, -20).abs;
       assert.equal(result.x, 10);
       assert.equal(result.y, 20);
     });
@@ -136,7 +136,7 @@ describe("Vec2", () => {
   describe("members", () => {
     it("returns members as array", () => {
       const v1 = new Vec2(3.4, -1.3);
-      const result = v1.members();
+      const result = v1.members;
       assert.deepEqual(result, [3.4, -1.3]);
     });
   });
@@ -203,7 +203,7 @@ describe("Rect", () => {
   describe("intBounding", () => {
     it("returns integer bounding rect", () => {
       const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
-      const result = r1.intBounding();
+      const result = r1.toIntBounding();
       assert.equal(result.left, 0);
       assert.equal(result.top, 1);
       assert.equal(result.right, 6);
@@ -357,8 +357,8 @@ describe("Transform", () => {
       const t2 = Transform.rotate(-Math.PI / 2).merge(
         Transform.translate(new Vec2(-10))
       );
-      assert(!t1.isAffine());
-      assert(t2.isAffine());
+      assert(!t1.isAffine);
+      assert(t2.isAffine);
     });
   });
   describe("isTranslation", () => {
@@ -367,8 +367,8 @@ describe("Transform", () => {
       const t2 = Transform.rotate(-Math.PI / 2).merge(
         Transform.translate(new Vec2(-10))
       );
-      assert(t1.isTranslation());
-      assert(!t2.isTranslation());
+      assert(t1.isTranslation);
+      assert(!t2.isTranslation);
     });
   });
   describe("toCSSMatrixString", () => {

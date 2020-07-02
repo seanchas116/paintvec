@@ -70,27 +70,27 @@ export class Vec2 {
   /**
     Inverts this vector.
   */
-  neg() {
+  get neg() {
     return new Vec2(-this.x, -this.y);
   }
 
   /**
     Calculates the length of this vector.
   */
-  length() {
+  get length() {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
   /**
     Calculates the squared length of this vector.
   */
-  squaredLength() {
+  get squaredLength() {
     return this.x * this.x + this.y * this.y;
   }
 
   /**
     Calculates the angle of this vector from positive x-axis in [-PI, PI].
   */
-  angle() {
+  get angle() {
     return Math.atan2(this.y, this.x);
   }
 
@@ -112,26 +112,26 @@ export class Vec2 {
   /**
     Rounds down the components of this vector.
   */
-  floor() {
+  get floor() {
     return new Vec2(Math.floor(this.x), Math.floor(this.y));
   }
   /**
     Rounds up the components of this vector.
   */
-  ceil() {
+  get ceil() {
     return new Vec2(Math.ceil(this.x), Math.ceil(this.y));
   }
   /**
     Rounds the components of this vector to nearest integer.
   */
-  round() {
+  get round() {
     return new Vec2(Math.round(this.x), Math.round(this.y));
   }
 
   /**
    * Returns absolute values of this vector.
    */
-  abs() {
+  get abs() {
     return new Vec2(Math.abs(this.x), Math.abs(this.y));
   }
 
@@ -148,7 +148,7 @@ export class Vec2 {
   /**
     Gets an array of [x, y].
   */
-  members(): [number, number] {
+  get members(): [number, number] {
     return [this.x, this.y];
   }
 
@@ -252,8 +252,8 @@ export class Rect {
   /**
     Calculates the smallest integer rectangle which includes this rectangle.
   */
-  intBounding() {
-    return new Rect(this.topLeft.floor(), this.bottomRight.ceil());
+  toIntBounding() {
+    return new Rect(this.topLeft.floor, this.bottomRight.ceil);
   }
 
   translate(offset: Vec2) {
@@ -314,7 +314,7 @@ export class Rect {
   /**
    * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
    */
-  vertices(): [Vec2, Vec2, Vec2, Vec2] {
+  get vertices(): [Vec2, Vec2, Vec2, Vec2] {
     return [this.topLeft, this.topRight, this.bottomRight, this.bottomLeft];
   }
 
@@ -515,13 +515,13 @@ export class Transform {
     return new Transform(m00, m01, m02, m10, m11, m12, m20, m21, m22);
   }
 
-  isAffine() {
+  get isAffine() {
     return this.m02 == 0 && this.m12 == 0 && this.m22 == 1;
   }
 
-  isTranslation() {
+  get isTranslation() {
     return (
-      this.isAffine() &&
+      this.isAffine &&
       this.m00 == 1 &&
       this.m01 == 0 &&
       this.m10 == 0 &&
@@ -532,7 +532,7 @@ export class Transform {
   /**
     Returns the members (m00, m01, 002, ... m22) in an array.
   */
-  members() {
+  get members() {
     return [
       this.m00,
       this.m01,
@@ -547,7 +547,7 @@ export class Transform {
   }
 
   toString() {
-    return `Transform(${this.members().join(",")})`;
+    return `Transform(${this.members.join(",")})`;
   }
 
   /**
@@ -644,7 +644,7 @@ export class Transform {
   }
 
   static rectToRect(from: Rect, to: Rect) {
-    return Transform.translate(from.topLeft.neg())
+    return Transform.translate(from.topLeft.neg)
       .scale(to.size.div(from.size))
       .translate(to.topLeft);
   }

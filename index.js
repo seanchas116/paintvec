@@ -73,25 +73,25 @@ class Vec2 {
     /**
       Inverts this vector.
     */
-    neg() {
+    get neg() {
         return new Vec2(-this.x, -this.y);
     }
     /**
       Calculates the length of this vector.
     */
-    length() {
+    get length() {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
     /**
       Calculates the squared length of this vector.
     */
-    squaredLength() {
+    get squaredLength() {
         return this.x * this.x + this.y * this.y;
     }
     /**
       Calculates the angle of this vector from positive x-axis in [-PI, PI].
     */
-    angle() {
+    get angle() {
         return Math.atan2(this.y, this.x);
     }
     dot(other) {
@@ -106,25 +106,25 @@ class Vec2 {
     /**
       Rounds down the components of this vector.
     */
-    floor() {
+    get floor() {
         return new Vec2(Math.floor(this.x), Math.floor(this.y));
     }
     /**
       Rounds up the components of this vector.
     */
-    ceil() {
+    get ceil() {
         return new Vec2(Math.ceil(this.x), Math.ceil(this.y));
     }
     /**
       Rounds the components of this vector to nearest integer.
     */
-    round() {
+    get round() {
         return new Vec2(Math.round(this.x), Math.round(this.y));
     }
     /**
      * Returns absolute values of this vector.
      */
-    abs() {
+    get abs() {
         return new Vec2(Math.abs(this.x), Math.abs(this.y));
     }
     /**
@@ -139,7 +139,7 @@ class Vec2 {
     /**
       Gets an array of [x, y].
     */
-    members() {
+    get members() {
         return [this.x, this.y];
     }
     toString() {
@@ -239,8 +239,8 @@ class Rect {
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */
-    intBounding() {
-        return new Rect(this.topLeft.floor(), this.bottomRight.ceil());
+    toIntBounding() {
+        return new Rect(this.topLeft.floor, this.bottomRight.ceil);
     }
     translate(offset) {
         return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset));
@@ -290,7 +290,7 @@ class Rect {
     /**
      * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
      */
-    vertices() {
+    get vertices() {
         return [this.topLeft, this.topRight, this.bottomRight, this.bottomLeft];
     }
     /**
@@ -467,11 +467,11 @@ class Transform {
         const m22 = (a11 * a00 - a01 * a10) * detInv;
         return new Transform(m00, m01, m02, m10, m11, m12, m20, m21, m22);
     }
-    isAffine() {
+    get isAffine() {
         return this.m02 == 0 && this.m12 == 0 && this.m22 == 1;
     }
-    isTranslation() {
-        return (this.isAffine() &&
+    get isTranslation() {
+        return (this.isAffine &&
             this.m00 == 1 &&
             this.m01 == 0 &&
             this.m10 == 0 &&
@@ -480,7 +480,7 @@ class Transform {
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */
-    members() {
+    get members() {
         return [
             this.m00,
             this.m01,
@@ -494,7 +494,7 @@ class Transform {
         ];
     }
     toString() {
-        return `Transform(${this.members().join(",")})`;
+        return `Transform(${this.members.join(",")})`;
     }
     /**
      * Returns the CSS matrix() transform as string
@@ -571,7 +571,7 @@ class Transform {
         return fromToUnit.merge(unitToTo);
     }
     static rectToRect(from, to) {
-        return Transform.translate(from.topLeft.neg())
+        return Transform.translate(from.topLeft.neg)
             .scale(to.size.div(from.size))
             .translate(to.topLeft);
     }
