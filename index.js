@@ -164,6 +164,10 @@ class Vec2 {
     toString() {
         return `Vec2(${this.x},${this.y})`;
     }
+    /**
+     * Constructs Vec2 from vec2-like objects.
+     * @param options
+     */
     static from(options) {
         var _a, _b, _c, _d;
         if (typeof options == "number") {
@@ -380,19 +384,24 @@ class Rect {
             return new Rect(new Vec2(left, top), new Vec2(right, bottom));
         }
     }
+    /**
+     * Creates Rect from rect-like objects.
+     * @param options
+     */
     static from(options) {
+        if ("x" in options) {
+            return new Rect(new Vec2(options.x, options.y), new Vec2(options.x + options.width, options.y + options.height));
+        }
+        if ("width" in options) {
+            return new Rect(new Vec2(options.left, options.top), new Vec2(options.left + options.width, options.top + options.height));
+        }
         if ("right" in options) {
             return new Rect(new Vec2(options.left, options.top), new Vec2(options.right, options.bottom));
         }
-        else if ("width" in options) {
-            return new Rect(new Vec2(options.left, options.top), new Vec2(options.left + options.width, options.top + options.height));
-        }
-        else if ("bottomRight" in options) {
+        if ("bottomRight" in options) {
             return new Rect(options.topLeft, options.bottomRight);
         }
-        else {
-            return new Rect(options.topLeft, options.topLeft.add(options.size));
-        }
+        return new Rect(options.topLeft, options.topLeft.add(options.size));
     }
     static fromTwoPoints(p0, p1) {
         const left = Math.min(p0.x, p1.x);

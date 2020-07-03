@@ -177,7 +177,7 @@ export class Vec2 {
 
   /**
    * Constructs Vec2 from vec2-like objects.
-   * @param options 
+   * @param options
    */
   static from(
     options:
@@ -422,19 +422,29 @@ export class Rect {
     }
   }
 
+  /**
+   * Creates Rect from rect-like objects.
+   * @param options
+   */
   static from(
     options:
       | {
-          left: number;
-          top: number;
-          right: number;
-          bottom: number;
+          x: number;
+          y: number;
+          width: number;
+          height: number;
         }
       | {
           left: number;
           top: number;
           width: number;
           height: number;
+        }
+      | {
+          left: number;
+          top: number;
+          right: number;
+          bottom: number;
         }
       | {
           topLeft: Vec2;
@@ -445,21 +455,28 @@ export class Rect {
           size: Vec2;
         }
   ) {
+    if ("x" in options) {
+      return new Rect(
+        new Vec2(options.x, options.y),
+        new Vec2(options.x + options.width, options.y + options.height)
+      );
+    }
+    if ("width" in options) {
+      return new Rect(
+        new Vec2(options.left, options.top),
+        new Vec2(options.left + options.width, options.top + options.height)
+      );
+    }
     if ("right" in options) {
       return new Rect(
         new Vec2(options.left, options.top),
         new Vec2(options.right, options.bottom)
       );
-    } else if ("width" in options) {
-      return new Rect(
-        new Vec2(options.left, options.top),
-        new Vec2(options.left + options.width, options.top + options.height)
-      );
-    } else if ("bottomRight" in options) {
-      return new Rect(options.topLeft, options.bottomRight);
-    } else {
-      return new Rect(options.topLeft, options.topLeft.add(options.size));
     }
+    if ("bottomRight" in options) {
+      return new Rect(options.topLeft, options.bottomRight);
+    }
+    return new Rect(options.topLeft, options.topLeft.add(options.size));
   }
 
   static fromTwoPoints(p0: Vec2, p1: Vec2) {

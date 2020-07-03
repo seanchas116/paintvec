@@ -111,6 +111,10 @@ export declare class Vec2 {
     */
     get members(): [number, number];
     toString(): string;
+    /**
+     * Constructs Vec2 from vec2-like objects.
+     * @param options
+     */
     static from(options: number | number[] | {
         x?: number;
         y?: number;
@@ -229,16 +233,25 @@ export declare class Rect {
       Calculates the rectangle that represents the shared region of given rectangles.
     */
     static intersection(...rects: Rect[]): Rect | undefined;
+    /**
+     * Creates Rect from rect-like objects.
+     * @param options
+     */
     static from(options: {
-        left: number;
-        top: number;
-        right: number;
-        bottom: number;
+        x: number;
+        y: number;
+        width: number;
+        height: number;
     } | {
         left: number;
         top: number;
         width: number;
         height: number;
+    } | {
+        left: number;
+        top: number;
+        right: number;
+        bottom: number;
     } | {
         topLeft: Vec2;
         bottomRight: Vec2;

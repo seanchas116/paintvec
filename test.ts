@@ -147,7 +147,7 @@ describe("Vec2", () => {
       assert.equal(result, "Vec2(3.4,-1.3)");
     });
   });
-  describe("from", () => {
+  describe(".from", () => {
     it("constructs Vec2 from vec2-like objects", () => {
       const v1 = Vec2.from(1);
       const v2 = Vec2.from([2, 3]);
@@ -336,6 +336,49 @@ describe("Rect", () => {
       const r2 = new Rect(new Vec2(100, 200), new Vec2(300, 400));
       const result = Rect.intersection(r1, r2);
       assert.equal(result, undefined);
+    });
+  });
+  describe(".from", () => {
+    it("creates rect from x, y, width, height", () => {
+      const rect = Rect.from({ x: 100, y: 200, width: 300, height: 400 });
+      assert.equal(rect.left, 100);
+      assert.equal(rect.top, 200);
+      assert.equal(rect.right, 400);
+      assert.equal(rect.bottom, 600);
+    });
+    it("creates rect from left, top, width, height", () => {
+      const rect = Rect.from({ left: 100, top: 200, width: 300, height: 400 });
+      assert.equal(rect.left, 100);
+      assert.equal(rect.top, 200);
+      assert.equal(rect.right, 400);
+      assert.equal(rect.bottom, 600);
+    });
+    it("creates rect from left, top, right, bottom", () => {
+      const rect = Rect.from({ left: 100, top: 200, right: 400, bottom: 600 });
+      assert.equal(rect.left, 100);
+      assert.equal(rect.top, 200);
+      assert.equal(rect.right, 400);
+      assert.equal(rect.bottom, 600);
+    });
+    it("creates rect from topLeft, bottomRight", () => {
+      const rect = Rect.from({
+        topLeft: new Vec2(100, 200),
+        bottomRight: new Vec2(400, 600),
+      });
+      assert.equal(rect.left, 100);
+      assert.equal(rect.top, 200);
+      assert.equal(rect.right, 400);
+      assert.equal(rect.bottom, 600);
+    });
+    it("creates rect from topLeft, size", () => {
+      const rect = Rect.from({
+        topLeft: new Vec2(100, 200),
+        size: new Vec2(300, 400),
+      });
+      assert.equal(rect.left, 100);
+      assert.equal(rect.top, 200);
+      assert.equal(rect.right, 400);
+      assert.equal(rect.bottom, 600);
     });
   });
   describe(".fromTwoRects", () => {
