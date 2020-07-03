@@ -381,7 +381,7 @@ describe("Rect", () => {
       assert.equal(rect.bottom, 600);
     });
   });
-  describe(".fromTwoRects", () => {
+  describe(".fromTwoPoints", () => {
     it("creates rect from two points", () => {
       const p1 = new Vec2(100, 200);
       const p2 = new Vec2(0, 400);
@@ -390,32 +390,6 @@ describe("Rect", () => {
       assert.equal(result.top, 200);
       assert.equal(result.right, 100);
       assert.equal(result.bottom, 400);
-    });
-  });
-  describe(".fromWidthHeight", () => {
-    it("creates rect from x, y, width, height", () => {
-      const result = Rect.from({
-        left: 100,
-        top: 200,
-        width: 300,
-        height: 400,
-      });
-      assert.equal(result.left, 100);
-      assert.equal(result.top, 200);
-      assert.equal(result.right, 400);
-      assert.equal(result.bottom, 600);
-    });
-  });
-  describe(".fromSize", () => {
-    it("creates rect from topLeft and size", () => {
-      const result = Rect.from({
-        topLeft: new Vec2(100, 200),
-        size: new Vec2(300, 400),
-      });
-      assert.equal(result.left, 100);
-      assert.equal(result.top, 200);
-      assert.equal(result.right, 400);
-      assert.equal(result.bottom, 600);
     });
   });
 });
