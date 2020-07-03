@@ -259,8 +259,7 @@ export declare class Rect {
         topLeft: Vec2;
         size: Vec2;
     }): Rect;
-    static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
-    static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
+    static boundingRect(points: Vec2[]): Rect;
 }
 interface EdgeOffsetsOptions {
     left?: number;

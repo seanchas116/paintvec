@@ -318,7 +318,7 @@ class Rect {
         const topRight = this.topRight.transform(transform);
         const bottomLeft = this.bottomLeft.transform(transform);
         const bottomRight = this.bottomRight.transform(transform);
-        return Rect.fromQuad([topLeft, topRight, bottomLeft, bottomRight]);
+        return Rect.boundingRect([topLeft, topRight, bottomLeft, bottomRight]);
     }
     /**
      * Returns the smallest rectangle which contains both this and other.
@@ -403,19 +403,13 @@ class Rect {
         }
         return new Rect(options.topLeft, options.topLeft.add(options.size));
     }
-    static fromTwoPoints(p0, p1) {
-        const left = Math.min(p0.x, p1.x);
-        const right = Math.max(p0.x, p1.x);
-        const top = Math.min(p0.y, p1.y);
-        const bottom = Math.max(p0.y, p1.y);
-        return new Rect(new Vec2(left, top), new Vec2(right, bottom));
-    }
-    static fromQuad(quad) {
-        const [v0, v1, v2, v3] = quad;
-        const left = Math.min(v0.x, v1.x, v2.x, v3.x);
-        const right = Math.max(v0.x, v1.x, v2.x, v3.x);
-        const top = Math.min(v0.y, v1.y, v2.y, v3.y);
-        const bottom = Math.max(v0.y, v1.y, v2.y, v3.y);
+    static boundingRect(points) {
+        const xs = points.map((p) => p.x);
+        const ys = points.map((p) => p.y);
+        const left = Math.min(...xs);
+        const right = Math.max(...xs);
+        const top = Math.min(...ys);
+        const bottom = Math.max(...ys);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
 }

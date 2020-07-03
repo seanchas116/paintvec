@@ -381,11 +381,11 @@ describe("Rect", () => {
       assert.equal(rect.bottom, 600);
     });
   });
-  describe(".fromTwoPoints", () => {
-    it("creates rect from two points", () => {
+  describe(".boundingRect", () => {
+    it("creates bounding rect from points", () => {
       const p1 = new Vec2(100, 200);
       const p2 = new Vec2(0, 400);
-      const result = Rect.fromTwoPoints(p1, p2);
+      const result = Rect.boundingRect([p1, p2]);
       assert.equal(result.left, 0);
       assert.equal(result.top, 200);
       assert.equal(result.right, 100);
