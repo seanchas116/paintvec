@@ -111,6 +111,10 @@ export declare class Vec2 {
     */
     get members(): [number, number];
     toString(): string;
+    static from(options: number | number[] | {
+        x?: number;
+        y?: number;
+    }): Vec2;
 }
 /**
   Rect represents rectangle in 2D space.

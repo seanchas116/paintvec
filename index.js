@@ -164,6 +164,18 @@ class Vec2 {
     toString() {
         return `Vec2(${this.x},${this.y})`;
     }
+    static from(options) {
+        var _a, _b, _c, _d;
+        if (typeof options == "number") {
+            return new Vec2(options, options);
+        }
+        else if (Array.isArray(options)) {
+            return new Vec2((_a = options[0]) !== null && _a !== void 0 ? _a : 0, (_b = options[1]) !== null && _b !== void 0 ? _b : 0);
+        }
+        else {
+            return new Vec2((_c = options.x) !== null && _c !== void 0 ? _c : 0, (_d = options.y) !== null && _d !== void 0 ? _d : 0);
+        }
+    }
 }
 exports.Vec2 = Vec2;
 /**

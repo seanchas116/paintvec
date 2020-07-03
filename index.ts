@@ -174,6 +174,28 @@ export class Vec2 {
   toString() {
     return `Vec2(${this.x},${this.y})`;
   }
+
+  /**
+   * Constructs Vec2 from vec2-like objects.
+   * @param options 
+   */
+  static from(
+    options:
+      | number
+      | number[]
+      | {
+          x?: number;
+          y?: number;
+        }
+  ) {
+    if (typeof options == "number") {
+      return new Vec2(options, options);
+    } else if (Array.isArray(options)) {
+      return new Vec2(options[0] ?? 0, options[1] ?? 0);
+    } else {
+      return new Vec2(options.x ?? 0, options.y ?? 0);
+    }
+  }
 }
 
 /**

@@ -147,6 +147,20 @@ describe("Vec2", () => {
       assert.equal(result, "Vec2(3.4,-1.3)");
     });
   });
+  describe("from", () => {
+    it("constructs Vec2 from vec2-like objects", () => {
+      const v1 = Vec2.from(1);
+      const v2 = Vec2.from([2, 3]);
+      const v3 = Vec2.from({ x: 4, y: 5 });
+
+      assert.equal(v1.x, 1);
+      assert.equal(v1.y, 1);
+      assert.equal(v2.x, 2);
+      assert.equal(v2.y, 3);
+      assert.equal(v3.x, 4);
+      assert.equal(v3.y, 5);
+    });
+  });
 });
 
 describe("Rect", () => {
