@@ -261,7 +261,6 @@ export declare class Rect {
     }): Rect;
     static fromTwoPoints(p0: Vec2, p1: Vec2): Rect;
     static fromQuad(quad: [Vec2, Vec2, Vec2, Vec2]): Rect;
-    static fromDOMRect(domRect: DOMRect): Rect;
 }
 interface EdgeOffsetsOptions {
     left?: number;

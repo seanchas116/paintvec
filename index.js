@@ -418,14 +418,6 @@ class Rect {
         const bottom = Math.max(v0.y, v1.y, v2.y, v3.y);
         return new Rect(new Vec2(left, top), new Vec2(right, bottom));
     }
-    static fromDOMRect(domRect) {
-        return this.from({
-            left: domRect.x,
-            top: domRect.y,
-            width: domRect.width,
-            height: domRect.height,
-        });
-    }
 }
 exports.Rect = Rect;
 /**
