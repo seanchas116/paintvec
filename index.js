@@ -295,10 +295,7 @@ class Rect {
         return new Rect(this.topLeft.add(offsets.topLeft), this.bottomRight.sub(offsets.bottomRight));
     }
     insetsTo(other) {
-        return new EdgeOffsets({
-            topLeft: other.topLeft.sub(this.topLeft),
-            bottomRight: this.bottomRight.sub(other.bottomRight),
-        });
+        return new EdgeOffsets(other.topLeft.sub(this.topLeft), this.bottomRight.sub(other.bottomRight));
     }
     /**
      * Returns if this rectangle include pos.
@@ -418,10 +415,9 @@ exports.Rect = Rect;
  * EdgeOffsets represents edge offsets which are applied to rectangles.
  */
 class EdgeOffsets {
-    constructor(options = {}) {
-        var _a, _b, _c, _d, _e, _f;
-        this.topLeft = (_a = options.topLeft) !== null && _a !== void 0 ? _a : new Vec2((_b = options.left) !== null && _b !== void 0 ? _b : 0, (_c = options.top) !== null && _c !== void 0 ? _c : 0);
-        this.bottomRight = (_d = options.bottomRight) !== null && _d !== void 0 ? _d : new Vec2((_e = options.right) !== null && _e !== void 0 ? _e : 0, (_f = options.bottom) !== null && _f !== void 0 ? _f : 0);
+    constructor(topLeft, bottomRight) {
+        this.topLeft = topLeft;
+        this.bottomRight = bottomRight;
     }
     get left() {
         return this.topLeft.x;
@@ -436,10 +432,7 @@ class EdgeOffsets {
         return this.bottomRight.y;
     }
     get neg() {
-        return new EdgeOffsets({
-            topLeft: this.topLeft.neg,
-            bottomRight: this.bottomRight.neg,
-        });
+        return new EdgeOffsets(this.topLeft.neg, this.bottomRight.neg);
     }
     equals(other) {
         return (this.topLeft.equals(other.topLeft) &&
@@ -447,6 +440,15 @@ class EdgeOffsets {
     }
     toString() {
         return `EdgeOffsets(${this.left},${this.top},${this.right},${this.bottom})`;
+    }
+    static from(options) {
+        if (typeof options == "number") {
+            return new EdgeOffsets(new Vec2(options, options), new Vec2(options, options));
+        }
+        if ("left" in options) {
+            return new EdgeOffsets(new Vec2(options.left, options.top), new Vec2(options.right, options.bottom));
+        }
+        return new EdgeOffsets(options.topLeft, options.bottomRight);
     }
 }
 exports.EdgeOffsets = EdgeOffsets;

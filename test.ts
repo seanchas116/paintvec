@@ -247,7 +247,7 @@ describe("Rect", () => {
   describe("inset", () => {
     it("insets rect by EdgeOffsets", () => {
       const r1 = Rect.from({ left: 9, right: 56, top: 15, bottom: 43 });
-      const offset = new EdgeOffsets({
+      const offset = EdgeOffsets.from({
         left: 1,
         right: 2,
         top: 3,
@@ -397,12 +397,12 @@ describe("Rect", () => {
 describe("EdgeOffsets", () => {
   describe("equals", () => {
     it("compares 2 EdgeOffsets", () => {
-      const e1 = new EdgeOffsets({ left: 3, right: 4, top: 5, bottom: 6 });
-      const e2 = new EdgeOffsets({
+      const e1 = EdgeOffsets.from({ left: 3, right: 4, top: 5, bottom: 6 });
+      const e2 = EdgeOffsets.from({
         topLeft: new Vec2(3, 5),
         bottomRight: new Vec2(4, 6),
       });
-      const e3 = new EdgeOffsets({ left: 3, right: 5, top: 6, bottom: 5 });
+      const e3 = EdgeOffsets.from({ left: 3, right: 5, top: 6, bottom: 5 });
       assert(e1.equals(e2));
       assert(!e1.equals(e3));
       assert(!e2.equals(e3));
@@ -410,7 +410,7 @@ describe("EdgeOffsets", () => {
   });
   describe("neg", () => {
     it("negates the EdgeOffset", () => {
-      const e1 = new EdgeOffsets({ left: 3, right: 4, top: 5, bottom: 6 });
+      const e1 = EdgeOffsets.from({ left: 3, right: 4, top: 5, bottom: 6 });
       const e2 = e1.neg;
       assert.equal(e2.left, -3);
       assert.equal(e2.right, -4);

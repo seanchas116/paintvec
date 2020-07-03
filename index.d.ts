@@ -261,21 +261,13 @@ export declare class Rect {
     }): Rect;
     static boundingRect(points: Vec2[]): Rect;
 }
-interface EdgeOffsetsOptions {
-    left?: number;
-    top?: number;
-    bottom?: number;
-    right?: number;
-    topLeft?: Vec2;
-    bottomRight?: Vec2;
-}
 /**
  * EdgeOffsets represents edge offsets which are applied to rectangles.
  */
 export declare class EdgeOffsets {
-    constructor(options?: EdgeOffsetsOptions);
-    readonly topLeft: Vec2;
-    readonly bottomRight: Vec2;
+    topLeft: Vec2;
+    bottomRight: Vec2;
+    constructor(topLeft: Vec2, bottomRight: Vec2);
     get left(): number;
     get top(): number;
     get right(): number;
@@ -283,6 +275,15 @@ export declare class EdgeOffsets {
     get neg(): EdgeOffsets;
     equals(other: EdgeOffsets): boolean;
     toString(): string;
+    static from(options: number | {
+        left: number;
+        top: number;
+        right: number;
+        bottom: number;
+    } | {
+        topLeft: Vec2;
+        bottomRight: Vec2;
+    }): EdgeOffsets;
 }
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
@@ -374,4 +375,3 @@ export declare class Transform {
     */
     static merge(...transforms: Transform[]): Transform;
 }
-export {};
