@@ -1,6 +1,6 @@
 {
   "name": "paintvec",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "JavaScript 2D vector math library",
   "keywords": [
     "geometry",
