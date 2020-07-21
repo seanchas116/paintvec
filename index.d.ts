@@ -119,6 +119,14 @@ export declare class Vec2 {
         x?: number;
         y?: number;
     }): Vec2;
+    /**
+     * Returns min value for each component.
+     */
+    static min(...vs: Vec2[]): Vec2;
+    /**
+     * Returns max value for each component.
+     */
+    static max(...vs: Vec2[]): Vec2;
 }
 /**
   Rect represents rectangle in 2D space.

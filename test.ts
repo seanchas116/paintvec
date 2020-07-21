@@ -161,6 +161,20 @@ describe("Vec2", () => {
       assert.equal(v3.y, 5);
     });
   });
+  describe(".min", () => {
+    it("returns min for each component", () => {
+      const v = Vec2.min(new Vec2(1, 2), new Vec2(4, 0), new Vec2(3, 5));
+      assert.equal(v.x, 1);
+      assert.equal(v.y, 0);
+    });
+  });
+  describe(".max", () => {
+    it("returns max for each component", () => {
+      const v = Vec2.max(new Vec2(1, 2), new Vec2(4, 0), new Vec2(3, 5));
+      assert.equal(v.x, 4);
+      assert.equal(v.y, 5);
+    });
+  });
 });
 
 describe("Rect", () => {

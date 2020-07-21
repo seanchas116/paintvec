@@ -196,6 +196,24 @@ export class Vec2 {
       return new Vec2(options.x ?? 0, options.y ?? 0);
     }
   }
+
+  /**
+   * Returns min value for each component.
+   */
+  static min(...vs: Vec2[]) {
+    const x = Math.min(...vs.map((v) => v.x));
+    const y = Math.min(...vs.map((v) => v.y));
+    return new Vec2(x, y);
+  }
+
+  /**
+   * Returns max value for each component.
+   */
+  static max(...vs: Vec2[]) {
+    const x = Math.max(...vs.map((v) => v.x));
+    const y = Math.max(...vs.map((v) => v.y));
+    return new Vec2(x, y);
+  }
 }
 
 /**

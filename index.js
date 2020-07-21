@@ -180,6 +180,22 @@ class Vec2 {
             return new Vec2((_c = options.x) !== null && _c !== void 0 ? _c : 0, (_d = options.y) !== null && _d !== void 0 ? _d : 0);
         }
     }
+    /**
+     * Returns min value for each component.
+     */
+    static min(...vs) {
+        const x = Math.min(...vs.map((v) => v.x));
+        const y = Math.min(...vs.map((v) => v.y));
+        return new Vec2(x, y);
+    }
+    /**
+     * Returns max value for each component.
+     */
+    static max(...vs) {
+        const x = Math.max(...vs.map((v) => v.x));
+        const y = Math.max(...vs.map((v) => v.y));
+        return new Vec2(x, y);
+    }
 }
 exports.Vec2 = Vec2;
 /**
