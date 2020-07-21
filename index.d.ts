@@ -103,6 +103,12 @@ export declare class Vec2 {
      */
     get abs(): Vec2;
     /**
+     * Clamp the components within the min and max values.
+     * @param min
+     * @param max
+     */
+    clamp(min: Vec2, max: Vec2): Vec2;
+    /**
       Transforms this vector with transform.
     */
     transform(transform: Transform): Vec2;

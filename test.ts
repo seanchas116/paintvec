@@ -133,6 +133,22 @@ describe("Vec2", () => {
       assert.equal(result.y, 20);
     });
   });
+  describe("clamp", () => {
+    it("clamps values", () => {
+      assert.deepEqual(
+        new Vec2(-10, -20).clamp(new Vec2(10, 9), new Vec2(20, 21)),
+        new Vec2(10, 9)
+      );
+      assert.deepEqual(
+        new Vec2(15, 16).clamp(new Vec2(10, 9), new Vec2(20, 21)),
+        new Vec2(15, 16)
+      );
+      assert.deepEqual(
+        new Vec2(30, 35).clamp(new Vec2(10, 9), new Vec2(20, 21)),
+        new Vec2(20, 21)
+      );
+    });
+  });
   describe("members", () => {
     it("returns members as array", () => {
       const v1 = new Vec2(3.4, -1.3);

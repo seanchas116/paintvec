@@ -147,6 +147,14 @@ class Vec2 {
         return new Vec2(Math.abs(this.x), Math.abs(this.y));
     }
     /**
+     * Clamp the components within the min and max values.
+     * @param min
+     * @param max
+     */
+    clamp(min, max) {
+        return new Vec2(Math.max(min.x, Math.min(this.x, max.x)), Math.max(min.y, Math.min(this.y, max.y)));
+    }
+    /**
       Transforms this vector with transform.
     */
     transform(transform) {
