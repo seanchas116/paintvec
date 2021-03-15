@@ -14,8 +14,8 @@
 	<nav class="navigation">
 		<a href="../index.html" class="title">paintvec</a>
 		<ul>
-			<li class="globals  ">
-				<a href="../globals.html"><em>Globals</em></a>
+			<li class=" ">
+				<a href="../modules.html">Exports</a>
 			</li>
 		</ul>
 		<ul>
@@ -79,6 +79,9 @@
 						<a href="vec2.html#add" class="tsd-kind-icon">add</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="vec2.html#clamp" class="tsd-kind-icon">clamp</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="vec2.html#cross" class="tsd-kind-icon">cross</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -114,6 +117,12 @@
 					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<a href="vec2.html#from" class="tsd-kind-icon">from</a>
 					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="vec2.html#max" class="tsd-kind-icon">max</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a href="vec2.html#min" class="tsd-kind-icon">min</a>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -127,12 +136,13 @@
 				<div class="lead">
 					<p>Vec2 represents 2D vector, point or size.</p>
 				</div>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
-<span class="hljs-keyword">const</span> b = <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
-a.add(b) <span class="hljs-comment">//=&gt; Vec2(4, 6)</span>
-a.sub(b) <span class="hljs-comment">//=&gt; Vec2(-2, -2)</span>
-b.length <span class="hljs-comment">//=&gt; 5</span>
-...</code></pre>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">a</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">b</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">)</span>
+<span style="color: #001080">a</span><span style="color: #000000">.</span><span style="color: #795E26">add</span><span style="color: #000000">(</span><span style="color: #001080">b</span><span style="color: #000000">) </span><span style="color: #008000">//=&gt; Vec2(4, 6)</span>
+<span style="color: #001080">a</span><span style="color: #000000">.</span><span style="color: #795E26">sub</span><span style="color: #000000">(</span><span style="color: #001080">b</span><span style="color: #000000">) </span><span style="color: #008000">//=&gt; Vec2(-2, -2)</span>
+<span style="color: #001080">b</span><span style="color: #000000">.</span><span style="color: #001080">length</span><span style="color: #000000"> </span><span style="color: #008000">//=&gt; 5</span>
+<span style="color: #000000">...</span>
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -142,29 +152,17 @@ b.length <span class="hljs-comment">//=&gt; 5</span>
 			<h2 class="member-group-title">Constructors</h2>
 			<section class="member tsd-kind-constructor tsd-parent-kind-class" id="constructor">
 				<h3 class="member-title tsd-kind-constructor tsd-parent-kind-class">new <wbr>Vec2<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
-				<div class="comment">
-				</div>
 				<ul class="parameters">
-				<li>x<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>The x component of this vector.</p></div></div></li><li>y<span class="tsd-signature-symbol"> = x</span><div class="comment"><div class="lead"><p>The y component of this vector.</p></div></div></li>    </ul>
+				<li>x<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>The x component of this vector.</p></div></li><li>y<span class="tsd-signature-symbol"> = ...</span><div class="comment"><p>The y component of this vector.</p></div></li>    </ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2 class="member-group-title">Properties</h2>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="x">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">x<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>The x component of this vector.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">x<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="y">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">y<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>The y component of this vector.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">y<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = ...</span></h3></div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -214,6 +212,16 @@ b.length <span class="hljs-comment">//=&gt; 5</span>
 				</div>
 				<ul class="parameters">
 				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="clamp">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">clamp<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a>, max<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Clamp the components within the min and max values.</p>
+					</div>
+				</div>
+				<ul class="parameters">
+				<li>min</li><li>max<div class="comment"></div></li>    </ul>
 			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="cross">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">cross<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h3>
@@ -327,6 +335,26 @@ b.length <span class="hljs-comment">//=&gt; 5</span>
 				</div>
 				<ul class="parameters">
 				<li>options<div class="comment"></div></li>    </ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="max">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">max<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>vs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Returns max value for each component.</p>
+					</div>
+				</div>
+				<ul class="parameters">
+				</ul>
+			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class tsd-is-static" id="min">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">min<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>vs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vec2.html" class="tsd-signature-type">Vec2</a></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Returns min value for each component.</p>
+					</div>
+				</div>
+				<ul class="parameters">
+				</ul>
 			</section>
 		</section>
 	</div>

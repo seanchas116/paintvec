@@ -14,8 +14,8 @@
 	<nav class="navigation">
 		<a href="../index.html" class="title">paintvec</a>
 		<ul>
-			<li class="globals  ">
-				<a href="../globals.html"><em>Globals</em></a>
+			<li class=" ">
+				<a href="../modules.html">Exports</a>
 			</li>
 		</ul>
 		<ul>
@@ -130,17 +130,18 @@
 				<div class="lead">
 					<p>Transform represents 2D affine and perspective transform with 3x3 matrix.</p>
 				</div>
-				<pre><code class="language-js"><span class="hljs-comment">// translate by (100, 200)</span>
-<span class="hljs-keyword">const</span> translate = Transform.translate(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>))
+				<pre><code class="language-js"><span style="color: #008000">// translate by (100, 200)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">translate</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">translate</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">200</span><span style="color: #000000">))</span>
 
-<span class="hljs-comment">// 2x scale</span>
-<span class="hljs-keyword">const</span> scale = Transform.scale(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">2</span>))
+<span style="color: #008000">// 2x scale</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">scale</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">scale</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">))</span>
 
-<span class="hljs-comment">// rotate 45 degrees</span>
-<span class="hljs-keyword">const</span> rotate = Transform.rotate(<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">4</span>)
+<span style="color: #008000">// rotate 45 degrees</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">rotate</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">rotate</span><span style="color: #000000">(</span><span style="color: #267F99">Math</span><span style="color: #000000">.PI / </span><span style="color: #098658">4</span><span style="color: #000000">)</span>
 
-<span class="hljs-comment">// translate then scale then rotate</span>
-<span class="hljs-keyword">const</span> transform = translate.merge(scale).merge(rotate)</code></pre>
+<span style="color: #008000">// translate then scale then rotate</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">transform</span><span style="color: #000000"> = </span><span style="color: #001080">translate</span><span style="color: #000000">.</span><span style="color: #795E26">merge</span><span style="color: #000000">(</span><span style="color: #001080">scale</span><span style="color: #000000">).</span><span style="color: #795E26">merge</span><span style="color: #000000">(</span><span style="color: #001080">rotate</span><span style="color: #000000">)</span>
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -156,82 +157,37 @@
 					</div>
 				</div>
 				<ul class="parameters">
-				<li>m00<span class="tsd-signature-symbol"> = 1</span><div class="comment"><div class="lead"><p>Column 0 and row 0 component of this transform.</p></div></div></li><li>m01<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 0 and row 1 component of this transform.</p></div></div></li><li>m02<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 0 and row 2 component of this transform.</p></div></div></li><li>m10<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 1 and row 0 component of this transform.</p></div></div></li><li>m11<span class="tsd-signature-symbol"> = 1</span><div class="comment"><div class="lead"><p>Column 1 and row 1 component of this transform.</p></div></div></li><li>m12<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 1 and row 2 component of this transform.</p></div></div></li><li>m20<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 2 and row 0 component of this transform.</p></div></div></li><li>m21<span class="tsd-signature-symbol"> = 0</span><div class="comment"><div class="lead"><p>Column 2 and row 1 component of this transform.</p></div></div></li><li>m22<span class="tsd-signature-symbol"> = 1</span><div class="comment"><div class="lead"><p>Column 2 and row 2 component of this transform.</p></div></div></li>    </ul>
+				<li>m00<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 0 and row 0 component of this transform.</p></div></li><li>m01<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 0 and row 1 component of this transform.</p></div></li><li>m02<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 0 and row 2 component of this transform.</p></div></li><li>m10<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 1 and row 0 component of this transform.</p></div></li><li>m11<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 1 and row 1 component of this transform.</p></div></li><li>m12<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 1 and row 2 component of this transform.</p></div></li><li>m20<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 2 and row 0 component of this transform.</p></div></li><li>m21<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 2 and row 1 component of this transform.</p></div></li><li>m22<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 2 and row 2 component of this transform.</p></div></li>    </ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2 class="member-group-title">Properties</h2>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m00">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m00<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 0 and row 0 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m00<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 1</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m01">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m01<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 0 and row 1 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m01<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m02">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m02<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 0 and row 2 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m02<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m10">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m10<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 1 and row 0 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m10<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m11">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m11<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 1 and row 1 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m11<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 1</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m12">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m12<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 1 and row 2 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m12<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m20">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m20<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 2 and row 0 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m20<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m21">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m21<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 2 and row 1 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m21<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 0</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="m22">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m22<span>:</span> <span class="tsd-signature-type">number</span></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>Column 2 and row 2 component of this transform.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">m22<span>:</span> <span class="tsd-signature-type">number</span><span class="default-value"> = 1</span></h3></div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">

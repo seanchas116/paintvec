@@ -14,8 +14,8 @@
 	<nav class="navigation">
 		<a href="../index.html" class="title">paintvec</a>
 		<ul>
-			<li class="globals  ">
-				<a href="../globals.html"><em>Globals</em></a>
+			<li class=" ">
+				<a href="../modules.html">Exports</a>
 			</li>
 		</ul>
 		<ul>
@@ -136,15 +136,16 @@
 				<div class="lead">
 					<p>Rect represents rectangle in 2D space.</p>
 				</div>
-				<pre><code class="language-js"><span class="hljs-comment">// 100*200 rectangle at (0, 0)</span>
-<span class="hljs-keyword">const</span> r1 = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">0</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>))
-<span class="hljs-comment">// 100*200 rectangle at (50, 50)</span>
-<span class="hljs-keyword">const</span> r2 = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">150</span>, <span class="hljs-number">250</span>))
+				<pre><code class="language-js"><span style="color: #008000">// 100*200 rectangle at (0, 0)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">r1</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Rect</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">), </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">200</span><span style="color: #000000">))</span>
+<span style="color: #008000">// 100*200 rectangle at (50, 50)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">r2</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Rect</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">50</span><span style="color: #000000">, </span><span style="color: #098658">50</span><span style="color: #000000">), </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">150</span><span style="color: #000000">, </span><span style="color: #098658">250</span><span style="color: #000000">))</span>
 
-<span class="hljs-keyword">const</span> intersect = Rect.intersection(r1, r2) <span class="hljs-comment">//=&gt; Rect(Vec2(50, 50), Vec2(100, 200))</span>
-<span class="hljs-keyword">const</span> union = Rect.union(r1, r2) <span class="hljs-comment">//=&gt; Rect(Vec2(0, 0), Vec2(150, 250))</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">intersect</span><span style="color: #000000"> = </span><span style="color: #001080">Rect</span><span style="color: #000000">.</span><span style="color: #795E26">intersection</span><span style="color: #000000">(</span><span style="color: #001080">r1</span><span style="color: #000000">, </span><span style="color: #001080">r2</span><span style="color: #000000">) </span><span style="color: #008000">//=&gt; Rect(Vec2(50, 50), Vec2(100, 200))</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">union</span><span style="color: #000000"> = </span><span style="color: #001080">Rect</span><span style="color: #000000">.</span><span style="color: #795E26">union</span><span style="color: #000000">(</span><span style="color: #001080">r1</span><span style="color: #000000">, </span><span style="color: #001080">r2</span><span style="color: #000000">) </span><span style="color: #008000">//=&gt; Rect(Vec2(0, 0), Vec2(150, 250))</span>
 
-...</code></pre>
+<span style="color: #000000">...</span>
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -160,26 +161,16 @@
 					</div>
 				</div>
 				<ul class="parameters">
-				<li>topLeft<span class="tsd-signature-symbol"> = new Vec2()</span><div class="comment"><div class="lead"><p>The top-left position (in top-left origin coordinates) of this rectangle.</p></div></div></li><li>bottomRight<span class="tsd-signature-symbol"> = topLeft</span><div class="comment"><div class="lead"><p>The bottom-right position (in top-left origin coordinates) of this rectangle.</p></div></div></li>    </ul>
+				<li>topLeft<span class="tsd-signature-symbol"> = ...</span><div class="comment"><p>The top-left position (in top-left origin coordinates) of this rectangle.</p></div></li><li>bottomRight<span class="tsd-signature-symbol"> = ...</span><div class="comment"><p>The bottom-right position (in top-left origin coordinates) of this rectangle.</p></div></li>    </ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2 class="member-group-title">Properties</h2>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="bottomright">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">bottom<wbr>Right<span>:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>The bottom-right position (in top-left origin coordinates) of this rectangle.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">bottom<wbr>Right<span>:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="default-value"> = ...</span></h3></div>
 			</section>
 			<section class="member tsd-kind-property tsd-parent-kind-class" id="topleft">
-				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">top<wbr>Left<span>:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a></h3></div>
-				<div class="comment">
-					<div class="lead">
-						<p>The top-left position (in top-left origin coordinates) of this rectangle.</p>
-					</div>
-				</div>
+				<div><h3 class="member-title tsd-kind-property tsd-parent-kind-class">top<wbr>Left<span>:</span> <a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="default-value"> = ...</span></h3></div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">

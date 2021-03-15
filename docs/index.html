@@ -14,8 +14,8 @@
 	<nav class="navigation">
 		<a href="index.html" class="title">paintvec</a>
 		<ul>
-			<li class="globals  ">
-				<a href="globals.html"><em>Globals</em></a>
+			<li class=" ">
+				<a href="modules.html">Exports</a>
 			</li>
 		</ul>
 		<ul>
@@ -41,7 +41,8 @@
 			<p><a href="https://badge.fury.io/js/paintvec"><img src="https://badge.fury.io/js/paintvec.svg" alt="npm version"></a>
 			<a href="https://circleci.com/gh/seanchas116/paintvec"><img src="https://circleci.com/gh/seanchas116/paintvec.svg?style=svg" alt="CircleCI"></a></p>
 			<p>paintvec is a simple JavaScript 2D vector math library.</p>
-			<pre><code>npm <span class="hljs-keyword">install</span> paintvec</code></pre>
+			<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">paintvec</span>
+</code></pre>
 			<a href="#features" id="features" style="color: inherit; text-decoration: none;">
 				<h2>Features</h2>
 			</a>
@@ -51,49 +52,50 @@
 				<li>2D affine transform (<code>Transform</code>)</li>
 			</ul>
 			<p><a href="https://seanchas116.github.io/paintvec/">Documentation</a></p>
-			<pre><code class="language-js"><span class="hljs-keyword">import</span> { Rect, Vec2, Transform } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;paintvec&quot;</span>;
+			<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Rect</span><span style="color: #000000">, </span><span style="color: #001080">Vec2</span><span style="color: #000000">, </span><span style="color: #001080">Transform</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;paintvec&quot;</span><span style="color: #000000">;</span>
 
-<span class="hljs-comment">/// Vec2</span>
+<span style="color: #008000">/// Vec2</span>
 
-<span class="hljs-comment">// point at (100, 200)</span>
-<span class="hljs-keyword">const</span> pos = <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
+<span style="color: #008000">// point at (100, 200)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pos</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">200</span><span style="color: #000000">);</span>
 
-<span class="hljs-comment">// arithmetics</span>
-<span class="hljs-keyword">const</span> pos2 = pos.add(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">50</span>, <span class="hljs-number">30</span>)).mul(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>));
+<span style="color: #008000">// arithmetics</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pos2</span><span style="color: #000000"> = </span><span style="color: #001080">pos</span><span style="color: #000000">.</span><span style="color: #795E26">add</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">50</span><span style="color: #000000">, </span><span style="color: #098658">30</span><span style="color: #000000">)).</span><span style="color: #795E26">mul</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">10</span><span style="color: #000000">, </span><span style="color: #098658">20</span><span style="color: #000000">));</span>
 
-<span class="hljs-comment">// math functions</span>
-pos.ceil().abs();
+<span style="color: #008000">// math functions</span>
+<span style="color: #001080">pos</span><span style="color: #000000">.</span><span style="color: #795E26">ceil</span><span style="color: #000000">().</span><span style="color: #795E26">abs</span><span style="color: #000000">();</span>
 
-<span class="hljs-comment">/// Rect</span>
+<span style="color: #008000">/// Rect</span>
 
-<span class="hljs-comment">// 100*200 rectangle at (0, 0)</span>
-<span class="hljs-keyword">const</span> rect = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">0</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>));
-<span class="hljs-comment">// 100*200 rectangle at (50, 50)</span>
-<span class="hljs-keyword">const</span> rect2 = <span class="hljs-keyword">new</span> Rect(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>), <span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">150</span>, <span class="hljs-number">250</span>));
+<span style="color: #008000">// 100*200 rectangle at (0, 0)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">rect</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Rect</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">), </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">200</span><span style="color: #000000">));</span>
+<span style="color: #008000">// 100*200 rectangle at (50, 50)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">rect2</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Rect</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">50</span><span style="color: #000000">, </span><span style="color: #098658">50</span><span style="color: #000000">), </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">150</span><span style="color: #000000">, </span><span style="color: #098658">250</span><span style="color: #000000">));</span>
 
-<span class="hljs-comment">// get intersection</span>
-<span class="hljs-keyword">const</span> intersect = Rect.intersection(rect, rect2); <span class="hljs-comment">//=&gt; Rect(Vec2(50, 50), Vec2(100, 200))</span>
+<span style="color: #008000">// get intersection</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">intersect</span><span style="color: #000000"> = </span><span style="color: #001080">Rect</span><span style="color: #000000">.</span><span style="color: #795E26">intersection</span><span style="color: #000000">(</span><span style="color: #001080">rect</span><span style="color: #000000">, </span><span style="color: #001080">rect2</span><span style="color: #000000">); </span><span style="color: #008000">//=&gt; Rect(Vec2(50, 50), Vec2(100, 200))</span>
 
-<span class="hljs-comment">// get union</span>
-<span class="hljs-keyword">const</span> union = Rect.union(rect, rect2); <span class="hljs-comment">//=&gt; Rect(Vec2(0, 0), Vec2(150, 250))</span>
+<span style="color: #008000">// get union</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">union</span><span style="color: #000000"> = </span><span style="color: #001080">Rect</span><span style="color: #000000">.</span><span style="color: #795E26">union</span><span style="color: #000000">(</span><span style="color: #001080">rect</span><span style="color: #000000">, </span><span style="color: #001080">rect2</span><span style="color: #000000">); </span><span style="color: #008000">//=&gt; Rect(Vec2(0, 0), Vec2(150, 250))</span>
 
-<span class="hljs-comment">/// Transform</span>
+<span style="color: #008000">/// Transform</span>
 
-<span class="hljs-comment">// translate by (100, 200)</span>
-<span class="hljs-keyword">const</span> translate = Transform.translate(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>));
+<span style="color: #008000">// translate by (100, 200)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">translate</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">translate</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">200</span><span style="color: #000000">));</span>
 
-<span class="hljs-comment">// 2x scale</span>
-<span class="hljs-keyword">const</span> scale = Transform.scale(<span class="hljs-keyword">new</span> Vec2(<span class="hljs-number">2</span>));
+<span style="color: #008000">// 2x scale</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">scale</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">scale</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vec2</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">));</span>
 
-<span class="hljs-comment">// rotate 45 degrees</span>
-<span class="hljs-keyword">const</span> rotate = Transform.rotate(<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">4</span>);
+<span style="color: #008000">// rotate 45 degrees</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">rotate</span><span style="color: #000000"> = </span><span style="color: #001080">Transform</span><span style="color: #000000">.</span><span style="color: #795E26">rotate</span><span style="color: #000000">(</span><span style="color: #267F99">Math</span><span style="color: #000000">.PI / </span><span style="color: #098658">4</span><span style="color: #000000">);</span>
 
-<span class="hljs-comment">// translate then scale then rotate</span>
-<span class="hljs-keyword">const</span> transform = translate.merge(scale).merge(rotate);
+<span style="color: #008000">// translate then scale then rotate</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">transform</span><span style="color: #000000"> = </span><span style="color: #001080">translate</span><span style="color: #000000">.</span><span style="color: #795E26">merge</span><span style="color: #000000">(</span><span style="color: #001080">scale</span><span style="color: #000000">).</span><span style="color: #795E26">merge</span><span style="color: #000000">(</span><span style="color: #001080">rotate</span><span style="color: #000000">);</span>
 
-<span class="hljs-comment">// apply transform to Vec2/Rect</span>
-pos.transform(transform);
-rect.transform(transform);</code></pre>
+<span style="color: #008000">// apply transform to Vec2/Rect</span>
+<span style="color: #001080">pos</span><span style="color: #000000">.</span><span style="color: #795E26">transform</span><span style="color: #000000">(</span><span style="color: #001080">transform</span><span style="color: #000000">);</span>
+<span style="color: #001080">rect</span><span style="color: #000000">.</span><span style="color: #795E26">transform</span><span style="color: #000000">(</span><span style="color: #001080">transform</span><span style="color: #000000">);</span>
+</code></pre>
 		</div>
 	</div>
 </div>
