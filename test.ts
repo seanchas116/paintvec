@@ -1,6 +1,6 @@
 import assert = require("assert");
 
-import { Vec2, Rect, Transform, EdgeOffsets } from "./";
+import { Vec2, Rect, Transform, EdgeOffsets, Segment } from "./";
 
 describe("Vec2", () => {
   describe("width / height", () => {
@@ -189,6 +189,30 @@ describe("Vec2", () => {
       const v = Vec2.max(new Vec2(1, 2), new Vec2(4, 0), new Vec2(3, 5));
       assert.equal(v.x, 4);
       assert.equal(v.y, 5);
+    });
+  });
+});
+
+describe("Segment", () => {
+  describe("equals", () => {
+    it("compares 2 segments by value", () => {
+      const r1 = new Segment(new Vec2(1, 2), new Vec2(10, 30));
+      const r2 = new Segment(new Vec2(1, 2), new Vec2(10, 30));
+      assert(r1.equals(r2));
+    });
+  });
+  describe("length", () => {
+    it("returns length", () => {
+      const v1 = new Segment(new Vec2(10, 20), new Vec2(310, 420));
+      const result = v1.length;
+      assert.equal(result, 500);
+    });
+  });
+  describe("angle", () => {
+    it("returns angle from positive x-axis", () => {
+      const v1 = new Segment(new Vec2(0, 0), new Vec2(0.5, Math.sqrt(3) / 2));
+      const result = v1.angle;
+      assert.equal(result, Math.PI / 3);
     });
   });
 });

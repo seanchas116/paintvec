@@ -134,6 +134,16 @@ export declare class Vec2 {
      */
     static max(...vs: Vec2[]): Vec2;
 }
+export declare class Segment {
+    p1: Vec2;
+    p2: Vec2;
+    constructor(p1: Vec2, p2: Vec2);
+    equals(other: Segment): boolean;
+    get length(): number;
+    get angle(): number;
+    transform(transform: Transform): Segment;
+    toString(): string;
+}
 /**
   Rect represents rectangle in 2D space.
 

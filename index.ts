@@ -228,6 +228,33 @@ export class Vec2 {
   }
 }
 
+export class Segment {
+  constructor(public p1: Vec2, public p2: Vec2) {}
+
+  equals(other: Segment) {
+    return this.p1.equals(other.p1) && this.p2.equals(other.p2);
+  }
+
+  get length() {
+    return this.p2.sub(this.p1).length;
+  }
+
+  get angle() {
+    return this.p2.sub(this.p1).angle;
+  }
+
+  transform(transform: Transform) {
+    return new Segment(
+      this.p1.transform(transform),
+      this.p2.transform(transform)
+    );
+  }
+
+  toString() {
+    return `Segment(${this.p1},${this.p2})`;
+  }
+}
+
 /**
   Rect represents rectangle in 2D space.
 

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transform = exports.EdgeOffsets = exports.Rect = exports.Vec2 = void 0;
+exports.Transform = exports.EdgeOffsets = exports.Rect = exports.Segment = exports.Vec2 = void 0;
 /**
   Vec2 represents 2D vector, point or size.
 
@@ -206,6 +206,28 @@ class Vec2 {
     }
 }
 exports.Vec2 = Vec2;
+class Segment {
+    constructor(p1, p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+    }
+    equals(other) {
+        return this.p1.equals(other.p1) && this.p2.equals(other.p2);
+    }
+    get length() {
+        return this.p2.sub(this.p1).length;
+    }
+    get angle() {
+        return this.p2.sub(this.p1).angle;
+    }
+    transform(transform) {
+        return new Segment(this.p1.transform(transform), this.p2.transform(transform));
+    }
+    toString() {
+        return `Segment(${this.p1},${this.p2})`;
+    }
+}
+exports.Segment = Segment;
 /**
   Rect represents rectangle in 2D space.
 
