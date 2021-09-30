@@ -667,7 +667,7 @@ class Transform {
      */
     toCSSMatrix3DString() {
         const { m00, m01, m02, m10, m11, m12, m20, m21, m22 } = this;
-        return `matrix(${m00},${m01},${m10},${m11},${m20},${m21})`;
+        return `matrix3d(${m00},${m01},0,${m02},${m10},${m11},0${m12},0,0,1,0,${m20},${m21},0,${m22})`;
     }
     scale(scale) {
         return this.merge(Transform.scale(scale));
