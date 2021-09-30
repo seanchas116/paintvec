@@ -631,6 +631,13 @@ export class EdgeOffsets {
 export class Transform {
   /**
     Creates a transform. It returns no-op transform when no arguments given.
+
+    ```
+    |x'|   | m00 m10 m20 | |x|
+    |y'| = | m01 m11 m21 | |y|
+    |z'|   | m02 m12 m22 | |z|
+    ```
+
     @param m00 Column 0 and row 0 component of this transform.
     @param m01 Column 0 and row 1 component of this transform.
     @param m02 Column 0 and row 2 component of this transform.
@@ -779,10 +786,19 @@ export class Transform {
   }
 
   /**
-   * Returns the CSS matrix() transform as string
+   * Returns the CSS matrix() string.
    */
   toCSSMatrixString() {
     const { m00, m01, m10, m11, m20, m21 } = this;
+    return `matrix(${m00},${m01},${m10},${m11},${m20},${m21})`;
+  }
+
+  /**
+   * Returns the CSS matrix3d() string.
+   * This supports perspective transform.
+   */
+  toCSSMatrix3DString() {
+    const { m00, m01, m02, m10, m11, m12, m20, m21, m22 } = this;
     return `matrix(${m00},${m01},${m10},${m11},${m20},${m21})`;
   }
 
