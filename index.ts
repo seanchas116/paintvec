@@ -799,7 +799,14 @@ export class Transform {
    */
   toCSSMatrix3DString() {
     const { m00, m01, m02, m10, m11, m12, m20, m21, m22 } = this;
-    return `matrix3d(${m00},${m01},0,${m02},${m10},${m11},0${m12},0,0,1,0,${m20},${m21},0,${m22})`;
+    // prettier-ignore
+    const members = [
+      m00, m01, 0, m02,
+      m10, m11, 0, m12,
+      0, 0, 1, 0,
+      m20, m21, 0, m22,
+    ];
+    return `matrix3d(${members.join(",")})`;
   }
 
   scale(scale: Vec2) {
@@ -838,7 +845,7 @@ export class Transform {
   }
 
   /**
-   * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (0, 1), (1, 1)]) to the specified quadrangle.
+   * Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
    * Reference: Projective Mappings for Image Warping
    */
   static unitToQuad(quad: [Vec2, Vec2, Vec2, Vec2]) {

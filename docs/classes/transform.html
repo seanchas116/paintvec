@@ -25,6 +25,9 @@
 			<li class=" tsd-kind-class">
 				<a href="rect.html" class="tsd-kind-icon">Rect</a>
 			</li>
+			<li class=" tsd-kind-class">
+				<a href="segment.html" class="tsd-kind-icon">Segment</a>
+			</li>
 		</ul>
 		<ul class="current">
 			<li class="current tsd-kind-class">
@@ -83,6 +86,9 @@
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="transform.html#scale" class="tsd-kind-icon">scale</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-class">
+						<a href="transform.html#tocssmatrix3dstring" class="tsd-kind-icon">toCSSMatrix3DString</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-class">
 						<a href="transform.html#tocssmatrixstring" class="tsd-kind-icon">toCSSMatrix<wbr>String</a>
@@ -155,6 +161,10 @@
 					<div class="lead">
 						<p>Creates a transform. It returns no-op transform when no arguments given.</p>
 					</div>
+					<pre><code><span style="color: #000000">|</span><span style="color: #001080">x</span><span style="color: #A31515">&#039;|   | m00 m10 m20 | |x</span><span style="color: #CD3131">|</span>
+<span style="color: #000000">|</span><span style="color: #001080">y</span><span style="color: #A31515">&#039;| = | m01 m11 m21 | |y</span><span style="color: #CD3131">|</span>
+<span style="color: #000000">|</span><span style="color: #001080">z</span><span style="color: #A31515">&#039;|   | m02 m12 m22 | |z</span><span style="color: #CD3131">|</span>
+</code></pre>
 				</div>
 				<ul class="parameters">
 				<li>m00<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 0 and row 0 component of this transform.</p></div></li><li>m01<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 0 and row 1 component of this transform.</p></div></li><li>m02<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 0 and row 2 component of this transform.</p></div></li><li>m10<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 1 and row 0 component of this transform.</p></div></li><li>m11<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 1 and row 1 component of this transform.</p></div></li><li>m12<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 1 and row 2 component of this transform.</p></div></li><li>m20<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 2 and row 0 component of this transform.</p></div></li><li>m21<span class="tsd-signature-symbol"> = 0</span><div class="comment"><p>Column 2 and row 1 component of this transform.</p></div></li><li>m22<span class="tsd-signature-symbol"> = 1</span><div class="comment"><p>Column 2 and row 2 component of this transform.</p></div></li>    </ul>
@@ -242,11 +252,20 @@
 				<ul class="parameters">
 				</ul>
 			</section>
+			<section class="member tsd-kind-method tsd-parent-kind-class" id="tocssmatrix3dstring">
+				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">toCSSMatrix3DString<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h3>
+				<div class="comment">
+					<div class="lead">
+						<p>Returns the CSS matrix3d() string.
+						This supports perspective transform.</p>
+					</div>
+				</div>
+			</section>
 			<section class="member tsd-kind-method tsd-parent-kind-class" id="tocssmatrixstring">
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class">toCSSMatrix<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h3>
 				<div class="comment">
 					<div class="lead">
-						<p>Returns the CSS matrix() transform as string</p>
+						<p>Returns the CSS matrix() string.</p>
 					</div>
 				</div>
 			</section>
@@ -312,7 +331,7 @@
 				<h3 class="member-title tsd-kind-method tsd-parent-kind-class tsd-is-static">unit<wbr>ToQuad<span class="tsd-signature-symbol">(</span>quad<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">, </span><a href="vec2.html" class="tsd-signature-type">Vec2</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="transform.html" class="tsd-signature-type">Transform</a></h3>
 				<div class="comment">
 					<div class="lead">
-						<p>Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (0, 1), (1, 1)]) to the specified quadrangle.
+						<p>Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
 						Reference: Projective Mappings for Image Warping</p>
 					</div>
 				</div>
