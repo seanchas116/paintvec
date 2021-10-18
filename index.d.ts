@@ -370,6 +370,7 @@ export declare class Transform {
     invert(): Transform | undefined;
     get isAffine(): boolean;
     get isTranslation(): boolean;
+    get withoutTranslation(): Transform;
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */
