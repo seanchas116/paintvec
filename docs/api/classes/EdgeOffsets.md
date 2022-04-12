@@ -15,10 +15,6 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 | `topLeft` | [`Vec2`](api/classes/Vec2.md) |
 | `bottomRight` | [`Vec2`](api/classes/Vec2.md) |
 
-#### Defined in
-
-[index.ts:554](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L554)
-
 ## Properties
 
 ### bottomRight
@@ -41,10 +37,6 @@ ___
 
 `number`
 
-#### Defined in
-
-[index.ts:565](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L565)
-
 ___
 
 ### left
@@ -54,10 +46,6 @@ ___
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:556](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L556)
 
 ___
 
@@ -69,10 +57,6 @@ ___
 
 [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
-#### Defined in
-
-[index.ts:569](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L569)
-
 ___
 
 ### right
@@ -83,10 +67,6 @@ ___
 
 `number`
 
-#### Defined in
-
-[index.ts:562](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L562)
-
 ___
 
 ### top
@@ -96,10 +76,6 @@ ___
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:559](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L559)
 
 ## Methods
 
@@ -117,10 +93,6 @@ ___
 
 `boolean`
 
-#### Defined in
-
-[index.ts:573](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L573)
-
 ___
 
 ### toString
@@ -130,10 +102,6 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-[index.ts:580](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L580)
 
 ___
 
@@ -150,7 +118,3 @@ ___
 #### Returns
 
 [`EdgeOffsets`](api/classes/EdgeOffsets.md)
-
-#### Defined in
-
-[index.ts:584](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L584)

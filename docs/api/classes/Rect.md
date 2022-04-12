@@ -29,10 +29,6 @@ Creates a rectangle. It returns empty rectangle when no arguments given.
 | `topLeft` | [`Vec2`](api/classes/Vec2.md) | `undefined` | The top-left position (in top-left origin coordinates) of this rectangle. |
 | `bottomRight` | [`Vec2`](api/classes/Vec2.md) | `topLeft` | The bottom-right position (in top-left origin coordinates) of this rectangle. |
 
-#### Defined in
-
-[index.ts:279](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L279)
-
 ## Properties
 
 ### bottomRight
@@ -57,10 +53,6 @@ The bottom coordinate (in top-left origin coordinates) of this rectangle.
 
 `number`
 
-#### Defined in
-
-[index.ts:330](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L330)
-
 ___
 
 ### bottomLeft
@@ -72,10 +64,6 @@ The bottom-lect position (in top-left origin coordinates) of this rectangle.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:306](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L306)
 
 ___
 
@@ -89,10 +77,6 @@ The center of this rectangle.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:349](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L349)
-
 ___
 
 ### height
@@ -104,10 +88,6 @@ The width of this rectangle.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:342](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L342)
 
 ___
 
@@ -121,10 +101,6 @@ The left coordinate (in top-left origin coordinates) of this rectangle.
 
 `number`
 
-#### Defined in
-
-[index.ts:312](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L312)
-
 ___
 
 ### right
@@ -136,10 +112,6 @@ The right coordinate (in top-left origin coordinates) of this rectangle.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:324](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L324)
 
 ___
 
@@ -153,10 +125,6 @@ The size of this rectangle.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:294](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L294)
-
 ___
 
 ### top
@@ -168,10 +136,6 @@ The top coordinate (in top-left origin coordinates) of this rectangle.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:318](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L318)
 
 ___
 
@@ -185,10 +149,6 @@ The top-right position (in top-left origin coordinates) of this rectangle.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:300](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L300)
-
 ___
 
 ### vertices
@@ -201,10 +161,6 @@ Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
 
 [[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)]
 
-#### Defined in
-
-[index.ts:448](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L448)
-
 ___
 
 ### width
@@ -216,10 +172,6 @@ The width of this rectangle.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:336](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L336)
 
 ## Methods
 
@@ -239,10 +191,6 @@ Checks if the rectangles has same values.
 
 `boolean`
 
-#### Defined in
-
-[index.ts:284](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L284)
-
 ___
 
 ### includes
@@ -261,10 +209,6 @@ Returns if this rectangle include pos.
 
 `boolean`
 
-#### Defined in
-
-[index.ts:391](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L391)
-
 ___
 
 ### inflate
@@ -280,10 +224,6 @@ ___
 #### Returns
 
 [`Rect`](api/classes/Rect.md)
-
-#### Defined in
-
-[index.ts:368](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L368)
 
 ___
 
@@ -301,10 +241,6 @@ ___
 
 [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:373](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L373)
-
 ___
 
 ### insetsTo
@@ -320,10 +256,6 @@ ___
 #### Returns
 
 [`EdgeOffsets`](api/classes/EdgeOffsets.md)
-
-#### Defined in
-
-[index.ts:380](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L380)
 
 ___
 
@@ -343,10 +275,6 @@ Returns the largest rectangle contained in both this and other.
 
 `undefined` \| [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:427](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L427)
-
 ___
 
 ### toDOMRect
@@ -356,10 +284,6 @@ ___
 #### Returns
 
 `DOMRect`
-
-#### Defined in
-
-[index.ts:441](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L441)
 
 ___
 
@@ -373,10 +297,6 @@ Calculates the smallest integer rectangle which includes this rectangle.
 
 [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:356](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L356)
-
 ___
 
 ### toString
@@ -386,10 +306,6 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-[index.ts:437](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L437)
 
 ___
 
@@ -409,10 +325,6 @@ Transforms each corners by transform and returns the bounding rectangle.
 
 [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:403](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L403)
-
 ___
 
 ### translate
@@ -430,10 +342,6 @@ Translates this rectangle by offset.
 #### Returns
 
 [`Rect`](api/classes/Rect.md)
-
-#### Defined in
-
-[index.ts:364](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L364)
 
 ___
 
@@ -453,10 +361,6 @@ Returns the smallest rectangle which contains both this and other.
 
 [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:415](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L415)
-
 ___
 
 ### boundingRect
@@ -472,10 +376,6 @@ ___
 #### Returns
 
 [`Rect`](api/classes/Rect.md)
-
-#### Defined in
-
-[index.ts:539](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L539)
 
 ___
 
@@ -495,10 +395,6 @@ Creates Rect from rect-like objects.
 
 [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:486](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L486)
-
 ___
 
 ### intersection
@@ -517,10 +413,6 @@ Calculates the rectangle that represents the shared region of given rectangles.
 
 `undefined` \| [`Rect`](api/classes/Rect.md)
 
-#### Defined in
-
-[index.ts:469](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L469)
-
 ___
 
 ### union
@@ -538,7 +430,3 @@ Calculates the bounding rectangle of given rectangles.
 #### Returns
 
 `undefined` \| [`Rect`](api/classes/Rect.md)
-
-#### Defined in
-
-[index.ts:455](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L455)

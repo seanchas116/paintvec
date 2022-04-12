@@ -44,10 +44,6 @@ Creates a transform. It returns no-op transform when no arguments given.
 | `m21` | `number` | `0` | Column 2 and row 1 component of this transform. |
 | `m22` | `number` | `1` | Column 2 and row 2 component of this transform. |
 
-#### Defined in
-
-[index.ts:651](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L651)
-
 ## Properties
 
 ### m00
@@ -112,10 +108,6 @@ ___
 
 `boolean`
 
-#### Defined in
-
-[index.ts:753](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L753)
-
 ___
 
 ### isTranslation
@@ -125,10 +117,6 @@ ___
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[index.ts:757](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L757)
 
 ___
 
@@ -142,10 +130,6 @@ Returns the members (m00, m01, 002, ... m22) in an array.
 
 `number`[]
 
-#### Defined in
-
-[index.ts:784](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L784)
-
 ___
 
 ### withoutTranslation
@@ -155,10 +139,6 @@ ___
 #### Returns
 
 [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:767](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L767)
 
 ## Methods
 
@@ -178,10 +158,6 @@ Checks if the transforms has same values.
 
 `boolean`
 
-#### Defined in
-
-[index.ts:666](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L666)
-
 ___
 
 ### invert
@@ -193,10 +169,6 @@ Inverts the transform. Returns undefined if this transform is not invertible.
 #### Returns
 
 `undefined` \| [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:720](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L720)
 
 ___
 
@@ -216,10 +188,6 @@ Merges 2 transforms. The returned transform represents "transform by this transf
 
 [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:683](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L683)
-
 ___
 
 ### rotate
@@ -235,10 +203,6 @@ ___
 #### Returns
 
 [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:834](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L834)
 
 ___
 
@@ -256,10 +220,6 @@ ___
 
 [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:826](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L826)
-
 ___
 
 ### toCSSMatrix3DString
@@ -273,10 +233,6 @@ This supports perspective transform.
 
 `string`
 
-#### Defined in
-
-[index.ts:814](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L814)
-
 ___
 
 ### toCSSMatrixString
@@ -289,10 +245,6 @@ Returns the CSS matrix() string.
 
 `string`
 
-#### Defined in
-
-[index.ts:805](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L805)
-
 ___
 
 ### toString
@@ -302,10 +254,6 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-[index.ts:798](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L798)
 
 ___
 
@@ -322,10 +270,6 @@ ___
 #### Returns
 
 [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:830](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L830)
 
 ___
 
@@ -345,10 +289,6 @@ Merges all transforms.
 
 [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:920](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L920)
-
 ___
 
 ### quadToQuad
@@ -366,10 +306,6 @@ ___
 
 `undefined` \| [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:895](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L895)
-
 ___
 
 ### rectToRect
@@ -386,10 +322,6 @@ ___
 #### Returns
 
 [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:911](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L911)
 
 ___
 
@@ -409,10 +341,6 @@ Returns the transform that represents rotating by angle (in radians).
 
 [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:848](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L848)
-
 ___
 
 ### scale
@@ -430,10 +358,6 @@ Returns the transform that represents scaling.
 #### Returns
 
 [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:841](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L841)
 
 ___
 
@@ -453,10 +377,6 @@ Returns the transform that represents translating.
 
 [`Transform`](api/classes/Transform.md)
 
-#### Defined in
-
-[index.ts:857](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L857)
-
 ___
 
 ### unitToQuad
@@ -475,7 +395,3 @@ Reference: Projective Mappings for Image Warping
 #### Returns
 
 `undefined` \| [`Transform`](api/classes/Transform.md)
-
-#### Defined in
-
-[index.ts:865](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L865)

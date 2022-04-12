@@ -24,10 +24,6 @@ b.length //=> 5
 | `x` | `number` | `0` | The x component of this vector. |
 | `y` | `number` | `x` | The y component of this vector. |
 
-#### Defined in
-
-[index.ts:18](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L18)
-
 ## Properties
 
 ### x
@@ -52,10 +48,6 @@ Returns absolute values of this vector.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:153](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L153)
-
 ___
 
 ### angle
@@ -67,10 +59,6 @@ Calculates the angle of this vector from positive x-axis in [-PI, PI].
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:99](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L99)
 
 ___
 
@@ -84,10 +72,6 @@ Rounds up the components of this vector.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:140](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L140)
-
 ___
 
 ### floor
@@ -99,10 +83,6 @@ Rounds down the components of this vector.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:134](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L134)
 
 ___
 
@@ -116,10 +96,6 @@ Returns y.
 
 `number`
 
-#### Defined in
-
-[index.ts:29](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L29)
-
 ___
 
 ### length
@@ -131,10 +107,6 @@ Calculates the length of this vector.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:86](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L86)
 
 ___
 
@@ -148,10 +120,6 @@ Gets an array of [x, y].
 
 [`number`, `number`]
 
-#### Defined in
-
-[index.ts:182](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L182)
-
 ___
 
 ### neg
@@ -163,10 +131,6 @@ Inverts this vector.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:79](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L79)
 
 ___
 
@@ -180,10 +144,6 @@ Rounds the components of this vector to nearest integer.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:146](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L146)
-
 ___
 
 ### squaredLength
@@ -196,10 +156,6 @@ Calculates the squared length of this vector.
 
 `number`
 
-#### Defined in
-
-[index.ts:92](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L92)
-
 ___
 
 ### width
@@ -211,10 +167,6 @@ Returns x.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:23](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L23)
 
 ## Methods
 
@@ -233,10 +185,6 @@ Adds v to this vector.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:43](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L43)
 
 ___
 
@@ -257,10 +205,6 @@ Clamp the components within the min and max values.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:162](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L162)
-
 ___
 
 ### cross
@@ -278,10 +222,6 @@ Returns the cross product of this and other.
 #### Returns
 
 `number`
-
-#### Defined in
-
-[index.ts:115](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L115)
 
 ___
 
@@ -301,10 +241,6 @@ Divides components of this vector by v.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:61](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L61)
-
 ___
 
 ### divScalar
@@ -322,10 +258,6 @@ Divides this vector by scalar s.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:73](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L73)
 
 ___
 
@@ -345,10 +277,6 @@ Returns the dot product of this and other.
 
 `number`
 
-#### Defined in
-
-[index.ts:107](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L107)
-
 ___
 
 ### equals
@@ -366,10 +294,6 @@ Checks if the vectors has same values.
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[index.ts:36](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L36)
 
 ___
 
@@ -390,10 +314,6 @@ Returns this * (1 - ratio) + other * ratio.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:124](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L124)
-
 ___
 
 ### mul
@@ -411,10 +331,6 @@ Multiplies components of this vector by v.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:55](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L55)
 
 ___
 
@@ -434,10 +350,6 @@ Multiplies this vector by scalar s.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:67](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L67)
-
 ___
 
 ### sub
@@ -456,10 +368,6 @@ Subtracts v from this vector.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:49](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L49)
-
 ___
 
 ### toString
@@ -469,10 +377,6 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-[index.ts:186](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L186)
 
 ___
 
@@ -492,10 +396,6 @@ Transforms this vector with transform.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:172](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L172)
-
 ___
 
 ### from
@@ -513,10 +413,6 @@ Constructs Vec2 from vec2-like objects.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:194](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L194)
 
 ___
 
@@ -536,10 +432,6 @@ Returns max value for each component.
 
 [`Vec2`](api/classes/Vec2.md)
 
-#### Defined in
-
-[index.ts:224](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L224)
-
 ___
 
 ### min
@@ -557,7 +449,3 @@ Returns min value for each component.
 #### Returns
 
 [`Vec2`](api/classes/Vec2.md)
-
-#### Defined in
-
-[index.ts:215](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L215)
