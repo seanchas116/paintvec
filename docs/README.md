@@ -3,7 +3,6 @@
 [![npm version](https://badge.fury.io/js/paintvec.svg)](https://badge.fury.io/js/paintvec)
 [![CircleCI](https://circleci.com/gh/seanchas116/paintvec.svg?style=svg)](https://circleci.com/gh/seanchas116/paintvec)
 
-
 paintvec is a simple JavaScript 2D vector math library.
 
 ```

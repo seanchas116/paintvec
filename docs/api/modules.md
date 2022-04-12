@@ -1,4 +1,4 @@
-[paintvec](README.md) / Exports
+[paintvec](api/README.md) / Exports
 
 # paintvec
 
@@ -6,8 +6,8 @@
 
 ### Classes
 
-- [EdgeOffsets](classes/EdgeOffsets.md)
-- [Rect](classes/Rect.md)
-- [Segment](classes/Segment.md)
-- [Transform](classes/Transform.md)
-- [Vec2](classes/Vec2.md)
+- [EdgeOffsets](api/classes/EdgeOffsets.md)
+- [Rect](api/classes/Rect.md)
+- [Segment](api/classes/Segment.md)
+- [Transform](api/classes/Transform.md)
+- [Vec2](api/classes/Vec2.md)

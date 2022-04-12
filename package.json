@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "build": "prettier --write *.ts && tsc",
-    "docs:generate": "typedoc  --plugin typedoc-plugin-markdown --out docs/api index.ts",
+    "docs:generate": "typedoc  --plugin typedoc-plugin-markdown --publicPath api/ --out docs/api index.ts",
     "docs:serve": "docsify serve ./docs",
     "test": "npm run build && mocha test.js"
   },

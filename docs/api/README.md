@@ -1,4 +1,4 @@
-paintvec / [Exports](modules.md)
+paintvec / [Exports](api/modules.md)
 
 # paintvec
 

@@ -1,4 +1,4 @@
-[paintvec](../README.md) / [Exports](../modules.md) / EdgeOffsets
+[paintvec](api/README.md) / [Exports](api/modules.md) / EdgeOffsets
 
 # Class: EdgeOffsets
 
@@ -8,26 +8,26 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 
 ### Constructors
 
-- [constructor](EdgeOffsets.md#constructor)
+- [constructor](api/classes/EdgeOffsets.md#constructor)
 
 ### Properties
 
-- [bottomRight](EdgeOffsets.md#bottomright)
-- [topLeft](EdgeOffsets.md#topleft)
+- [bottomRight](api/classes/EdgeOffsets.md#bottomright)
+- [topLeft](api/classes/EdgeOffsets.md#topleft)
 
 ### Accessors
 
-- [bottom](EdgeOffsets.md#bottom)
-- [left](EdgeOffsets.md#left)
-- [neg](EdgeOffsets.md#neg)
-- [right](EdgeOffsets.md#right)
-- [top](EdgeOffsets.md#top)
+- [bottom](api/classes/EdgeOffsets.md#bottom)
+- [left](api/classes/EdgeOffsets.md#left)
+- [neg](api/classes/EdgeOffsets.md#neg)
+- [right](api/classes/EdgeOffsets.md#right)
+- [top](api/classes/EdgeOffsets.md#top)
 
 ### Methods
 
-- [equals](EdgeOffsets.md#equals)
-- [toString](EdgeOffsets.md#tostring)
-- [from](EdgeOffsets.md#from)
+- [equals](api/classes/EdgeOffsets.md#equals)
+- [toString](api/classes/EdgeOffsets.md#tostring)
+- [from](api/classes/EdgeOffsets.md#from)
 
 ## Constructors
 
@@ -39,24 +39,24 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 
 | Name | Type |
 | :------ | :------ |
-| `topLeft` | [`Vec2`](Vec2.md) |
-| `bottomRight` | [`Vec2`](Vec2.md) |
+| `topLeft` | [`Vec2`](api/classes/Vec2.md) |
+| `bottomRight` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Defined in
 
-[index.ts:554](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L554)
+[index.ts:554](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L554)
 
 ## Properties
 
 ### bottomRight
 
-• **bottomRight**: [`Vec2`](Vec2.md)
+• **bottomRight**: [`Vec2`](api/classes/Vec2.md)
 
 ___
 
 ### topLeft
 
-• **topLeft**: [`Vec2`](Vec2.md)
+• **topLeft**: [`Vec2`](api/classes/Vec2.md)
 
 ## Accessors
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[index.ts:565](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L565)
+[index.ts:565](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L565)
 
 ___
 
@@ -84,21 +84,21 @@ ___
 
 #### Defined in
 
-[index.ts:556](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L556)
+[index.ts:556](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L556)
 
 ___
 
 ### neg
 
-• `get` **neg**(): [`EdgeOffsets`](EdgeOffsets.md)
+• `get` **neg**(): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Returns
 
-[`EdgeOffsets`](EdgeOffsets.md)
+[`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Defined in
 
-[index.ts:569](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L569)
+[index.ts:569](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L569)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[index.ts:562](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L562)
+[index.ts:562](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L562)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[index.ts:559](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L559)
+[index.ts:559](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L559)
 
 ## Methods
 
@@ -138,7 +138,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`EdgeOffsets`](EdgeOffsets.md) |
+| `other` | [`EdgeOffsets`](api/classes/EdgeOffsets.md) |
 
 #### Returns
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[index.ts:573](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L573)
+[index.ts:573](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L573)
 
 ___
 
@@ -160,24 +160,24 @@ ___
 
 #### Defined in
 
-[index.ts:580](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L580)
+[index.ts:580](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L580)
 
 ___
 
 ### from
 
-▸ `Static` **from**(`options`): [`EdgeOffsets`](EdgeOffsets.md)
+▸ `Static` **from**(`options`): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `number` \| { `bottom`: `number` ; `left`: `number` ; `right`: `number` ; `top`: `number`  } \| { `bottomRight`: [`Vec2`](Vec2.md) ; `topLeft`: [`Vec2`](Vec2.md)  } |
+| `options` | `number` \| { `bottom`: `number` ; `left`: `number` ; `right`: `number` ; `top`: `number`  } \| { `bottomRight`: [`Vec2`](api/classes/Vec2.md) ; `topLeft`: [`Vec2`](api/classes/Vec2.md)  } |
 
 #### Returns
 
-[`EdgeOffsets`](EdgeOffsets.md)
+[`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Defined in
 
-[index.ts:584](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L584)
+[index.ts:584](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L584)

@@ -1,4 +1,4 @@
-[paintvec](../README.md) / [Exports](../modules.md) / Rect
+[paintvec](api/README.md) / [Exports](api/modules.md) / Rect
 
 # Class: Rect
 
@@ -20,45 +20,45 @@ const union = Rect.union(r1, r2) //=> Rect(Vec2(0, 0), Vec2(150, 250))
 
 ### Constructors
 
-- [constructor](Rect.md#constructor)
+- [constructor](api/classes/Rect.md#constructor)
 
 ### Properties
 
-- [bottomRight](Rect.md#bottomright)
-- [topLeft](Rect.md#topleft)
+- [bottomRight](api/classes/Rect.md#bottomright)
+- [topLeft](api/classes/Rect.md#topleft)
 
 ### Accessors
 
-- [bottom](Rect.md#bottom)
-- [bottomLeft](Rect.md#bottomleft)
-- [center](Rect.md#center)
-- [height](Rect.md#height)
-- [left](Rect.md#left)
-- [right](Rect.md#right)
-- [size](Rect.md#size)
-- [top](Rect.md#top)
-- [topRight](Rect.md#topright)
-- [vertices](Rect.md#vertices)
-- [width](Rect.md#width)
+- [bottom](api/classes/Rect.md#bottom)
+- [bottomLeft](api/classes/Rect.md#bottomleft)
+- [center](api/classes/Rect.md#center)
+- [height](api/classes/Rect.md#height)
+- [left](api/classes/Rect.md#left)
+- [right](api/classes/Rect.md#right)
+- [size](api/classes/Rect.md#size)
+- [top](api/classes/Rect.md#top)
+- [topRight](api/classes/Rect.md#topright)
+- [vertices](api/classes/Rect.md#vertices)
+- [width](api/classes/Rect.md#width)
 
 ### Methods
 
-- [equals](Rect.md#equals)
-- [includes](Rect.md#includes)
-- [inflate](Rect.md#inflate)
-- [inset](Rect.md#inset)
-- [insetsTo](Rect.md#insetsto)
-- [intersection](Rect.md#intersection)
-- [toDOMRect](Rect.md#todomrect)
-- [toIntBounding](Rect.md#tointbounding)
-- [toString](Rect.md#tostring)
-- [transform](Rect.md#transform)
-- [translate](Rect.md#translate)
-- [union](Rect.md#union)
-- [boundingRect](Rect.md#boundingrect)
-- [from](Rect.md#from)
-- [intersection](Rect.md#intersection-1)
-- [union](Rect.md#union-1)
+- [equals](api/classes/Rect.md#equals)
+- [includes](api/classes/Rect.md#includes)
+- [inflate](api/classes/Rect.md#inflate)
+- [inset](api/classes/Rect.md#inset)
+- [insetsTo](api/classes/Rect.md#insetsto)
+- [intersection](api/classes/Rect.md#intersection)
+- [toDOMRect](api/classes/Rect.md#todomrect)
+- [toIntBounding](api/classes/Rect.md#tointbounding)
+- [toString](api/classes/Rect.md#tostring)
+- [transform](api/classes/Rect.md#transform)
+- [translate](api/classes/Rect.md#translate)
+- [union](api/classes/Rect.md#union)
+- [boundingRect](api/classes/Rect.md#boundingrect)
+- [from](api/classes/Rect.md#from)
+- [intersection](api/classes/Rect.md#intersection-1)
+- [union](api/classes/Rect.md#union-1)
 
 ## Constructors
 
@@ -72,24 +72,24 @@ Creates a rectangle. It returns empty rectangle when no arguments given.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `topLeft` | [`Vec2`](Vec2.md) | `undefined` | The top-left position (in top-left origin coordinates) of this rectangle. |
-| `bottomRight` | [`Vec2`](Vec2.md) | `topLeft` | The bottom-right position (in top-left origin coordinates) of this rectangle. |
+| `topLeft` | [`Vec2`](api/classes/Vec2.md) | `undefined` | The top-left position (in top-left origin coordinates) of this rectangle. |
+| `bottomRight` | [`Vec2`](api/classes/Vec2.md) | `topLeft` | The bottom-right position (in top-left origin coordinates) of this rectangle. |
 
 #### Defined in
 
-[index.ts:279](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L279)
+[index.ts:279](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L279)
 
 ## Properties
 
 ### bottomRight
 
-• **bottomRight**: [`Vec2`](Vec2.md) = `topLeft`
+• **bottomRight**: [`Vec2`](api/classes/Vec2.md) = `topLeft`
 
 ___
 
 ### topLeft
 
-• **topLeft**: [`Vec2`](Vec2.md)
+• **topLeft**: [`Vec2`](api/classes/Vec2.md)
 
 ## Accessors
 
@@ -105,39 +105,39 @@ The bottom coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:330](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L330)
+[index.ts:330](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L330)
 
 ___
 
 ### bottomLeft
 
-• `get` **bottomLeft**(): [`Vec2`](Vec2.md)
+• `get` **bottomLeft**(): [`Vec2`](api/classes/Vec2.md)
 
 The bottom-lect position (in top-left origin coordinates) of this rectangle.
 
 #### Returns
 
-[`Vec2`](Vec2.md)
+[`Vec2`](api/classes/Vec2.md)
 
 #### Defined in
 
-[index.ts:306](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L306)
+[index.ts:306](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L306)
 
 ___
 
 ### center
 
-• `get` **center**(): [`Vec2`](Vec2.md)
+• `get` **center**(): [`Vec2`](api/classes/Vec2.md)
 
 The center of this rectangle.
 
 #### Returns
 
-[`Vec2`](Vec2.md)
+[`Vec2`](api/classes/Vec2.md)
 
 #### Defined in
 
-[index.ts:349](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L349)
+[index.ts:349](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L349)
 
 ___
 
@@ -153,7 +153,7 @@ The width of this rectangle.
 
 #### Defined in
 
-[index.ts:342](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L342)
+[index.ts:342](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L342)
 
 ___
 
@@ -169,7 +169,7 @@ The left coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:312](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L312)
+[index.ts:312](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L312)
 
 ___
 
@@ -185,23 +185,23 @@ The right coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:324](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L324)
+[index.ts:324](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L324)
 
 ___
 
 ### size
 
-• `get` **size**(): [`Vec2`](Vec2.md)
+• `get` **size**(): [`Vec2`](api/classes/Vec2.md)
 
 The size of this rectangle.
 
 #### Returns
 
-[`Vec2`](Vec2.md)
+[`Vec2`](api/classes/Vec2.md)
 
 #### Defined in
 
-[index.ts:294](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L294)
+[index.ts:294](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L294)
 
 ___
 
@@ -217,39 +217,39 @@ The top coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:318](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L318)
+[index.ts:318](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L318)
 
 ___
 
 ### topRight
 
-• `get` **topRight**(): [`Vec2`](Vec2.md)
+• `get` **topRight**(): [`Vec2`](api/classes/Vec2.md)
 
 The top-right position (in top-left origin coordinates) of this rectangle.
 
 #### Returns
 
-[`Vec2`](Vec2.md)
+[`Vec2`](api/classes/Vec2.md)
 
 #### Defined in
 
-[index.ts:300](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L300)
+[index.ts:300](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L300)
 
 ___
 
 ### vertices
 
-• `get` **vertices**(): [[`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md)]
+• `get` **vertices**(): [[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)]
 
 Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
 
 #### Returns
 
-[[`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md)]
+[[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)]
 
 #### Defined in
 
-[index.ts:448](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L448)
+[index.ts:448](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L448)
 
 ___
 
@@ -265,7 +265,7 @@ The width of this rectangle.
 
 #### Defined in
 
-[index.ts:336](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L336)
+[index.ts:336](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L336)
 
 ## Methods
 
@@ -279,7 +279,7 @@ Checks if the rectangles has same values.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Rect`](Rect.md) |
+| `other` | [`Rect`](api/classes/Rect.md) |
 
 #### Returns
 
@@ -287,7 +287,7 @@ Checks if the rectangles has same values.
 
 #### Defined in
 
-[index.ts:284](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L284)
+[index.ts:284](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L284)
 
 ___
 
@@ -301,7 +301,7 @@ Returns if this rectangle include pos.
 
 | Name | Type |
 | :------ | :------ |
-| `pos` | [`Vec2`](Vec2.md) |
+| `pos` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
@@ -309,13 +309,13 @@ Returns if this rectangle include pos.
 
 #### Defined in
 
-[index.ts:391](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L391)
+[index.ts:391](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L391)
 
 ___
 
 ### inflate
 
-▸ **inflate**(`offset`): [`Rect`](Rect.md)
+▸ **inflate**(`offset`): [`Rect`](api/classes/Rect.md)
 
 #### Parameters
 
@@ -325,57 +325,57 @@ ___
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:368](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L368)
+[index.ts:368](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L368)
 
 ___
 
 ### inset
 
-▸ **inset**(`offsets`): [`Rect`](Rect.md)
+▸ **inset**(`offsets`): [`Rect`](api/classes/Rect.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `offsets` | [`EdgeOffsets`](EdgeOffsets.md) |
+| `offsets` | [`EdgeOffsets`](api/classes/EdgeOffsets.md) |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:373](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L373)
+[index.ts:373](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L373)
 
 ___
 
 ### insetsTo
 
-▸ **insetsTo**(`other`): [`EdgeOffsets`](EdgeOffsets.md)
+▸ **insetsTo**(`other`): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Rect`](Rect.md) |
+| `other` | [`Rect`](api/classes/Rect.md) |
 
 #### Returns
 
-[`EdgeOffsets`](EdgeOffsets.md)
+[`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Defined in
 
-[index.ts:380](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L380)
+[index.ts:380](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L380)
 
 ___
 
 ### intersection
 
-▸ **intersection**(`other`): `undefined` \| [`Rect`](Rect.md)
+▸ **intersection**(`other`): `undefined` \| [`Rect`](api/classes/Rect.md)
 
 Returns the largest rectangle contained in both this and other.
 
@@ -383,15 +383,15 @@ Returns the largest rectangle contained in both this and other.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Rect`](Rect.md) |
+| `other` | [`Rect`](api/classes/Rect.md) |
 
 #### Returns
 
-`undefined` \| [`Rect`](Rect.md)
+`undefined` \| [`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:427](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L427)
+[index.ts:427](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L427)
 
 ___
 
@@ -405,23 +405,23 @@ ___
 
 #### Defined in
 
-[index.ts:441](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L441)
+[index.ts:441](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L441)
 
 ___
 
 ### toIntBounding
 
-▸ **toIntBounding**(): [`Rect`](Rect.md)
+▸ **toIntBounding**(): [`Rect`](api/classes/Rect.md)
 
 Calculates the smallest integer rectangle which includes this rectangle.
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:356](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L356)
+[index.ts:356](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L356)
 
 ___
 
@@ -435,13 +435,13 @@ ___
 
 #### Defined in
 
-[index.ts:437](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L437)
+[index.ts:437](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L437)
 
 ___
 
 ### transform
 
-▸ **transform**(`transform`): [`Rect`](Rect.md)
+▸ **transform**(`transform`): [`Rect`](api/classes/Rect.md)
 
 Transforms each corners by transform and returns the bounding rectangle.
 
@@ -449,21 +449,21 @@ Transforms each corners by transform and returns the bounding rectangle.
 
 | Name | Type |
 | :------ | :------ |
-| `transform` | [`Transform`](Transform.md) |
+| `transform` | [`Transform`](api/classes/Transform.md) |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:403](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L403)
+[index.ts:403](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L403)
 
 ___
 
 ### translate
 
-▸ **translate**(`offset`): [`Rect`](Rect.md)
+▸ **translate**(`offset`): [`Rect`](api/classes/Rect.md)
 
 Translates this rectangle by offset.
 
@@ -471,21 +471,21 @@ Translates this rectangle by offset.
 
 | Name | Type |
 | :------ | :------ |
-| `offset` | [`Vec2`](Vec2.md) |
+| `offset` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:364](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L364)
+[index.ts:364](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L364)
 
 ___
 
 ### union
 
-▸ **union**(`other`): [`Rect`](Rect.md)
+▸ **union**(`other`): [`Rect`](api/classes/Rect.md)
 
 Returns the smallest rectangle which contains both this and other.
 
@@ -493,41 +493,41 @@ Returns the smallest rectangle which contains both this and other.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Rect`](Rect.md) |
+| `other` | [`Rect`](api/classes/Rect.md) |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:415](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L415)
+[index.ts:415](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L415)
 
 ___
 
 ### boundingRect
 
-▸ `Static` **boundingRect**(`points`): [`Rect`](Rect.md)
+▸ `Static` **boundingRect**(`points`): [`Rect`](api/classes/Rect.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `points` | [`Vec2`](Vec2.md)[] |
+| `points` | [`Vec2`](api/classes/Vec2.md)[] |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:539](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L539)
+[index.ts:539](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L539)
 
 ___
 
 ### from
 
-▸ `Static` **from**(`options`): [`Rect`](Rect.md)
+▸ `Static` **from**(`options`): [`Rect`](api/classes/Rect.md)
 
 Creates Rect from rect-like objects.
 
@@ -535,21 +535,21 @@ Creates Rect from rect-like objects.
 
 | Name | Type |
 | :------ | :------ |
-| `options` | { `height`: `number` ; `width`: `number` ; `x`: `number` ; `y`: `number`  } \| { `height`: `number` ; `left`: `number` ; `top`: `number` ; `width`: `number`  } \| { `bottom`: `number` ; `left`: `number` ; `right`: `number` ; `top`: `number`  } \| { `bottomRight`: [`Vec2`](Vec2.md) ; `topLeft`: [`Vec2`](Vec2.md)  } \| { `size`: [`Vec2`](Vec2.md) ; `topLeft`: [`Vec2`](Vec2.md)  } |
+| `options` | { `height`: `number` ; `width`: `number` ; `x`: `number` ; `y`: `number`  } \| { `height`: `number` ; `left`: `number` ; `top`: `number` ; `width`: `number`  } \| { `bottom`: `number` ; `left`: `number` ; `right`: `number` ; `top`: `number`  } \| { `bottomRight`: [`Vec2`](api/classes/Vec2.md) ; `topLeft`: [`Vec2`](api/classes/Vec2.md)  } \| { `size`: [`Vec2`](api/classes/Vec2.md) ; `topLeft`: [`Vec2`](api/classes/Vec2.md)  } |
 
 #### Returns
 
-[`Rect`](Rect.md)
+[`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:486](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L486)
+[index.ts:486](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L486)
 
 ___
 
 ### intersection
 
-▸ `Static` **intersection**(...`rects`): `undefined` \| [`Rect`](Rect.md)
+▸ `Static` **intersection**(...`rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
 
 Calculates the rectangle that represents the shared region of given rectangles.
 
@@ -557,21 +557,21 @@ Calculates the rectangle that represents the shared region of given rectangles.
 
 | Name | Type |
 | :------ | :------ |
-| `...rects` | [`Rect`](Rect.md)[] |
+| `...rects` | [`Rect`](api/classes/Rect.md)[] |
 
 #### Returns
 
-`undefined` \| [`Rect`](Rect.md)
+`undefined` \| [`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:469](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L469)
+[index.ts:469](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L469)
 
 ___
 
 ### union
 
-▸ `Static` **union**(...`rects`): `undefined` \| [`Rect`](Rect.md)
+▸ `Static` **union**(...`rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
 
 Calculates the bounding rectangle of given rectangles.
 
@@ -579,12 +579,12 @@ Calculates the bounding rectangle of given rectangles.
 
 | Name | Type |
 | :------ | :------ |
-| `...rects` | [`Rect`](Rect.md)[] |
+| `...rects` | [`Rect`](api/classes/Rect.md)[] |
 
 #### Returns
 
-`undefined` \| [`Rect`](Rect.md)
+`undefined` \| [`Rect`](api/classes/Rect.md)
 
 #### Defined in
 
-[index.ts:455](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L455)
+[index.ts:455](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L455)

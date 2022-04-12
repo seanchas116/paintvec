@@ -1,4 +1,4 @@
-[paintvec](../README.md) / [Exports](../modules.md) / Transform
+[paintvec](api/README.md) / [Exports](api/modules.md) / Transform
 
 # Class: Transform
 
@@ -22,45 +22,45 @@ const transform = translate.merge(scale).merge(rotate)
 
 ### Constructors
 
-- [constructor](Transform.md#constructor)
+- [constructor](api/classes/Transform.md#constructor)
 
 ### Properties
 
-- [m00](Transform.md#m00)
-- [m01](Transform.md#m01)
-- [m02](Transform.md#m02)
-- [m10](Transform.md#m10)
-- [m11](Transform.md#m11)
-- [m12](Transform.md#m12)
-- [m20](Transform.md#m20)
-- [m21](Transform.md#m21)
-- [m22](Transform.md#m22)
+- [m00](api/classes/Transform.md#m00)
+- [m01](api/classes/Transform.md#m01)
+- [m02](api/classes/Transform.md#m02)
+- [m10](api/classes/Transform.md#m10)
+- [m11](api/classes/Transform.md#m11)
+- [m12](api/classes/Transform.md#m12)
+- [m20](api/classes/Transform.md#m20)
+- [m21](api/classes/Transform.md#m21)
+- [m22](api/classes/Transform.md#m22)
 
 ### Accessors
 
-- [isAffine](Transform.md#isaffine)
-- [isTranslation](Transform.md#istranslation)
-- [members](Transform.md#members)
-- [withoutTranslation](Transform.md#withouttranslation)
+- [isAffine](api/classes/Transform.md#isaffine)
+- [isTranslation](api/classes/Transform.md#istranslation)
+- [members](api/classes/Transform.md#members)
+- [withoutTranslation](api/classes/Transform.md#withouttranslation)
 
 ### Methods
 
-- [equals](Transform.md#equals)
-- [invert](Transform.md#invert)
-- [merge](Transform.md#merge)
-- [rotate](Transform.md#rotate)
-- [scale](Transform.md#scale)
-- [toCSSMatrix3DString](Transform.md#tocssmatrix3dstring)
-- [toCSSMatrixString](Transform.md#tocssmatrixstring)
-- [toString](Transform.md#tostring)
-- [translate](Transform.md#translate)
-- [merge](Transform.md#merge-1)
-- [quadToQuad](Transform.md#quadtoquad)
-- [rectToRect](Transform.md#recttorect)
-- [rotate](Transform.md#rotate-1)
-- [scale](Transform.md#scale-1)
-- [translate](Transform.md#translate-1)
-- [unitToQuad](Transform.md#unittoquad)
+- [equals](api/classes/Transform.md#equals)
+- [invert](api/classes/Transform.md#invert)
+- [merge](api/classes/Transform.md#merge)
+- [rotate](api/classes/Transform.md#rotate)
+- [scale](api/classes/Transform.md#scale)
+- [toCSSMatrix3DString](api/classes/Transform.md#tocssmatrix3dstring)
+- [toCSSMatrixString](api/classes/Transform.md#tocssmatrixstring)
+- [toString](api/classes/Transform.md#tostring)
+- [translate](api/classes/Transform.md#translate)
+- [merge](api/classes/Transform.md#merge-1)
+- [quadToQuad](api/classes/Transform.md#quadtoquad)
+- [rectToRect](api/classes/Transform.md#recttorect)
+- [rotate](api/classes/Transform.md#rotate-1)
+- [scale](api/classes/Transform.md#scale-1)
+- [translate](api/classes/Transform.md#translate-1)
+- [unitToQuad](api/classes/Transform.md#unittoquad)
 
 ## Constructors
 
@@ -92,7 +92,7 @@ Creates a transform. It returns no-op transform when no arguments given.
 
 #### Defined in
 
-[index.ts:651](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L651)
+[index.ts:651](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L651)
 
 ## Properties
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[index.ts:753](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L753)
+[index.ts:753](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L753)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[index.ts:757](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L757)
+[index.ts:757](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L757)
 
 ___
 
@@ -190,21 +190,21 @@ Returns the members (m00, m01, 002, ... m22) in an array.
 
 #### Defined in
 
-[index.ts:784](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L784)
+[index.ts:784](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L784)
 
 ___
 
 ### withoutTranslation
 
-• `get` **withoutTranslation**(): [`Transform`](Transform.md)
+• `get` **withoutTranslation**(): [`Transform`](api/classes/Transform.md)
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:767](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L767)
+[index.ts:767](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L767)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Checks if the transforms has same values.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Transform`](Transform.md) |
+| `other` | [`Transform`](api/classes/Transform.md) |
 
 #### Returns
 
@@ -226,29 +226,29 @@ Checks if the transforms has same values.
 
 #### Defined in
 
-[index.ts:666](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L666)
+[index.ts:666](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L666)
 
 ___
 
 ### invert
 
-▸ **invert**(): `undefined` \| [`Transform`](Transform.md)
+▸ **invert**(): `undefined` \| [`Transform`](api/classes/Transform.md)
 
 Inverts the transform. Returns undefined if this transform is not invertible.
 
 #### Returns
 
-`undefined` \| [`Transform`](Transform.md)
+`undefined` \| [`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:720](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L720)
+[index.ts:720](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L720)
 
 ___
 
 ### merge
 
-▸ **merge**(`other`): [`Transform`](Transform.md)
+▸ **merge**(`other`): [`Transform`](api/classes/Transform.md)
 
 Merges 2 transforms. The returned transform represents "transform by this transform, then other transform".
 
@@ -256,21 +256,21 @@ Merges 2 transforms. The returned transform represents "transform by this transf
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`Transform`](Transform.md) |
+| `other` | [`Transform`](api/classes/Transform.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:683](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L683)
+[index.ts:683](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L683)
 
 ___
 
 ### rotate
 
-▸ **rotate**(`angle`): [`Transform`](Transform.md)
+▸ **rotate**(`angle`): [`Transform`](api/classes/Transform.md)
 
 #### Parameters
 
@@ -280,31 +280,31 @@ ___
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:834](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L834)
+[index.ts:834](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L834)
 
 ___
 
 ### scale
 
-▸ **scale**(`scale`): [`Transform`](Transform.md)
+▸ **scale**(`scale`): [`Transform`](api/classes/Transform.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `scale` | [`Vec2`](Vec2.md) |
+| `scale` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:826](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L826)
+[index.ts:826](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L826)
 
 ___
 
@@ -321,7 +321,7 @@ This supports perspective transform.
 
 #### Defined in
 
-[index.ts:814](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L814)
+[index.ts:814](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L814)
 
 ___
 
@@ -337,7 +337,7 @@ Returns the CSS matrix() string.
 
 #### Defined in
 
-[index.ts:805](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L805)
+[index.ts:805](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L805)
 
 ___
 
@@ -351,33 +351,33 @@ ___
 
 #### Defined in
 
-[index.ts:798](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L798)
+[index.ts:798](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L798)
 
 ___
 
 ### translate
 
-▸ **translate**(`offset`): [`Transform`](Transform.md)
+▸ **translate**(`offset`): [`Transform`](api/classes/Transform.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `offset` | [`Vec2`](Vec2.md) |
+| `offset` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:830](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L830)
+[index.ts:830](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L830)
 
 ___
 
 ### merge
 
-▸ `Static` **merge**(...`transforms`): [`Transform`](Transform.md)
+▸ `Static` **merge**(...`transforms`): [`Transform`](api/classes/Transform.md)
 
 Merges all transforms.
 
@@ -385,63 +385,63 @@ Merges all transforms.
 
 | Name | Type |
 | :------ | :------ |
-| `...transforms` | [`Transform`](Transform.md)[] |
+| `...transforms` | [`Transform`](api/classes/Transform.md)[] |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:920](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L920)
+[index.ts:920](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L920)
 
 ___
 
 ### quadToQuad
 
-▸ `Static` **quadToQuad**(`from`, `to`): `undefined` \| [`Transform`](Transform.md)
+▸ `Static` **quadToQuad**(`from`, `to`): `undefined` \| [`Transform`](api/classes/Transform.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `from` | [[`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md)] |
-| `to` | [[`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md)] |
+| `from` | [[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)] |
+| `to` | [[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)] |
 
 #### Returns
 
-`undefined` \| [`Transform`](Transform.md)
+`undefined` \| [`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:895](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L895)
+[index.ts:895](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L895)
 
 ___
 
 ### rectToRect
 
-▸ `Static` **rectToRect**(`from`, `to`): [`Transform`](Transform.md)
+▸ `Static` **rectToRect**(`from`, `to`): [`Transform`](api/classes/Transform.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `from` | [`Rect`](Rect.md) |
-| `to` | [`Rect`](Rect.md) |
+| `from` | [`Rect`](api/classes/Rect.md) |
+| `to` | [`Rect`](api/classes/Rect.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:911](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L911)
+[index.ts:911](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L911)
 
 ___
 
 ### rotate
 
-▸ `Static` **rotate**(`angle`): [`Transform`](Transform.md)
+▸ `Static` **rotate**(`angle`): [`Transform`](api/classes/Transform.md)
 
 Returns the transform that represents rotating by angle (in radians).
 
@@ -453,17 +453,17 @@ Returns the transform that represents rotating by angle (in radians).
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:848](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L848)
+[index.ts:848](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L848)
 
 ___
 
 ### scale
 
-▸ `Static` **scale**(`scale`): [`Transform`](Transform.md)
+▸ `Static` **scale**(`scale`): [`Transform`](api/classes/Transform.md)
 
 Returns the transform that represents scaling.
 
@@ -471,21 +471,21 @@ Returns the transform that represents scaling.
 
 | Name | Type |
 | :------ | :------ |
-| `scale` | [`Vec2`](Vec2.md) |
+| `scale` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:841](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L841)
+[index.ts:841](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L841)
 
 ___
 
 ### translate
 
-▸ `Static` **translate**(`translation`): [`Transform`](Transform.md)
+▸ `Static` **translate**(`translation`): [`Transform`](api/classes/Transform.md)
 
 Returns the transform that represents translating.
 
@@ -493,21 +493,21 @@ Returns the transform that represents translating.
 
 | Name | Type |
 | :------ | :------ |
-| `translation` | [`Vec2`](Vec2.md) |
+| `translation` | [`Vec2`](api/classes/Vec2.md) |
 
 #### Returns
 
-[`Transform`](Transform.md)
+[`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:857](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L857)
+[index.ts:857](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L857)
 
 ___
 
 ### unitToQuad
 
-▸ `Static` **unitToQuad**(`quad`): `undefined` \| [`Transform`](Transform.md)
+▸ `Static` **unitToQuad**(`quad`): `undefined` \| [`Transform`](api/classes/Transform.md)
 
 Returns the perspective transform that transforms the unit square ([(0, 0), (1, 0), (1, 1), (0, 1)]) to the specified quadrangle.
 Reference: Projective Mappings for Image Warping
@@ -516,12 +516,12 @@ Reference: Projective Mappings for Image Warping
 
 | Name | Type |
 | :------ | :------ |
-| `quad` | [[`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md), [`Vec2`](Vec2.md)] |
+| `quad` | [[`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md), [`Vec2`](api/classes/Vec2.md)] |
 
 #### Returns
 
-`undefined` \| [`Transform`](Transform.md)
+`undefined` \| [`Transform`](api/classes/Transform.md)
 
 #### Defined in
 
-[index.ts:865](https://github.com/seanchas116/paintvec/blob/febe25d/index.ts#L865)
+[index.ts:865](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L865)
