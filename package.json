@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "build": "prettier --write *.ts && tsc",
-    "docs": "typedoc --theme node_modules/typedoc-theme-clean/bin --out docs index.ts",
+    "docs": "typedoc --out docs index.ts",
     "test": "npm run build && mocha test.js"
   },
   "repository": {
