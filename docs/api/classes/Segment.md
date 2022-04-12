@@ -1,34 +1,10 @@
-[paintvec](api/README.md) / [Exports](api/modules.md) / Segment
-
 # Class: Segment
-
-## Table of contents
-
-### Constructors
-
-- [constructor](api/classes/Segment.md#constructor)
-
-### Properties
-
-- [p1](api/classes/Segment.md#p1)
-- [p2](api/classes/Segment.md#p2)
-
-### Accessors
-
-- [angle](api/classes/Segment.md#angle)
-- [length](api/classes/Segment.md#length)
-
-### Methods
-
-- [equals](api/classes/Segment.md#equals)
-- [toString](api/classes/Segment.md#tostring)
-- [transform](api/classes/Segment.md#transform)
 
 ## Constructors
 
 ### constructor
 
-• **new Segment**(`p1`, `p2`)
+**new Segment**(`p1`, `p2`)
 
 #### Parameters
 
@@ -39,25 +15,25 @@
 
 #### Defined in
 
-[index.ts:232](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L232)
+[index.ts:232](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L232)
 
 ## Properties
 
 ### p1
 
-• **p1**: [`Vec2`](api/classes/Vec2.md)
+ **p1**: [`Vec2`](api/classes/Vec2.md)
 
 ___
 
 ### p2
 
-• **p2**: [`Vec2`](api/classes/Vec2.md)
+ **p2**: [`Vec2`](api/classes/Vec2.md)
 
 ## Accessors
 
 ### angle
 
-• `get` **angle**(): `number`
+`get` **angle**(): `number`
 
 #### Returns
 
@@ -65,13 +41,13 @@ ___
 
 #### Defined in
 
-[index.ts:242](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L242)
+[index.ts:242](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L242)
 
 ___
 
 ### length
 
-• `get` **length**(): `number`
+`get` **length**(): `number`
 
 #### Returns
 
@@ -79,13 +55,13 @@ ___
 
 #### Defined in
 
-[index.ts:238](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L238)
+[index.ts:238](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L238)
 
 ## Methods
 
 ### equals
 
-▸ **equals**(`other`): `boolean`
+**equals**(`other`): `boolean`
 
 #### Parameters
 
@@ -99,13 +75,13 @@ ___
 
 #### Defined in
 
-[index.ts:234](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L234)
+[index.ts:234](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L234)
 
 ___
 
 ### toString
 
-▸ **toString**(): `string`
+**toString**(): `string`
 
 #### Returns
 
@@ -113,13 +89,13 @@ ___
 
 #### Defined in
 
-[index.ts:253](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L253)
+[index.ts:253](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L253)
 
 ___
 
 ### transform
 
-▸ **transform**(`transform`): [`Segment`](api/classes/Segment.md)
+**transform**(`transform`): [`Segment`](api/classes/Segment.md)
 
 #### Parameters
 
@@ -133,4 +109,4 @@ ___
 
 #### Defined in
 
-[index.ts:246](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L246)
+[index.ts:246](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L246)

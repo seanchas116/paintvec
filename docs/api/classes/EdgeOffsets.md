@@ -1,39 +1,12 @@
-[paintvec](api/README.md) / [Exports](api/modules.md) / EdgeOffsets
-
 # Class: EdgeOffsets
 
 EdgeOffsets represents edge offsets which are applied to rectangles.
-
-## Table of contents
-
-### Constructors
-
-- [constructor](api/classes/EdgeOffsets.md#constructor)
-
-### Properties
-
-- [bottomRight](api/classes/EdgeOffsets.md#bottomright)
-- [topLeft](api/classes/EdgeOffsets.md#topleft)
-
-### Accessors
-
-- [bottom](api/classes/EdgeOffsets.md#bottom)
-- [left](api/classes/EdgeOffsets.md#left)
-- [neg](api/classes/EdgeOffsets.md#neg)
-- [right](api/classes/EdgeOffsets.md#right)
-- [top](api/classes/EdgeOffsets.md#top)
-
-### Methods
-
-- [equals](api/classes/EdgeOffsets.md#equals)
-- [toString](api/classes/EdgeOffsets.md#tostring)
-- [from](api/classes/EdgeOffsets.md#from)
 
 ## Constructors
 
 ### constructor
 
-• **new EdgeOffsets**(`topLeft`, `bottomRight`)
+**new EdgeOffsets**(`topLeft`, `bottomRight`)
 
 #### Parameters
 
@@ -44,25 +17,25 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 
 #### Defined in
 
-[index.ts:554](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L554)
+[index.ts:554](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L554)
 
 ## Properties
 
 ### bottomRight
 
-• **bottomRight**: [`Vec2`](api/classes/Vec2.md)
+ **bottomRight**: [`Vec2`](api/classes/Vec2.md)
 
 ___
 
 ### topLeft
 
-• **topLeft**: [`Vec2`](api/classes/Vec2.md)
+ **topLeft**: [`Vec2`](api/classes/Vec2.md)
 
 ## Accessors
 
 ### bottom
 
-• `get` **bottom**(): `number`
+`get` **bottom**(): `number`
 
 #### Returns
 
@@ -70,13 +43,13 @@ ___
 
 #### Defined in
 
-[index.ts:565](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L565)
+[index.ts:565](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L565)
 
 ___
 
 ### left
 
-• `get` **left**(): `number`
+`get` **left**(): `number`
 
 #### Returns
 
@@ -84,13 +57,13 @@ ___
 
 #### Defined in
 
-[index.ts:556](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L556)
+[index.ts:556](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L556)
 
 ___
 
 ### neg
 
-• `get` **neg**(): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
+`get` **neg**(): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Returns
 
@@ -98,13 +71,13 @@ ___
 
 #### Defined in
 
-[index.ts:569](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L569)
+[index.ts:569](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L569)
 
 ___
 
 ### right
 
-• `get` **right**(): `number`
+`get` **right**(): `number`
 
 #### Returns
 
@@ -112,13 +85,13 @@ ___
 
 #### Defined in
 
-[index.ts:562](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L562)
+[index.ts:562](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L562)
 
 ___
 
 ### top
 
-• `get` **top**(): `number`
+`get` **top**(): `number`
 
 #### Returns
 
@@ -126,13 +99,13 @@ ___
 
 #### Defined in
 
-[index.ts:559](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L559)
+[index.ts:559](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L559)
 
 ## Methods
 
 ### equals
 
-▸ **equals**(`other`): `boolean`
+**equals**(`other`): `boolean`
 
 #### Parameters
 
@@ -146,13 +119,13 @@ ___
 
 #### Defined in
 
-[index.ts:573](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L573)
+[index.ts:573](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L573)
 
 ___
 
 ### toString
 
-▸ **toString**(): `string`
+**toString**(): `string`
 
 #### Returns
 
@@ -160,13 +133,13 @@ ___
 
 #### Defined in
 
-[index.ts:580](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L580)
+[index.ts:580](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L580)
 
 ___
 
 ### from
 
-▸ `Static` **from**(`options`): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
+`Static` **from**(`options`): [`EdgeOffsets`](api/classes/EdgeOffsets.md)
 
 #### Parameters
 
@@ -180,4 +153,4 @@ ___
 
 #### Defined in
 
-[index.ts:584](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L584)
+[index.ts:584](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L584)

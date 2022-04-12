@@ -1,5 +1,3 @@
-paintvec / [Exports](api/modules.md)
-
 # paintvec
 
 [![npm version](https://badge.fury.io/js/paintvec.svg)](https://badge.fury.io/js/paintvec)

@@ -1,10 +1,6 @@
-[paintvec](api/README.md) / Exports
-
 # paintvec
 
-## Table of contents
-
-### Classes
+## Classes
 
 - [EdgeOffsets](api/classes/EdgeOffsets.md)
 - [Rect](api/classes/Rect.md)

@@ -1,5 +1,3 @@
-[paintvec](api/README.md) / [Exports](api/modules.md) / Vec2
-
 # Class: Vec2
 
 Vec2 represents 2D vector, point or size.
@@ -13,55 +11,11 @@ b.length //=> 5
 ...
 ```
 
-## Table of contents
-
-### Constructors
-
-- [constructor](api/classes/Vec2.md#constructor)
-
-### Properties
-
-- [x](api/classes/Vec2.md#x)
-- [y](api/classes/Vec2.md#y)
-
-### Accessors
-
-- [abs](api/classes/Vec2.md#abs)
-- [angle](api/classes/Vec2.md#angle)
-- [ceil](api/classes/Vec2.md#ceil)
-- [floor](api/classes/Vec2.md#floor)
-- [height](api/classes/Vec2.md#height)
-- [length](api/classes/Vec2.md#length)
-- [members](api/classes/Vec2.md#members)
-- [neg](api/classes/Vec2.md#neg)
-- [round](api/classes/Vec2.md#round)
-- [squaredLength](api/classes/Vec2.md#squaredlength)
-- [width](api/classes/Vec2.md#width)
-
-### Methods
-
-- [add](api/classes/Vec2.md#add)
-- [clamp](api/classes/Vec2.md#clamp)
-- [cross](api/classes/Vec2.md#cross)
-- [div](api/classes/Vec2.md#div)
-- [divScalar](api/classes/Vec2.md#divscalar)
-- [dot](api/classes/Vec2.md#dot)
-- [equals](api/classes/Vec2.md#equals)
-- [mix](api/classes/Vec2.md#mix)
-- [mul](api/classes/Vec2.md#mul)
-- [mulScalar](api/classes/Vec2.md#mulscalar)
-- [sub](api/classes/Vec2.md#sub)
-- [toString](api/classes/Vec2.md#tostring)
-- [transform](api/classes/Vec2.md#transform)
-- [from](api/classes/Vec2.md#from)
-- [max](api/classes/Vec2.md#max)
-- [min](api/classes/Vec2.md#min)
-
 ## Constructors
 
 ### constructor
 
-• **new Vec2**(`x?`, `y?`)
+**new Vec2**(`x?`, `y?`)
 
 #### Parameters
 
@@ -72,25 +26,25 @@ b.length //=> 5
 
 #### Defined in
 
-[index.ts:18](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L18)
+[index.ts:18](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L18)
 
 ## Properties
 
 ### x
 
-• **x**: `number` = `0`
+ **x**: `number` = `0`
 
 ___
 
 ### y
 
-• **y**: `number` = `x`
+ **y**: `number` = `x`
 
 ## Accessors
 
 ### abs
 
-• `get` **abs**(): [`Vec2`](api/classes/Vec2.md)
+`get` **abs**(): [`Vec2`](api/classes/Vec2.md)
 
 Returns absolute values of this vector.
 
@@ -100,13 +54,13 @@ Returns absolute values of this vector.
 
 #### Defined in
 
-[index.ts:153](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L153)
+[index.ts:153](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L153)
 
 ___
 
 ### angle
 
-• `get` **angle**(): `number`
+`get` **angle**(): `number`
 
 Calculates the angle of this vector from positive x-axis in [-PI, PI].
 
@@ -116,13 +70,13 @@ Calculates the angle of this vector from positive x-axis in [-PI, PI].
 
 #### Defined in
 
-[index.ts:99](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L99)
+[index.ts:99](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L99)
 
 ___
 
 ### ceil
 
-• `get` **ceil**(): [`Vec2`](api/classes/Vec2.md)
+`get` **ceil**(): [`Vec2`](api/classes/Vec2.md)
 
 Rounds up the components of this vector.
 
@@ -132,13 +86,13 @@ Rounds up the components of this vector.
 
 #### Defined in
 
-[index.ts:140](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L140)
+[index.ts:140](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L140)
 
 ___
 
 ### floor
 
-• `get` **floor**(): [`Vec2`](api/classes/Vec2.md)
+`get` **floor**(): [`Vec2`](api/classes/Vec2.md)
 
 Rounds down the components of this vector.
 
@@ -148,13 +102,13 @@ Rounds down the components of this vector.
 
 #### Defined in
 
-[index.ts:134](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L134)
+[index.ts:134](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L134)
 
 ___
 
 ### height
 
-• `get` **height**(): `number`
+`get` **height**(): `number`
 
 Returns y.
 
@@ -164,13 +118,13 @@ Returns y.
 
 #### Defined in
 
-[index.ts:29](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L29)
+[index.ts:29](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L29)
 
 ___
 
 ### length
 
-• `get` **length**(): `number`
+`get` **length**(): `number`
 
 Calculates the length of this vector.
 
@@ -180,13 +134,13 @@ Calculates the length of this vector.
 
 #### Defined in
 
-[index.ts:86](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L86)
+[index.ts:86](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L86)
 
 ___
 
 ### members
 
-• `get` **members**(): [`number`, `number`]
+`get` **members**(): [`number`, `number`]
 
 Gets an array of [x, y].
 
@@ -196,13 +150,13 @@ Gets an array of [x, y].
 
 #### Defined in
 
-[index.ts:182](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L182)
+[index.ts:182](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L182)
 
 ___
 
 ### neg
 
-• `get` **neg**(): [`Vec2`](api/classes/Vec2.md)
+`get` **neg**(): [`Vec2`](api/classes/Vec2.md)
 
 Inverts this vector.
 
@@ -212,13 +166,13 @@ Inverts this vector.
 
 #### Defined in
 
-[index.ts:79](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L79)
+[index.ts:79](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L79)
 
 ___
 
 ### round
 
-• `get` **round**(): [`Vec2`](api/classes/Vec2.md)
+`get` **round**(): [`Vec2`](api/classes/Vec2.md)
 
 Rounds the components of this vector to nearest integer.
 
@@ -228,13 +182,13 @@ Rounds the components of this vector to nearest integer.
 
 #### Defined in
 
-[index.ts:146](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L146)
+[index.ts:146](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L146)
 
 ___
 
 ### squaredLength
 
-• `get` **squaredLength**(): `number`
+`get` **squaredLength**(): `number`
 
 Calculates the squared length of this vector.
 
@@ -244,13 +198,13 @@ Calculates the squared length of this vector.
 
 #### Defined in
 
-[index.ts:92](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L92)
+[index.ts:92](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L92)
 
 ___
 
 ### width
 
-• `get` **width**(): `number`
+`get` **width**(): `number`
 
 Returns x.
 
@@ -260,13 +214,13 @@ Returns x.
 
 #### Defined in
 
-[index.ts:23](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L23)
+[index.ts:23](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L23)
 
 ## Methods
 
 ### add
 
-▸ **add**(`v`): [`Vec2`](api/classes/Vec2.md)
+**add**(`v`): [`Vec2`](api/classes/Vec2.md)
 
 Adds v to this vector.
 
@@ -282,13 +236,13 @@ Adds v to this vector.
 
 #### Defined in
 
-[index.ts:43](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L43)
+[index.ts:43](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L43)
 
 ___
 
 ### clamp
 
-▸ **clamp**(`min`, `max`): [`Vec2`](api/classes/Vec2.md)
+**clamp**(`min`, `max`): [`Vec2`](api/classes/Vec2.md)
 
 Clamp the components within the min and max values.
 
@@ -305,13 +259,13 @@ Clamp the components within the min and max values.
 
 #### Defined in
 
-[index.ts:162](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L162)
+[index.ts:162](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L162)
 
 ___
 
 ### cross
 
-▸ **cross**(`other`): `number`
+**cross**(`other`): `number`
 
 Returns the cross product of this and other.
 
@@ -327,13 +281,13 @@ Returns the cross product of this and other.
 
 #### Defined in
 
-[index.ts:115](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L115)
+[index.ts:115](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L115)
 
 ___
 
 ### div
 
-▸ **div**(`v`): [`Vec2`](api/classes/Vec2.md)
+**div**(`v`): [`Vec2`](api/classes/Vec2.md)
 
 Divides components of this vector by v.
 
@@ -349,13 +303,13 @@ Divides components of this vector by v.
 
 #### Defined in
 
-[index.ts:61](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L61)
+[index.ts:61](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L61)
 
 ___
 
 ### divScalar
 
-▸ **divScalar**(`s`): [`Vec2`](api/classes/Vec2.md)
+**divScalar**(`s`): [`Vec2`](api/classes/Vec2.md)
 
 Divides this vector by scalar s.
 
@@ -371,13 +325,13 @@ Divides this vector by scalar s.
 
 #### Defined in
 
-[index.ts:73](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L73)
+[index.ts:73](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L73)
 
 ___
 
 ### dot
 
-▸ **dot**(`other`): `number`
+**dot**(`other`): `number`
 
 Returns the dot product of this and other.
 
@@ -393,13 +347,13 @@ Returns the dot product of this and other.
 
 #### Defined in
 
-[index.ts:107](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L107)
+[index.ts:107](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L107)
 
 ___
 
 ### equals
 
-▸ **equals**(`v`): `boolean`
+**equals**(`v`): `boolean`
 
 Checks if the vectors has same values.
 
@@ -415,13 +369,13 @@ Checks if the vectors has same values.
 
 #### Defined in
 
-[index.ts:36](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L36)
+[index.ts:36](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L36)
 
 ___
 
 ### mix
 
-▸ **mix**(`other`, `ratio`): [`Vec2`](api/classes/Vec2.md)
+**mix**(`other`, `ratio`): [`Vec2`](api/classes/Vec2.md)
 
 Returns this * (1 - ratio) + other * ratio.
 
@@ -438,13 +392,13 @@ Returns this * (1 - ratio) + other * ratio.
 
 #### Defined in
 
-[index.ts:124](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L124)
+[index.ts:124](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L124)
 
 ___
 
 ### mul
 
-▸ **mul**(`v`): [`Vec2`](api/classes/Vec2.md)
+**mul**(`v`): [`Vec2`](api/classes/Vec2.md)
 
 Multiplies components of this vector by v.
 
@@ -460,13 +414,13 @@ Multiplies components of this vector by v.
 
 #### Defined in
 
-[index.ts:55](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L55)
+[index.ts:55](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L55)
 
 ___
 
 ### mulScalar
 
-▸ **mulScalar**(`s`): [`Vec2`](api/classes/Vec2.md)
+**mulScalar**(`s`): [`Vec2`](api/classes/Vec2.md)
 
 Multiplies this vector by scalar s.
 
@@ -482,13 +436,13 @@ Multiplies this vector by scalar s.
 
 #### Defined in
 
-[index.ts:67](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L67)
+[index.ts:67](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L67)
 
 ___
 
 ### sub
 
-▸ **sub**(`v`): [`Vec2`](api/classes/Vec2.md)
+**sub**(`v`): [`Vec2`](api/classes/Vec2.md)
 
 Subtracts v from this vector.
 
@@ -504,13 +458,13 @@ Subtracts v from this vector.
 
 #### Defined in
 
-[index.ts:49](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L49)
+[index.ts:49](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L49)
 
 ___
 
 ### toString
 
-▸ **toString**(): `string`
+**toString**(): `string`
 
 #### Returns
 
@@ -518,13 +472,13 @@ ___
 
 #### Defined in
 
-[index.ts:186](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L186)
+[index.ts:186](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L186)
 
 ___
 
 ### transform
 
-▸ **transform**(`transform`): [`Vec2`](api/classes/Vec2.md)
+**transform**(`transform`): [`Vec2`](api/classes/Vec2.md)
 
 Transforms this vector with transform.
 
@@ -540,13 +494,13 @@ Transforms this vector with transform.
 
 #### Defined in
 
-[index.ts:172](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L172)
+[index.ts:172](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L172)
 
 ___
 
 ### from
 
-▸ `Static` **from**(`options`): [`Vec2`](api/classes/Vec2.md)
+`Static` **from**(`options`): [`Vec2`](api/classes/Vec2.md)
 
 Constructs Vec2 from vec2-like objects.
 
@@ -562,13 +516,13 @@ Constructs Vec2 from vec2-like objects.
 
 #### Defined in
 
-[index.ts:194](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L194)
+[index.ts:194](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L194)
 
 ___
 
 ### max
 
-▸ `Static` **max**(...`vs`): [`Vec2`](api/classes/Vec2.md)
+`Static` **max**(...`vs`): [`Vec2`](api/classes/Vec2.md)
 
 Returns max value for each component.
 
@@ -584,13 +538,13 @@ Returns max value for each component.
 
 #### Defined in
 
-[index.ts:224](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L224)
+[index.ts:224](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L224)
 
 ___
 
 ### min
 
-▸ `Static` **min**(...`vs`): [`Vec2`](api/classes/Vec2.md)
+`Static` **min**(...`vs`): [`Vec2`](api/classes/Vec2.md)
 
 Returns min value for each component.
 
@@ -606,4 +560,4 @@ Returns min value for each component.
 
 #### Defined in
 
-[index.ts:215](https://github.com/seanchas116/paintvec/blob/a2da251/index.ts#L215)
+[index.ts:215](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L215)
