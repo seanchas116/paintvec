@@ -17,7 +17,7 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 
 #### Defined in
 
-[index.ts:554](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L554)
+[index.ts:561](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L561)
 
 ## Properties
 
@@ -25,11 +25,19 @@ EdgeOffsets represents edge offsets which are applied to rectangles.
 
  **bottomRight**: [`Vec2`](api/classes/Vec2.md)
 
+#### Defined in
+
+[index.ts:561](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L561)
+
 ___
 
 ### topLeft
 
  **topLeft**: [`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:561](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L561)
 
 ## Accessors
 
@@ -43,7 +51,7 @@ ___
 
 #### Defined in
 
-[index.ts:565](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L565)
+[index.ts:572](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L572)
 
 ___
 
@@ -57,7 +65,7 @@ ___
 
 #### Defined in
 
-[index.ts:556](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L556)
+[index.ts:563](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L563)
 
 ___
 
@@ -71,7 +79,7 @@ ___
 
 #### Defined in
 
-[index.ts:569](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L569)
+[index.ts:576](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L576)
 
 ___
 
@@ -85,7 +93,7 @@ ___
 
 #### Defined in
 
-[index.ts:562](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L562)
+[index.ts:569](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L569)
 
 ___
 
@@ -99,7 +107,7 @@ ___
 
 #### Defined in
 
-[index.ts:559](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L559)
+[index.ts:566](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L566)
 
 ## Methods
 
@@ -119,7 +127,7 @@ ___
 
 #### Defined in
 
-[index.ts:573](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L573)
+[index.ts:580](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L580)
 
 ___
 
@@ -133,7 +141,7 @@ ___
 
 #### Defined in
 
-[index.ts:580](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L580)
+[index.ts:587](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L587)
 
 ___
 
@@ -153,4 +161,4 @@ ___
 
 #### Defined in
 
-[index.ts:584](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L584)
+[index.ts:591](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L591)

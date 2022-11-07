@@ -220,14 +220,23 @@ describe("Segment", () => {
 describe("Rect", () => {
   describe("equals", () => {
     it("compares 2 rects by value", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
-      const r2 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       assert(r1.equals(r2));
     });
   });
   describe("size", () => {
     it("returns size", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       const result = r1.size;
       assert.equal(result.width, 9);
       assert.equal(result.height, 28);
@@ -235,7 +244,10 @@ describe("Rect", () => {
   });
   describe("topRight", () => {
     it("returns top right", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       const result = r1.topRight;
       assert.equal(result.x, 10);
       assert.equal(result.y, 2);
@@ -243,7 +255,10 @@ describe("Rect", () => {
   });
   describe("bottomLeft", () => {
     it("returns bototm left", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       const result = r1.bottomLeft;
       assert.equal(result.x, 1);
       assert.equal(result.y, 30);
@@ -251,7 +266,10 @@ describe("Rect", () => {
   });
   describe("left, top, right, bottom, width, height", () => {
     it("returns each component", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       assert.equal(r1.left, 1);
       assert.equal(r1.top, 2);
       assert.equal(r1.right, 10);
@@ -262,7 +280,10 @@ describe("Rect", () => {
   });
   describe("center", () => {
     it("returns center", () => {
-      const r1 = new Rect(new Vec2(1, 2), new Vec2(10, 30));
+      const r1 = Rect.from({
+        topLeft: new Vec2(1, 2),
+        bottomRight: new Vec2(10, 30),
+      });
       const result = r1.center;
       assert.equal(result.x, 5.5);
       assert.equal(result.y, 16);
@@ -270,7 +291,10 @@ describe("Rect", () => {
   });
   describe("intBounding", () => {
     it("returns integer bounding rect", () => {
-      const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
+      const r1 = Rect.from({
+        topLeft: new Vec2(0.9, 1.5),
+        bottomRight: new Vec2(5.6, 4.3),
+      });
       const result = r1.toIntBounding();
       assert.equal(result.left, 0);
       assert.equal(result.top, 1);
@@ -280,7 +304,10 @@ describe("Rect", () => {
   });
   describe("translate", () => {
     it("translates rect", () => {
-      const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
+      const r1 = Rect.from({
+        topLeft: new Vec2(0.9, 1.5),
+        bottomRight: new Vec2(5.6, 4.3),
+      });
       const result = r1.translate(new Vec2(0.5, 0.3));
       assert.equal(result.left, 1.4);
       assert.equal(result.top, 1.8);
@@ -290,7 +317,10 @@ describe("Rect", () => {
   });
   describe("inflate", () => {
     it("inflates rect", () => {
-      const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
+      const r1 = Rect.from({
+        topLeft: new Vec2(0.9, 1.5),
+        bottomRight: new Vec2(5.6, 4.3),
+      });
       const result = r1.inflate(0.5);
       assert.equal(result.left, 0.4);
       assert.equal(result.top, 1);
@@ -327,7 +357,10 @@ describe("Rect", () => {
   });
   describe("includes", () => {
     it("returns if the point is inside the rect", () => {
-      const r1 = new Rect(new Vec2(0.9, 1.5), new Vec2(5.6, 4.3));
+      const r1 = Rect.from({
+        topLeft: new Vec2(0.9, 1.5),
+        bottomRight: new Vec2(5.6, 4.3),
+      });
       const p1 = new Vec2(1, 2);
       const p2 = new Vec2(-1, 2);
       const p3 = new Vec2(3, 5);
@@ -338,8 +371,14 @@ describe("Rect", () => {
   });
   describe("union", () => {
     it("returns union rect", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120));
-      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(50, 120),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(30, 0),
+        bottomRight: new Vec2(100, 60),
+      });
       const result = r1.union(r2);
       assert.equal(result.left, 10);
       assert.equal(result.top, 0);
@@ -349,8 +388,14 @@ describe("Rect", () => {
   });
   describe("intersection", () => {
     it("returns intersection rect", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120));
-      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(50, 120),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(30, 0),
+        bottomRight: new Vec2(100, 60),
+      });
       const result = r1.intersection(r2)!;
       assert.equal(result.left, 30);
       assert.equal(result.top, 20);
@@ -358,16 +403,28 @@ describe("Rect", () => {
       assert.equal(result.bottom, 60);
     });
     it("returns undefined if no intersection exists", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(30, 40));
-      const r2 = new Rect(new Vec2(100, 200), new Vec2(300, 400));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(30, 40),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(100, 200),
+        bottomRight: new Vec2(300, 400),
+      });
       const result = r1.intersection(r2)!;
       assert.equal(result, undefined);
     });
   });
   describe(".union", () => {
     it("returns union rect", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120));
-      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(50, 120),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(30, 0),
+        bottomRight: new Vec2(100, 60),
+      });
       const result = Rect.union(r1, r2)!;
       assert.equal(result.left, 10);
       assert.equal(result.top, 0);
@@ -377,8 +434,14 @@ describe("Rect", () => {
   });
   describe(".intersection", () => {
     it("returns intersection rect", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(50, 120));
-      const r2 = new Rect(new Vec2(30, 0), new Vec2(100, 60));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(50, 120),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(30, 0),
+        bottomRight: new Vec2(100, 60),
+      });
       const result = Rect.intersection(r1, r2)!;
       assert.equal(result.left, 30);
       assert.equal(result.top, 20);
@@ -386,8 +449,14 @@ describe("Rect", () => {
       assert.equal(result.bottom, 60);
     });
     it("returns undefined if no intersection exists", () => {
-      const r1 = new Rect(new Vec2(10, 20), new Vec2(30, 40));
-      const r2 = new Rect(new Vec2(100, 200), new Vec2(300, 400));
+      const r1 = Rect.from({
+        topLeft: new Vec2(10, 20),
+        bottomRight: new Vec2(30, 40),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(100, 200),
+        bottomRight: new Vec2(300, 400),
+      });
       const result = Rect.intersection(r1, r2);
       assert.equal(result, undefined);
     });
@@ -570,8 +639,14 @@ describe("Transform", () => {
   });
   describe("rectToRect", () => {
     it("returns transform from rect to quad", () => {
-      const r1 = new Rect(new Vec2(0, 100), new Vec2(100, 300));
-      const r2 = new Rect(new Vec2(-50, 0), new Vec2(0, 20));
+      const r1 = Rect.from({
+        topLeft: new Vec2(0, 100),
+        bottomRight: new Vec2(100, 300),
+      });
+      const r2 = Rect.from({
+        topLeft: new Vec2(-50, 0),
+        bottomRight: new Vec2(0, 20),
+      });
       const t = Transform.rectToRect(r1, r2);
       const p = new Vec2(25, 150);
       const result = p.transform(t);

@@ -36,10 +36,10 @@ pos.ceil().abs();
 // 100*200 rectangle at (0, 0)
 const rect = new Rect(new Vec2(0), new Vec2(100, 200));
 // 100*200 rectangle at (50, 50)
-const rect2 = new Rect(new Vec2(50, 50), new Vec2(150, 250));
+const rect2 = new Rect(new Vec2(50, 50), new Vec2(100, 200));
 
 // get intersection
-const intersect = Rect.intersection(rect, rect2); //=> Rect(Vec2(50, 50), Vec2(100, 200))
+const intersect = Rect.intersection(rect, rect2); //=> Rect(Vec2(50, 50), Vec2(50, 150))
 
 // get union
 const union = Rect.union(rect, rect2); //=> Rect(Vec2(0, 0), Vec2(150, 250))

@@ -261,11 +261,8 @@ export class Segment {
   ```js
   // 100*200 rectangle at (0, 0)
   const r1 = new Rect(new Vec2(0), new Vec2(100, 200))
-  // 100*200 rectangle at (50, 50)
-  const r2 = new Rect(new Vec2(50, 50), new Vec2(150, 250))
-
-  const intersect = Rect.intersection(r1, r2) //=> Rect(Vec2(50, 50), Vec2(100, 200))
-  const union = Rect.union(r1, r2) //=> Rect(Vec2(0, 0), Vec2(150, 250))
+  // 200*300 rectangle at (50, 50)
+  const r2 = new Rect(new Vec2(50, 50), new Vec2(200, 300))
 
   ...
   ```
@@ -274,38 +271,38 @@ export class Rect {
   /**
     Creates a rectangle. It returns empty rectangle when no arguments given.
     @param topLeft The top-left position (in top-left origin coordinates) of this rectangle.
-    @param bottomRight The bottom-right position (in top-left origin coordinates) of this rectangle.
+    @param size The size of this rectangle.
   */
-  constructor(public topLeft = new Vec2(), public bottomRight = topLeft) {}
+  constructor(public topLeft = new Vec2(), public size = new Vec2()) {}
 
   /**
     Checks if the rectangles has same values.
   */
   equals(other: Rect) {
-    return (
-      this.topLeft.equals(other.topLeft) &&
-      this.bottomRight.equals(other.bottomRight)
-    );
+    return this.topLeft.equals(other.topLeft) && this.size.equals(other.size);
   }
 
   /**
-    The size of this rectangle.
-  */
-  get size() {
-    return this.bottomRight.sub(this.topLeft);
+   * The bottom-right position (in top-left origin coordinates) of this rectangle.
+   */
+  get bottomRight() {
+    return this.topLeft.add(this.size);
   }
+
   /**
     The top-right position (in top-left origin coordinates) of this rectangle.
   */
   get topRight() {
     return new Vec2(this.right, this.top);
   }
+
   /**
     The bottom-lect position (in top-left origin coordinates) of this rectangle.
   */
   get bottomLeft() {
     return new Vec2(this.left, this.bottom);
   }
+
   /**
     The left coordinate (in top-left origin coordinates) of this rectangle.
   */
@@ -322,13 +319,13 @@ export class Rect {
     The right coordinate (in top-left origin coordinates) of this rectangle.
   */
   get right() {
-    return this.bottomRight.x;
+    return this.left + this.width;
   }
   /**
     The bottom coordinate (in top-left origin coordinates) of this rectangle.
   */
   get bottom() {
-    return this.bottomRight.y;
+    return this.top + this.height;
   }
   /**
     The width of this rectangle.
@@ -347,14 +344,16 @@ export class Rect {
    * The center of this rectangle.
    */
   get center() {
-    return this.topLeft.add(this.bottomRight).divScalar(2);
+    return this.topLeft.add(this.size.mulScalar(0.5));
   }
 
   /**
     Calculates the smallest integer rectangle which includes this rectangle.
   */
   toIntBounding() {
-    return new Rect(this.topLeft.floor, this.bottomRight.ceil);
+    const topLeft = this.topLeft.floor;
+    const bottomRight = this.bottomRight.ceil;
+    return new Rect(topLeft, bottomRight.sub(topLeft));
   }
 
   /**
@@ -362,19 +361,18 @@ export class Rect {
    * @param offset
    */
   translate(offset: Vec2) {
-    return new Rect(this.topLeft.add(offset), this.bottomRight.add(offset));
+    return new Rect(this.topLeft.add(offset), this.size);
   }
 
   inflate(offset: number) {
     const d = new Vec2(offset);
-    return new Rect(this.topLeft.sub(d), this.bottomRight.add(d));
+    return new Rect(this.topLeft.sub(d), this.size.add(d.mulScalar(2)));
   }
 
   inset(offsets: EdgeOffsets) {
-    return new Rect(
-      this.topLeft.add(offsets.topLeft),
-      this.bottomRight.sub(offsets.bottomRight)
-    );
+    const topLeft = this.topLeft.add(offsets.topLeft);
+    const bottomRight = this.bottomRight.sub(offsets.bottomRight);
+    return new Rect(topLeft, bottomRight.sub(topLeft));
   }
 
   insetsTo(other: Rect) {
@@ -417,7 +415,7 @@ export class Rect {
     const top = Math.min(this.top, other.top);
     const right = Math.max(this.right, other.right);
     const bottom = Math.max(this.bottom, other.bottom);
-    return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    return new Rect(new Vec2(left, top), new Vec2(right - left, bottom - top));
   }
 
   /**
@@ -429,8 +427,11 @@ export class Rect {
     const top = Math.max(this.top, other.top);
     const right = Math.min(this.right, other.right);
     const bottom = Math.min(this.bottom, other.bottom);
-    if (left < right && top < bottom) {
-      return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    const width = right - left;
+    const height = bottom - top;
+
+    if (width > 0 && height > 0) {
+      return new Rect(new Vec2(left, top), new Vec2(width, height));
     }
   }
 
@@ -460,7 +461,7 @@ export class Rect {
     const top = Math.min(...rects.map((r) => r.top));
     const right = Math.max(...rects.map((r) => r.right));
     const bottom = Math.max(...rects.map((r) => r.bottom));
-    return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    return new Rect(new Vec2(left, top), new Vec2(right - left, bottom - top));
   }
 
   /**
@@ -474,8 +475,11 @@ export class Rect {
     const top = Math.max(...rects.map((r) => r.top));
     const right = Math.min(...rects.map((r) => r.right));
     const bottom = Math.min(...rects.map((r) => r.bottom));
-    if (left < right && top < bottom) {
-      return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    const width = right - left;
+    const height = bottom - top;
+
+    if (width > 0 && height > 0) {
+      return new Rect(new Vec2(left, top), new Vec2(width, height));
     }
   }
 
@@ -515,25 +519,28 @@ export class Rect {
     if ("x" in options) {
       return new Rect(
         new Vec2(options.x, options.y),
-        new Vec2(options.x + options.width, options.y + options.height)
+        new Vec2(options.width, options.height)
       );
     }
     if ("width" in options) {
       return new Rect(
         new Vec2(options.left, options.top),
-        new Vec2(options.left + options.width, options.top + options.height)
+        new Vec2(options.width, options.height)
       );
     }
     if ("right" in options) {
       return new Rect(
         new Vec2(options.left, options.top),
-        new Vec2(options.right, options.bottom)
+        new Vec2(options.right - options.left, options.bottom - options.top)
       );
     }
     if ("bottomRight" in options) {
-      return new Rect(options.topLeft, options.bottomRight);
+      return new Rect(
+        options.topLeft,
+        options.bottomRight.sub(options.topLeft)
+      );
     }
-    return new Rect(options.topLeft, options.topLeft.add(options.size));
+    return new Rect(options.topLeft, options.size);
   }
 
   static boundingRect(points: Vec2[]) {
@@ -543,7 +550,7 @@ export class Rect {
     const right = Math.max(...xs);
     const top = Math.min(...ys);
     const bottom = Math.max(...ys);
-    return new Rect(new Vec2(left, top), new Vec2(right, bottom));
+    return new Rect(new Vec2(left, top), new Vec2(right - left, bottom - top));
   }
 }
 

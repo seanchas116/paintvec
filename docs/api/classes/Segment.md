@@ -15,7 +15,7 @@
 
 #### Defined in
 
-[index.ts:232](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L232)
+[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
 
 ## Properties
 
@@ -23,11 +23,19 @@
 
  **p1**: [`Vec2`](api/classes/Vec2.md)
 
+#### Defined in
+
+[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
+
 ___
 
 ### p2
 
  **p2**: [`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
 
 ## Accessors
 
@@ -41,7 +49,7 @@ ___
 
 #### Defined in
 
-[index.ts:242](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L242)
+[index.ts:242](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L242)
 
 ___
 
@@ -55,7 +63,7 @@ ___
 
 #### Defined in
 
-[index.ts:238](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L238)
+[index.ts:238](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L238)
 
 ## Methods
 
@@ -75,7 +83,7 @@ ___
 
 #### Defined in
 
-[index.ts:234](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L234)
+[index.ts:234](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L234)
 
 ___
 
@@ -89,7 +97,7 @@ ___
 
 #### Defined in
 
-[index.ts:253](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L253)
+[index.ts:253](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L253)
 
 ___
 
@@ -109,4 +117,4 @@ ___
 
 #### Defined in
 
-[index.ts:246](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L246)
+[index.ts:246](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L246)

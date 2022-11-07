@@ -46,7 +46,7 @@ Creates a transform. It returns no-op transform when no arguments given.
 
 #### Defined in
 
-[index.ts:651](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L651)
+[index.ts:658](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L658)
 
 ## Properties
 
@@ -54,11 +54,23 @@ Creates a transform. It returns no-op transform when no arguments given.
 
  **m00**: `number` = `1`
 
+Column 0 and row 0 component of this transform.
+
+#### Defined in
+
+[index.ts:659](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L659)
+
 ___
 
 ### m01
 
  **m01**: `number` = `0`
+
+Column 0 and row 1 component of this transform.
+
+#### Defined in
+
+[index.ts:660](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L660)
 
 ___
 
@@ -66,11 +78,23 @@ ___
 
  **m02**: `number` = `0`
 
+Column 0 and row 2 component of this transform.
+
+#### Defined in
+
+[index.ts:661](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L661)
+
 ___
 
 ### m10
 
  **m10**: `number` = `0`
+
+Column 1 and row 0 component of this transform.
+
+#### Defined in
+
+[index.ts:662](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L662)
 
 ___
 
@@ -78,11 +102,23 @@ ___
 
  **m11**: `number` = `1`
 
+Column 1 and row 1 component of this transform.
+
+#### Defined in
+
+[index.ts:663](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L663)
+
 ___
 
 ### m12
 
  **m12**: `number` = `0`
+
+Column 1 and row 2 component of this transform.
+
+#### Defined in
+
+[index.ts:664](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L664)
 
 ___
 
@@ -90,17 +126,35 @@ ___
 
  **m20**: `number` = `0`
 
+Column 2 and row 0 component of this transform.
+
+#### Defined in
+
+[index.ts:665](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L665)
+
 ___
 
 ### m21
 
  **m21**: `number` = `0`
 
+Column 2 and row 1 component of this transform.
+
+#### Defined in
+
+[index.ts:666](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L666)
+
 ___
 
 ### m22
 
  **m22**: `number` = `1`
+
+Column 2 and row 2 component of this transform.
+
+#### Defined in
+
+[index.ts:667](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L667)
 
 ## Accessors
 
@@ -114,7 +168,7 @@ ___
 
 #### Defined in
 
-[index.ts:753](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L753)
+[index.ts:760](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L760)
 
 ___
 
@@ -128,7 +182,7 @@ ___
 
 #### Defined in
 
-[index.ts:757](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L757)
+[index.ts:764](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L764)
 
 ___
 
@@ -144,7 +198,7 @@ Returns the members (m00, m01, 002, ... m22) in an array.
 
 #### Defined in
 
-[index.ts:784](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L784)
+[index.ts:791](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L791)
 
 ___
 
@@ -158,7 +212,7 @@ ___
 
 #### Defined in
 
-[index.ts:767](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L767)
+[index.ts:774](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L774)
 
 ## Methods
 
@@ -180,7 +234,7 @@ Checks if the transforms has same values.
 
 #### Defined in
 
-[index.ts:666](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L666)
+[index.ts:673](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L673)
 
 ___
 
@@ -196,7 +250,7 @@ Inverts the transform. Returns undefined if this transform is not invertible.
 
 #### Defined in
 
-[index.ts:720](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L720)
+[index.ts:727](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L727)
 
 ___
 
@@ -218,7 +272,7 @@ Merges 2 transforms. The returned transform represents "transform by this transf
 
 #### Defined in
 
-[index.ts:683](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L683)
+[index.ts:690](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L690)
 
 ___
 
@@ -238,7 +292,7 @@ ___
 
 #### Defined in
 
-[index.ts:834](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L834)
+[index.ts:841](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L841)
 
 ___
 
@@ -258,7 +312,7 @@ ___
 
 #### Defined in
 
-[index.ts:826](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L826)
+[index.ts:833](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L833)
 
 ___
 
@@ -275,7 +329,7 @@ This supports perspective transform.
 
 #### Defined in
 
-[index.ts:814](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L814)
+[index.ts:821](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L821)
 
 ___
 
@@ -291,7 +345,7 @@ Returns the CSS matrix() string.
 
 #### Defined in
 
-[index.ts:805](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L805)
+[index.ts:812](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L812)
 
 ___
 
@@ -305,7 +359,7 @@ ___
 
 #### Defined in
 
-[index.ts:798](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L798)
+[index.ts:805](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L805)
 
 ___
 
@@ -325,7 +379,7 @@ ___
 
 #### Defined in
 
-[index.ts:830](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L830)
+[index.ts:837](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L837)
 
 ___
 
@@ -347,7 +401,7 @@ Merges all transforms.
 
 #### Defined in
 
-[index.ts:920](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L920)
+[index.ts:927](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L927)
 
 ___
 
@@ -368,7 +422,7 @@ ___
 
 #### Defined in
 
-[index.ts:895](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L895)
+[index.ts:902](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L902)
 
 ___
 
@@ -389,7 +443,7 @@ ___
 
 #### Defined in
 
-[index.ts:911](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L911)
+[index.ts:918](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L918)
 
 ___
 
@@ -411,7 +465,7 @@ Returns the transform that represents rotating by angle (in radians).
 
 #### Defined in
 
-[index.ts:848](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L848)
+[index.ts:855](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L855)
 
 ___
 
@@ -433,7 +487,7 @@ Returns the transform that represents scaling.
 
 #### Defined in
 
-[index.ts:841](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L841)
+[index.ts:848](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L848)
 
 ___
 
@@ -455,7 +509,7 @@ Returns the transform that represents translating.
 
 #### Defined in
 
-[index.ts:857](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L857)
+[index.ts:864](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L864)
 
 ___
 
@@ -478,4 +532,4 @@ Reference: Projective Mappings for Image Warping
 
 #### Defined in
 
-[index.ts:865](https://github.com/seanchas116/paintvec/blob/53b097f/index.ts#L865)
+[index.ts:872](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L872)

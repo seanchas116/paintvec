@@ -150,32 +150,29 @@ export declare class Segment {
   ```js
   // 100*200 rectangle at (0, 0)
   const r1 = new Rect(new Vec2(0), new Vec2(100, 200))
-  // 100*200 rectangle at (50, 50)
-  const r2 = new Rect(new Vec2(50, 50), new Vec2(150, 250))
-
-  const intersect = Rect.intersection(r1, r2) //=> Rect(Vec2(50, 50), Vec2(100, 200))
-  const union = Rect.union(r1, r2) //=> Rect(Vec2(0, 0), Vec2(150, 250))
+  // 200*300 rectangle at (50, 50)
+  const r2 = new Rect(new Vec2(50, 50), new Vec2(200, 300))
 
   ...
   ```
 */
 export declare class Rect {
     topLeft: Vec2;
-    bottomRight: Vec2;
+    size: Vec2;
     /**
       Creates a rectangle. It returns empty rectangle when no arguments given.
       @param topLeft The top-left position (in top-left origin coordinates) of this rectangle.
-      @param bottomRight The bottom-right position (in top-left origin coordinates) of this rectangle.
+      @param size The size of this rectangle.
     */
-    constructor(topLeft?: Vec2, bottomRight?: Vec2);
+    constructor(topLeft?: Vec2, size?: Vec2);
     /**
       Checks if the rectangles has same values.
     */
     equals(other: Rect): boolean;
     /**
-      The size of this rectangle.
-    */
-    get size(): Vec2;
+     * The bottom-right position (in top-left origin coordinates) of this rectangle.
+     */
+    get bottomRight(): Vec2;
     /**
       The top-right position (in top-left origin coordinates) of this rectangle.
     */
