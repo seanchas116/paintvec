@@ -136,6 +136,12 @@ export declare class Segment {
     transform(transform: Transform): Segment;
     mix(other: Segment, ratio: number): Segment;
     toString(): string;
+    toSVGLineProps(): {
+        x1: number;
+        y1: number;
+        x2: number;
+        y2: number;
+    };
 }
 /**
   Rect represents rectangle in 2D space.
@@ -257,6 +263,12 @@ export declare class Rect {
     intersection(other: Rect): Rect | undefined;
     toString(): string;
     toDOMRect(): DOMRect;
+    toSVGRectProps(): {
+        x: number;
+        y: number;
+        width: number;
+        height: number;
+    };
     /**
      * Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
      */

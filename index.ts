@@ -262,6 +262,15 @@ export class Segment {
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     return `Segment(${this.p1},${this.p2})`;
   }
+
+  toSVGLineProps() {
+    return {
+      x1: this.p1.x,
+      y1: this.p1.y,
+      x2: this.p2.x,
+      y2: this.p2.y,
+    };
+  }
 }
 
 /**
@@ -522,6 +531,15 @@ export class Rect {
 
   toDOMRect() {
     return new DOMRect(this.left, this.top, this.width, this.height);
+  }
+
+  toSVGRectProps() {
+    return {
+      x: this.left,
+      y: this.top,
+      width: this.width,
+      height: this.height,
+    };
   }
 
   /**
