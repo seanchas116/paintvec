@@ -162,46 +162,68 @@ export declare class Rect {
       Checks if the rectangles has same values.
     */
     equals(other: Rect): boolean;
+    get tl(): Vec2;
     /**
      * The bottom-right position (in top-left origin coordinates) of this rectangle.
      */
     get bottomRight(): Vec2;
+    get br(): Vec2;
     /**
       The top-right position (in top-left origin coordinates) of this rectangle.
     */
     get topRight(): Vec2;
+    get tr(): Vec2;
     /**
       The bottom-lect position (in top-left origin coordinates) of this rectangle.
     */
     get bottomLeft(): Vec2;
+    get bl(): Vec2;
     /**
       The left coordinate (in top-left origin coordinates) of this rectangle.
     */
     get left(): number;
+    get l(): number;
     /**
       The top coordinate (in top-left origin coordinates) of this rectangle.
     */
     get top(): number;
+    get t(): number;
     /**
       The right coordinate (in top-left origin coordinates) of this rectangle.
     */
     get right(): number;
+    get r(): number;
     /**
       The bottom coordinate (in top-left origin coordinates) of this rectangle.
     */
     get bottom(): number;
+    get b(): number;
     /**
       The width of this rectangle.
     */
     get width(): number;
+    get w(): number;
     /**
       The width of this rectangle.
     */
     get height(): number;
+    get h(): number;
     /**
      * The center of this rectangle.
      */
     get center(): Vec2;
+    get topLine(): Segment;
+    get bottomLine(): Segment;
+    get leftLine(): Segment;
+    get rightLine(): Segment;
+    get startLines(): {
+        x: Segment;
+        y: Segment;
+    };
+    get endLines(): {
+        x: Segment;
+        y: Segment;
+    };
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
     */

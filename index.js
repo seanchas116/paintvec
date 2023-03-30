@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transform = exports.EdgeOffsets = exports.Rect = exports.Segment = exports.Vec2 = void 0;
 /**
   Vec2 represents 2D vector, point or size.
 
@@ -13,7 +10,9 @@ exports.Transform = exports.EdgeOffsets = exports.Rect = exports.Segment = expor
   ...
   ```
 */
-class Vec2 {
+export class Vec2 {
+    x;
+    y;
     /**
       @param x The x component of this vector.
       @param y The y component of this vector.
@@ -177,15 +176,14 @@ class Vec2 {
      * @param options
      */
     static from(options) {
-        var _a, _b, _c, _d;
         if (typeof options == "number") {
             return new Vec2(options, options);
         }
         else if (Array.isArray(options)) {
-            return new Vec2((_a = options[0]) !== null && _a !== void 0 ? _a : 0, (_b = options[1]) !== null && _b !== void 0 ? _b : 0);
+            return new Vec2(options[0] ?? 0, options[1] ?? 0);
         }
         else {
-            return new Vec2((_c = options.x) !== null && _c !== void 0 ? _c : 0, (_d = options.y) !== null && _d !== void 0 ? _d : 0);
+            return new Vec2(options.x ?? 0, options.y ?? 0);
         }
     }
     /**
@@ -205,8 +203,9 @@ class Vec2 {
         return new Vec2(x, y);
     }
 }
-exports.Vec2 = Vec2;
-class Segment {
+export class Segment {
+    p1;
+    p2;
     constructor(p1, p2) {
         this.p1 = p1;
         this.p2 = p2;
@@ -231,7 +230,6 @@ class Segment {
         return `Segment(${this.p1},${this.p2})`;
     }
 }
-exports.Segment = Segment;
 /**
   Rect represents rectangle in 2D space.
 
@@ -244,7 +242,9 @@ exports.Segment = Segment;
   ...
   ```
 */
-class Rect {
+export class Rect {
+    topLeft;
+    size;
     /**
       Creates a rectangle. It returns empty rectangle when no arguments given.
       @param topLeft The top-left position (in top-left origin coordinates) of this rectangle.
@@ -260,11 +260,17 @@ class Rect {
     equals(other) {
         return this.topLeft.equals(other.topLeft) && this.size.equals(other.size);
     }
+    get tl() {
+        return this.topLeft;
+    }
     /**
      * The bottom-right position (in top-left origin coordinates) of this rectangle.
      */
     get bottomRight() {
         return this.topLeft.add(this.size);
+    }
+    get br() {
+        return this.bottomRight;
     }
     /**
       The top-right position (in top-left origin coordinates) of this rectangle.
@@ -272,11 +278,17 @@ class Rect {
     get topRight() {
         return new Vec2(this.right, this.top);
     }
+    get tr() {
+        return this.topRight;
+    }
     /**
       The bottom-lect position (in top-left origin coordinates) of this rectangle.
     */
     get bottomLeft() {
         return new Vec2(this.left, this.bottom);
+    }
+    get bl() {
+        return this.bottomLeft;
     }
     /**
       The left coordinate (in top-left origin coordinates) of this rectangle.
@@ -284,11 +296,17 @@ class Rect {
     get left() {
         return this.topLeft.x;
     }
+    get l() {
+        return this.left;
+    }
     /**
       The top coordinate (in top-left origin coordinates) of this rectangle.
     */
     get top() {
         return this.topLeft.y;
+    }
+    get t() {
+        return this.top;
     }
     /**
       The right coordinate (in top-left origin coordinates) of this rectangle.
@@ -296,11 +314,17 @@ class Rect {
     get right() {
         return this.left + this.width;
     }
+    get r() {
+        return this.right;
+    }
     /**
       The bottom coordinate (in top-left origin coordinates) of this rectangle.
     */
     get bottom() {
         return this.top + this.height;
+    }
+    get b() {
+        return this.bottom;
     }
     /**
       The width of this rectangle.
@@ -308,17 +332,47 @@ class Rect {
     get width() {
         return this.size.x;
     }
+    get w() {
+        return this.width;
+    }
     /**
       The width of this rectangle.
     */
     get height() {
         return this.size.y;
     }
+    get h() {
+        return this.height;
+    }
     /**
      * The center of this rectangle.
      */
     get center() {
         return this.topLeft.add(this.size.mul(0.5));
+    }
+    get topLine() {
+        return new Segment(this.topLeft, this.topRight);
+    }
+    get bottomLine() {
+        return new Segment(this.bottomLeft, this.bottomRight);
+    }
+    get leftLine() {
+        return new Segment(this.topLeft, this.bottomLeft);
+    }
+    get rightLine() {
+        return new Segment(this.topRight, this.bottomRight);
+    }
+    get startLines() {
+        return {
+            x: this.leftLine,
+            y: this.topLine,
+        };
+    }
+    get endLines() {
+        return {
+            x: this.rightLine,
+            y: this.bottomLine,
+        };
     }
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
@@ -465,11 +519,12 @@ class Rect {
         return new Rect(new Vec2(left, top), new Vec2(right - left, bottom - top));
     }
 }
-exports.Rect = Rect;
 /**
  * EdgeOffsets represents edge offsets which are applied to rectangles.
  */
-class EdgeOffsets {
+export class EdgeOffsets {
+    topLeft;
+    bottomRight;
     constructor(topLeft, bottomRight) {
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
@@ -506,7 +561,6 @@ class EdgeOffsets {
         return new EdgeOffsets(options.topLeft, options.bottomRight);
     }
 }
-exports.EdgeOffsets = EdgeOffsets;
 /**
   Transform represents 2D affine and perspective transform with 3x3 matrix.
 
@@ -524,7 +578,16 @@ exports.EdgeOffsets = EdgeOffsets;
   const transform = translate.merge(scale).merge(rotate)
   ```
 */
-class Transform {
+export class Transform {
+    m00;
+    m01;
+    m02;
+    m10;
+    m11;
+    m12;
+    m20;
+    m21;
+    m22;
     /**
       Creates a transform. It returns no-op transform when no arguments given.
   
@@ -767,4 +830,3 @@ class Transform {
         return transforms.reduce((a, x) => a.merge(x), new Transform());
     }
 }
-exports.Transform = Transform;

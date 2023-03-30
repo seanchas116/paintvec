@@ -291,11 +291,19 @@ export class Rect {
     return this.topLeft.equals(other.topLeft) && this.size.equals(other.size);
   }
 
+  get tl() {
+    return this.topLeft;
+  }
+
   /**
    * The bottom-right position (in top-left origin coordinates) of this rectangle.
    */
   get bottomRight() {
     return this.topLeft.add(this.size);
+  }
+
+  get br() {
+    return this.bottomRight;
   }
 
   /**
@@ -305,11 +313,19 @@ export class Rect {
     return new Vec2(this.right, this.top);
   }
 
+  get tr() {
+    return this.topRight;
+  }
+
   /**
     The bottom-lect position (in top-left origin coordinates) of this rectangle.
   */
   get bottomLeft() {
     return new Vec2(this.left, this.bottom);
+  }
+
+  get bl() {
+    return this.bottomLeft;
   }
 
   /**
@@ -318,11 +334,18 @@ export class Rect {
   get left() {
     return this.topLeft.x;
   }
+  get l() {
+    return this.left;
+  }
+
   /**
     The top coordinate (in top-left origin coordinates) of this rectangle.
   */
   get top() {
     return this.topLeft.y;
+  }
+  get t() {
+    return this.top;
   }
   /**
     The right coordinate (in top-left origin coordinates) of this rectangle.
@@ -330,11 +353,17 @@ export class Rect {
   get right() {
     return this.left + this.width;
   }
+  get r() {
+    return this.right;
+  }
   /**
     The bottom coordinate (in top-left origin coordinates) of this rectangle.
   */
   get bottom() {
     return this.top + this.height;
+  }
+  get b() {
+    return this.bottom;
   }
   /**
     The width of this rectangle.
@@ -342,11 +371,17 @@ export class Rect {
   get width() {
     return this.size.x;
   }
+  get w() {
+    return this.width;
+  }
   /**
     The width of this rectangle.
   */
   get height() {
     return this.size.y;
+  }
+  get h() {
+    return this.height;
   }
 
   /**
@@ -354,6 +389,42 @@ export class Rect {
    */
   get center() {
     return this.topLeft.add(this.size.mul(0.5));
+  }
+
+  get topLine() {
+    return new Segment(this.topLeft, this.topRight);
+  }
+
+  get bottomLine() {
+    return new Segment(this.bottomLeft, this.bottomRight);
+  }
+
+  get leftLine() {
+    return new Segment(this.topLeft, this.bottomLeft);
+  }
+
+  get rightLine() {
+    return new Segment(this.topRight, this.bottomRight);
+  }
+
+  get startLines(): {
+    x: Segment;
+    y: Segment;
+  } {
+    return {
+      x: this.leftLine,
+      y: this.topLine,
+    };
+  }
+
+  get endLines(): {
+    x: Segment;
+    y: Segment;
+  } {
+    return {
+      x: this.rightLine,
+      y: this.bottomLine,
+    };
   }
 
   /**
