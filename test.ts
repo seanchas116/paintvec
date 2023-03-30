@@ -47,6 +47,12 @@ describe("Vec2", () => {
       assert.equal(result.x, 5000);
       assert.equal(result.y, 8000);
     });
+    it("multiplies vector by number", () => {
+      const v1 = new Vec2(100, 200);
+      const result = v1.mul(1.5);
+      assert.equal(result.x, 150);
+      assert.equal(result.y, 300);
+    });
   });
   describe("div", () => {
     it("divides 2 vectors ", () => {
@@ -56,19 +62,9 @@ describe("Vec2", () => {
       assert.equal(result.x, 2);
       assert.equal(result.y, 5);
     });
-  });
-  describe("mulScalar", () => {
-    it("multiplies vector by number", () => {
-      const v1 = new Vec2(100, 200);
-      const result = v1.mulScalar(1.5);
-      assert.equal(result.x, 150);
-      assert.equal(result.y, 300);
-    });
-  });
-  describe("divScalar", () => {
     it("divides vector by number", () => {
       const v1 = new Vec2(100, 200);
-      const result = v1.divScalar(4);
+      const result = v1.div(4);
       assert.equal(result.x, 25);
       assert.equal(result.y, 50);
     });

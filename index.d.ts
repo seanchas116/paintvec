@@ -33,27 +33,19 @@ export declare class Vec2 {
     /**
       Adds v to this vector.
     */
-    add(v: Vec2): Vec2;
+    add(v: Vec2 | number): Vec2;
     /**
       Subtracts v from this vector.
     */
-    sub(v: Vec2): Vec2;
+    sub(v: Vec2 | number): Vec2;
     /**
       Multiplies components of this vector by v.
     */
-    mul(v: Vec2): Vec2;
+    mul(v: Vec2 | number): Vec2;
     /**
       Divides components of this vector by v.
     */
-    div(v: Vec2): Vec2;
-    /**
-      Multiplies this vector by scalar s.
-    */
-    mulScalar(s: number): Vec2;
-    /**
-      Divides this vector by scalar s.
-    */
-    divScalar(s: number): Vec2;
+    div(v: Vec2 | number): Vec2;
     /**
       Inverts this vector.
     */

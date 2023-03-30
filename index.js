@@ -44,37 +44,37 @@ class Vec2 {
       Adds v to this vector.
     */
     add(v) {
+        if (typeof v === "number") {
+            return new Vec2(this.x + v, this.y + v);
+        }
         return new Vec2(this.x + v.x, this.y + v.y);
     }
     /**
       Subtracts v from this vector.
     */
     sub(v) {
+        if (typeof v === "number") {
+            return new Vec2(this.x - v, this.y - v);
+        }
         return new Vec2(this.x - v.x, this.y - v.y);
     }
     /**
       Multiplies components of this vector by v.
     */
     mul(v) {
+        if (typeof v === "number") {
+            return new Vec2(this.x * v, this.y * v);
+        }
         return new Vec2(this.x * v.x, this.y * v.y);
     }
     /**
       Divides components of this vector by v.
     */
     div(v) {
+        if (typeof v === "number") {
+            return new Vec2(this.x / v, this.y / v);
+        }
         return new Vec2(this.x / v.x, this.y / v.y);
-    }
-    /**
-      Multiplies this vector by scalar s.
-    */
-    mulScalar(s) {
-        return new Vec2(this.x * s, this.y * s);
-    }
-    /**
-      Divides this vector by scalar s.
-    */
-    divScalar(s) {
-        return new Vec2(this.x / s, this.y / s);
     }
     /**
       Inverts this vector.
@@ -314,7 +314,7 @@ class Rect {
      * The center of this rectangle.
      */
     get center() {
-        return this.topLeft.add(this.size.mulScalar(0.5));
+        return this.topLeft.add(this.size.mul(0.5));
     }
     /**
       Calculates the smallest integer rectangle which includes this rectangle.
@@ -333,7 +333,7 @@ class Rect {
     }
     inflate(offset) {
         const d = new Vec2(offset);
-        return new Rect(this.topLeft.sub(d), this.size.add(d.mulScalar(2)));
+        return new Rect(this.topLeft.sub(d), this.size.add(d.mul(2)));
     }
     inset(offsets) {
         const topLeft = this.topLeft.add(offsets.topLeft);
