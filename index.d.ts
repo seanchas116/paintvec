@@ -134,6 +134,7 @@ export declare class Segment {
     get length(): number;
     get angle(): number;
     transform(transform: Transform): Segment;
+    mix(other: Segment, ratio: number): Segment;
     toString(): string;
 }
 /**

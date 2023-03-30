@@ -223,6 +223,9 @@ class Segment {
     transform(transform) {
         return new Segment(this.p1.transform(transform), this.p2.transform(transform));
     }
+    mix(other, ratio) {
+        return new Segment(this.p1.mix(other.p1, ratio), this.p2.mix(other.p2, ratio));
+    }
     toString() {
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         return `Segment(${this.p1},${this.p2})`;
