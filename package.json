@@ -8,23 +8,27 @@
     "rectangle",
     "affine"
   ],
+  "homepage": "https://github.com/seanchas116/paintvec#readme",
+  "bugs": {
+    "url": "https://github.com/seanchas116/paintvec/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanchas116/paintvec.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "build": "prettier --write *.ts && tsc",
     "docs:generate": "typedoc  --plugin typedoc-plugin-markdown --hideBreadcrumbs --hideInPageTOC --hideMembersSymbol --publicPath api/ --out docs/api index.ts",
     "docs:serve": "docsify serve ./docs",
     "test": "vitest run -r ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seanchas116/paintvec.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/seanchas116/paintvec/issues"
-  },
-  "homepage": "https://github.com/seanchas116/paintvec#readme",
   "devDependencies": {
     "@types/node": "^18.15.11",
     "docsify-cli": "^4.4.4",
@@ -34,8 +38,5 @@
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^4.9.5",
     "vitest": "^0.29.7"
-  },
-  "directories": {
-    "doc": "docs"
   }
 }
