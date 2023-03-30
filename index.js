@@ -224,6 +224,7 @@ class Segment {
         return new Segment(this.p1.transform(transform), this.p2.transform(transform));
     }
     toString() {
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         return `Segment(${this.p1},${this.p2})`;
     }
 }
@@ -390,6 +391,7 @@ class Rect {
         }
     }
     toString() {
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         return `Rect(${this.topLeft},${this.bottomRight})`;
     }
     toDOMRect() {
