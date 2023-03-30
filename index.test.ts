@@ -1,6 +1,5 @@
-import assert = require("assert");
-
-import { Vec2, Rect, Transform, EdgeOffsets, Segment } from "./";
+import { describe, it, assert } from "vitest";
+import { Vec2, Rect, Transform, EdgeOffsets, Segment } from ".";
 
 describe("Vec2", () => {
   describe("width / height", () => {

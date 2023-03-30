@@ -13,7 +13,7 @@
     "build": "prettier --write *.ts && tsc",
     "docs:generate": "typedoc  --plugin typedoc-plugin-markdown --hideBreadcrumbs --hideInPageTOC --hideMembersSymbol --publicPath api/ --out docs/api index.ts",
     "docs:serve": "docsify serve ./docs",
-    "test": "npm run build && mocha test.js"
+    "test": "vitest run -r ."
   },
   "repository": {
     "type": "git",
@@ -26,15 +26,14 @@
   },
   "homepage": "https://github.com/seanchas116/paintvec#readme",
   "devDependencies": {
-    "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.11",
     "docsify-cli": "^4.4.4",
-    "mocha": "^10.2.0",
     "prettier": "^2.8.7",
     "typedoc": "^0.23.28",
     "typedoc-plugin-markdown": "^3.14.0",
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.7"
   },
   "directories": {
     "doc": "docs"
