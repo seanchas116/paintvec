@@ -252,6 +252,7 @@ export class Segment {
   }
 
   toString() {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     return `Segment(${this.p1},${this.p2})`;
   }
 }
@@ -437,6 +438,7 @@ export class Rect {
   }
 
   toString() {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     return `Rect(${this.topLeft},${this.bottomRight})`;
   }
 
