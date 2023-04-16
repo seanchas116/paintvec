@@ -33,10 +33,10 @@
     "@types/node": "^18.15.11",
     "docsify-cli": "^4.4.4",
     "prettier": "^2.8.7",
-    "typedoc": "^0.24.1",
-    "typedoc-plugin-markdown": "^3.14.0",
+    "typedoc": "^0.24.2",
+    "typedoc-plugin-markdown": "^3.15.1",
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^4.9.5",
-    "vitest": "^0.30.0"
+    "vitest": "^0.30.1"
   }
 }
