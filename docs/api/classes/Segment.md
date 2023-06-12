@@ -15,7 +15,7 @@
 
 #### Defined in
 
-[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
+[index.ts:233](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L233)
 
 ## Properties
 
@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
+[index.ts:233](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L233)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[index.ts:232](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L232)
+[index.ts:233](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L233)
 
 ## Accessors
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[index.ts:242](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L242)
+[index.ts:243](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L243)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[index.ts:238](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L238)
+[index.ts:239](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L239)
 
 ## Methods
 
@@ -83,7 +83,49 @@ ___
 
 #### Defined in
 
-[index.ts:234](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L234)
+[index.ts:235](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L235)
+
+___
+
+### mix
+
+**mix**(`other`, `ratio`): [`Segment`](api/classes/Segment.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `other` | [`Segment`](api/classes/Segment.md) |
+| `ratio` | `number` |
+
+#### Returns
+
+[`Segment`](api/classes/Segment.md)
+
+#### Defined in
+
+[index.ts:254](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L254)
+
+___
+
+### toSVGLineProps
+
+**toSVGLineProps**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `x1` | `number` |
+| `x2` | `number` |
+| `y1` | `number` |
+| `y2` | `number` |
+
+#### Defined in
+
+[index.ts:266](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L266)
 
 ___
 
@@ -97,7 +139,7 @@ ___
 
 #### Defined in
 
-[index.ts:253](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L253)
+[index.ts:261](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L261)
 
 ___
 
@@ -117,4 +159,4 @@ ___
 
 #### Defined in
 
-[index.ts:246](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L246)
+[index.ts:247](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L247)

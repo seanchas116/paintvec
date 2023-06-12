@@ -28,7 +28,7 @@ Creates a rectangle. It returns empty rectangle when no arguments given.
 
 #### Defined in
 
-[index.ts:276](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L276)
+[index.ts:294](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L294)
 
 ## Properties
 
@@ -40,7 +40,7 @@ The size of this rectangle.
 
 #### Defined in
 
-[index.ts:276](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L276)
+[index.ts:294](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L294)
 
 ___
 
@@ -52,9 +52,37 @@ The top-left position (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:276](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L276)
+[index.ts:294](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L294)
 
 ## Accessors
+
+### b
+
+`get` **b**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:374](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L374)
+
+___
+
+### bl
+
+`get` **bl**(): [`Vec2`](api/classes/Vec2.md)
+
+#### Returns
+
+[`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:336](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L336)
+
+___
 
 ### bottom
 
@@ -68,7 +96,7 @@ The bottom coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:327](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L327)
+[index.ts:371](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L371)
 
 ___
 
@@ -84,7 +112,21 @@ The bottom-lect position (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:302](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L302)
+[index.ts:332](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L332)
+
+___
+
+### bottomLine
+
+`get` **bottomLine**(): [`Segment`](api/classes/Segment.md)
+
+#### Returns
+
+[`Segment`](api/classes/Segment.md)
+
+#### Defined in
+
+[index.ts:407](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L407)
 
 ___
 
@@ -100,7 +142,21 @@ The bottom-right position (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:288](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L288)
+[index.ts:310](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L310)
+
+___
+
+### br
+
+`get` **br**(): [`Vec2`](api/classes/Vec2.md)
+
+#### Returns
+
+[`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:314](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L314)
 
 ___
 
@@ -116,7 +172,40 @@ The center of this rectangle.
 
 #### Defined in
 
-[index.ts:346](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L346)
+[index.ts:399](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L399)
+
+___
+
+### endLines
+
+`get` **endLines**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `x` | [`Segment`](api/classes/Segment.md) |
+| `y` | [`Segment`](api/classes/Segment.md) |
+
+#### Defined in
+
+[index.ts:429](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L429)
+
+___
+
+### h
+
+`get` **h**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:392](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L392)
 
 ___
 
@@ -132,7 +221,21 @@ The width of this rectangle.
 
 #### Defined in
 
-[index.ts:339](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L339)
+[index.ts:389](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L389)
+
+___
+
+### l
+
+`get` **l**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:346](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L346)
 
 ___
 
@@ -148,7 +251,35 @@ The left coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:309](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L309)
+[index.ts:343](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L343)
+
+___
+
+### leftLine
+
+`get` **leftLine**(): [`Segment`](api/classes/Segment.md)
+
+#### Returns
+
+[`Segment`](api/classes/Segment.md)
+
+#### Defined in
+
+[index.ts:411](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L411)
+
+___
+
+### r
+
+`get` **r**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:365](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L365)
 
 ___
 
@@ -164,7 +295,68 @@ The right coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:321](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L321)
+[index.ts:362](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L362)
+
+___
+
+### rightLine
+
+`get` **rightLine**(): [`Segment`](api/classes/Segment.md)
+
+#### Returns
+
+[`Segment`](api/classes/Segment.md)
+
+#### Defined in
+
+[index.ts:415](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L415)
+
+___
+
+### startLines
+
+`get` **startLines**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `x` | [`Segment`](api/classes/Segment.md) |
+| `y` | [`Segment`](api/classes/Segment.md) |
+
+#### Defined in
+
+[index.ts:419](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L419)
+
+___
+
+### t
+
+`get` **t**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:356](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L356)
+
+___
+
+### tl
+
+`get` **tl**(): [`Vec2`](api/classes/Vec2.md)
+
+#### Returns
+
+[`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:303](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L303)
 
 ___
 
@@ -180,7 +372,21 @@ The top coordinate (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:315](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L315)
+[index.ts:353](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L353)
+
+___
+
+### topLine
+
+`get` **topLine**(): [`Segment`](api/classes/Segment.md)
+
+#### Returns
+
+[`Segment`](api/classes/Segment.md)
+
+#### Defined in
+
+[index.ts:403](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L403)
 
 ___
 
@@ -196,7 +402,21 @@ The top-right position (in top-left origin coordinates) of this rectangle.
 
 #### Defined in
 
-[index.ts:295](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L295)
+[index.ts:321](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L321)
+
+___
+
+### tr
+
+`get` **tr**(): [`Vec2`](api/classes/Vec2.md)
+
+#### Returns
+
+[`Vec2`](api/classes/Vec2.md)
+
+#### Defined in
+
+[index.ts:325](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L325)
 
 ___
 
@@ -212,7 +432,21 @@ Returns array of `[topLeft, topRight, bottomRight, bottomLeft]`.
 
 #### Defined in
 
-[index.ts:449](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L449)
+[index.ts:548](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L548)
+
+___
+
+### w
+
+`get` **w**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:383](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L383)
 
 ___
 
@@ -228,7 +462,7 @@ The width of this rectangle.
 
 #### Defined in
 
-[index.ts:333](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L333)
+[index.ts:380](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L380)
 
 ## Methods
 
@@ -250,7 +484,7 @@ Checks if the rectangles has same values.
 
 #### Defined in
 
-[index.ts:281](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L281)
+[index.ts:299](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L299)
 
 ___
 
@@ -272,7 +506,7 @@ Returns if this rectangle include pos.
 
 #### Defined in
 
-[index.ts:389](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L389)
+[index.ts:478](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L478)
 
 ___
 
@@ -292,7 +526,7 @@ ___
 
 #### Defined in
 
-[index.ts:367](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L367)
+[index.ts:456](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L456)
 
 ___
 
@@ -312,7 +546,7 @@ ___
 
 #### Defined in
 
-[index.ts:372](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L372)
+[index.ts:461](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L461)
 
 ___
 
@@ -332,7 +566,7 @@ ___
 
 #### Defined in
 
-[index.ts:378](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L378)
+[index.ts:467](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L467)
 
 ___
 
@@ -354,7 +588,7 @@ Returns the largest rectangle contained in both this and other.
 
 #### Defined in
 
-[index.ts:425](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L425)
+[index.ts:514](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L514)
 
 ___
 
@@ -368,7 +602,7 @@ ___
 
 #### Defined in
 
-[index.ts:442](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L442)
+[index.ts:532](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L532)
 
 ___
 
@@ -384,7 +618,28 @@ Calculates the smallest integer rectangle which includes this rectangle.
 
 #### Defined in
 
-[index.ts:353](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L353)
+[index.ts:442](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L442)
+
+___
+
+### toSVGRectProps
+
+**toSVGRectProps**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `height` | `number` |
+| `width` | `number` |
+| `x` | `number` |
+| `y` | `number` |
+
+#### Defined in
+
+[index.ts:536](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L536)
 
 ___
 
@@ -398,7 +653,7 @@ ___
 
 #### Defined in
 
-[index.ts:438](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L438)
+[index.ts:527](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L527)
 
 ___
 
@@ -420,7 +675,7 @@ Transforms each corners by transform and returns the bounding rectangle.
 
 #### Defined in
 
-[index.ts:401](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L401)
+[index.ts:490](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L490)
 
 ___
 
@@ -442,7 +697,7 @@ Translates this rectangle by offset.
 
 #### Defined in
 
-[index.ts:363](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L363)
+[index.ts:452](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L452)
 
 ___
 
@@ -464,7 +719,7 @@ Returns the smallest rectangle which contains both this and other.
 
 #### Defined in
 
-[index.ts:413](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L413)
+[index.ts:502](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L502)
 
 ___
 
@@ -484,7 +739,7 @@ ___
 
 #### Defined in
 
-[index.ts:546](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L546)
+[index.ts:645](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L645)
 
 ___
 
@@ -506,13 +761,13 @@ Creates Rect from rect-like objects.
 
 #### Defined in
 
-[index.ts:490](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L490)
+[index.ts:589](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L589)
 
 ___
 
 ### intersection
 
-`Static` **intersection**(...`rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
+`Static` **intersection**(`...rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
 
 Calculates the rectangle that represents the shared region of given rectangles.
 
@@ -528,13 +783,13 @@ Calculates the rectangle that represents the shared region of given rectangles.
 
 #### Defined in
 
-[index.ts:470](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L470)
+[index.ts:569](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L569)
 
 ___
 
 ### union
 
-`Static` **union**(...`rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
+`Static` **union**(`...rects`): `undefined` \| [`Rect`](api/classes/Rect.md)
 
 Calculates the bounding rectangle of given rectangles.
 
@@ -550,4 +805,4 @@ Calculates the bounding rectangle of given rectangles.
 
 #### Defined in
 
-[index.ts:456](https://github.com/seanchas116/paintvec/blob/5d662e3/index.ts#L456)
+[index.ts:555](https://github.com/seanchas116/paintvec/blob/8211046/index.ts#L555)
