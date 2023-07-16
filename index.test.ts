@@ -132,15 +132,15 @@ describe("Vec2", () => {
     it("clamps values", () => {
       assert.deepEqual(
         new Vec2(-10, -20).clamp(new Vec2(10, 9), new Vec2(20, 21)),
-        new Vec2(10, 9)
+        new Vec2(10, 9),
       );
       assert.deepEqual(
         new Vec2(15, 16).clamp(new Vec2(10, 9), new Vec2(20, 21)),
-        new Vec2(15, 16)
+        new Vec2(15, 16),
       );
       assert.deepEqual(
         new Vec2(30, 35).clamp(new Vec2(10, 9), new Vec2(20, 21)),
-        new Vec2(20, 21)
+        new Vec2(20, 21),
       );
     });
   });
@@ -542,10 +542,10 @@ describe("Transform", () => {
   describe("equals", () => {
     it("compares 2 transforms", () => {
       const t1 = Transform.translate(new Vec2(10)).merge(
-        Transform.rotate(Math.PI / 2)
+        Transform.rotate(Math.PI / 2),
       );
       const t2 = Transform.translate(new Vec2(10)).merge(
-        Transform.rotate(Math.PI / 2)
+        Transform.rotate(Math.PI / 2),
       );
       assert(t1.equals(t2));
     });
@@ -553,10 +553,10 @@ describe("Transform", () => {
   describe("invert", () => {
     it("inverts transform", () => {
       const t1 = Transform.translate(new Vec2(10)).merge(
-        Transform.rotate(Math.PI / 2)
+        Transform.rotate(Math.PI / 2),
       );
       const t2 = Transform.rotate(-Math.PI / 2).merge(
-        Transform.translate(new Vec2(-10))
+        Transform.translate(new Vec2(-10)),
       );
       assert(t1.invert()!.equals(t2));
     });
@@ -565,7 +565,7 @@ describe("Transform", () => {
     it("returns if affine", () => {
       const t1 = new Transform(1, 1, 1, 1, 1, 1, 1, 1, 1);
       const t2 = Transform.rotate(-Math.PI / 2).merge(
-        Transform.translate(new Vec2(-10))
+        Transform.translate(new Vec2(-10)),
       );
       assert(!t1.isAffine);
       assert(t2.isAffine);
@@ -575,7 +575,7 @@ describe("Transform", () => {
     it("returns if translation", () => {
       const t1 = Transform.translate(new Vec2(100, 200));
       const t2 = Transform.rotate(-Math.PI / 2).merge(
-        Transform.translate(new Vec2(-10))
+        Transform.translate(new Vec2(-10)),
       );
       assert(t1.isTranslation);
       assert(!t2.isTranslation);
@@ -653,7 +653,7 @@ describe("Transform", () => {
     it("merges transforms", () => {
       const v1 = new Vec2(100, 200);
       const t1 = Transform.translate(new Vec2(10, 5)).merge(
-        Transform.rotate(Math.PI / 2)
+        Transform.rotate(Math.PI / 2),
       );
       const result = v1.transform(t1);
       assert(almostEqual(result.x, -205));

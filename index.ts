@@ -15,7 +15,10 @@ export class Vec2 {
     @param x The x component of this vector.
     @param y The y component of this vector.
   */
-  constructor(public x = 0, public y = x) {}
+  constructor(
+    public x = 0,
+    public y = x,
+  ) {}
 
   /**
    * Returns x.
@@ -125,7 +128,7 @@ export class Vec2 {
   mix(other: Vec2, ratio: number) {
     return new Vec2(
       this.x * (1 - ratio) + other.x * ratio,
-      this.y * (1 - ratio) + other.y * ratio
+      this.y * (1 - ratio) + other.y * ratio,
     );
   }
 
@@ -163,7 +166,7 @@ export class Vec2 {
   clamp(min: Vec2, max: Vec2) {
     return new Vec2(
       Math.max(min.x, Math.min(this.x, max.x)),
-      Math.max(min.y, Math.min(this.y, max.y))
+      Math.max(min.y, Math.min(this.y, max.y)),
     );
   }
 
@@ -199,7 +202,7 @@ export class Vec2 {
       | {
           x?: number;
           y?: number;
-        }
+        },
   ) {
     if (typeof options == "number") {
       return new Vec2(options, options);
@@ -230,7 +233,10 @@ export class Vec2 {
 }
 
 export class Segment {
-  constructor(public p1: Vec2, public p2: Vec2) {}
+  constructor(
+    public p1: Vec2,
+    public p2: Vec2,
+  ) {}
 
   equals(other: Segment) {
     return this.p1.equals(other.p1) && this.p2.equals(other.p2);
@@ -247,14 +253,14 @@ export class Segment {
   transform(transform: Transform) {
     return new Segment(
       this.p1.transform(transform),
-      this.p2.transform(transform)
+      this.p2.transform(transform),
     );
   }
 
   mix(other: Segment, ratio: number) {
     return new Segment(
       this.p1.mix(other.p1, ratio),
-      this.p2.mix(other.p2, ratio)
+      this.p2.mix(other.p2, ratio),
     );
   }
 
@@ -291,7 +297,10 @@ export class Rect {
     @param topLeft The top-left position (in top-left origin coordinates) of this rectangle.
     @param size The size of this rectangle.
   */
-  constructor(public topLeft = new Vec2(), public size = new Vec2()) {}
+  constructor(
+    public topLeft = new Vec2(),
+    public size = new Vec2(),
+  ) {}
 
   /**
     Checks if the rectangles has same values.
@@ -467,7 +476,7 @@ export class Rect {
   insetsTo(other: Rect) {
     return new EdgeOffsets(
       other.topLeft.sub(this.topLeft),
-      this.bottomRight.sub(other.bottomRight)
+      this.bottomRight.sub(other.bottomRight),
     );
   }
 
@@ -613,30 +622,30 @@ export class Rect {
       | {
           topLeft: Vec2;
           size: Vec2;
-        }
+        },
   ) {
     if ("x" in options) {
       return new Rect(
         new Vec2(options.x, options.y),
-        new Vec2(options.width, options.height)
+        new Vec2(options.width, options.height),
       );
     }
     if ("width" in options) {
       return new Rect(
         new Vec2(options.left, options.top),
-        new Vec2(options.width, options.height)
+        new Vec2(options.width, options.height),
       );
     }
     if ("right" in options) {
       return new Rect(
         new Vec2(options.left, options.top),
-        new Vec2(options.right - options.left, options.bottom - options.top)
+        new Vec2(options.right - options.left, options.bottom - options.top),
       );
     }
     if ("bottomRight" in options) {
       return new Rect(
         options.topLeft,
-        options.bottomRight.sub(options.topLeft)
+        options.bottomRight.sub(options.topLeft),
       );
     }
     return new Rect(options.topLeft, options.size);
@@ -657,7 +666,10 @@ export class Rect {
  * EdgeOffsets represents edge offsets which are applied to rectangles.
  */
 export class EdgeOffsets {
-  constructor(public topLeft: Vec2, public bottomRight: Vec2) {}
+  constructor(
+    public topLeft: Vec2,
+    public bottomRight: Vec2,
+  ) {}
 
   get left() {
     return this.topLeft.x;
@@ -699,18 +711,18 @@ export class EdgeOffsets {
       | {
           topLeft: Vec2;
           bottomRight: Vec2;
-        }
+        },
   ) {
     if (typeof options == "number") {
       return new EdgeOffsets(
         new Vec2(options, options),
-        new Vec2(options, options)
+        new Vec2(options, options),
       );
     }
     if ("left" in options) {
       return new EdgeOffsets(
         new Vec2(options.left, options.top),
-        new Vec2(options.right, options.bottom)
+        new Vec2(options.right, options.bottom),
       );
     }
     return new EdgeOffsets(options.topLeft, options.bottomRight);
@@ -763,7 +775,7 @@ export class Transform {
     public m12 = 0,
     public m20 = 0,
     public m21 = 0,
-    public m22 = 1
+    public m22 = 1,
   ) {}
 
   /**
@@ -880,7 +892,7 @@ export class Transform {
       this.m12,
       0,
       0,
-      1
+      1,
     );
   }
 
@@ -1000,7 +1012,7 @@ export class Transform {
 
   static quadToQuad(
     from: [Vec2, Vec2, Vec2, Vec2],
-    to: [Vec2, Vec2, Vec2, Vec2]
+    to: [Vec2, Vec2, Vec2, Vec2],
   ) {
     const unitToFrom = this.unitToQuad(from);
     const unitToTo = this.unitToQuad(to);
