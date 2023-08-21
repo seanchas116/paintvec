@@ -248,6 +248,10 @@ export declare class Rect {
      */
     includes(pos: Vec2): boolean;
     /**
+     * Returns the area of this rectangle.
+     */
+    get area(): number;
+    /**
       Transforms each corners by transform and returns the bounding rectangle.
     */
     transform(transform: Transform): Rect;

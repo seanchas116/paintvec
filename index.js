@@ -420,6 +420,12 @@ export class Rect {
             pos.y <= this.bottom);
     }
     /**
+     * Returns the area of this rectangle.
+     */
+    get area() {
+        return this.width * this.height;
+    }
+    /**
       Transforms each corners by transform and returns the bounding rectangle.
     */
     transform(transform) {

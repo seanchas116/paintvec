@@ -494,6 +494,13 @@ export class Rect {
   }
 
   /**
+   * Returns the area of this rectangle.
+   */
+  get area(): number {
+    return this.width * this.height;
+  }
+
+  /**
     Transforms each corners by transform and returns the bounding rectangle.
   */
   transform(transform: Transform) {
