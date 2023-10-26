@@ -30,7 +30,7 @@
     "test": "vitest run -r ."
   },
   "devDependencies": {
-    "@types/node": "^20.8.4",
+    "@types/node": "^20.8.9",
     "docsify-cli": "^4.4.4",
     "prettier": "^3.0.3",
     "typedoc": "^0.25.2",
