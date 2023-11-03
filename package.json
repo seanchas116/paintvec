@@ -30,11 +30,11 @@
     "test": "vitest run -r ."
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
+    "@types/node": "^20.8.10",
     "docsify-cli": "^4.4.4",
     "prettier": "^3.0.3",
-    "typedoc": "^0.25.2",
-    "typedoc-plugin-markdown": "^3.16.0",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-markdown": "^3.17.0",
     "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
