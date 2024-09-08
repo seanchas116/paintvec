@@ -732,6 +732,9 @@ export class Transform {
     get withoutTranslation() {
         return new Transform(this.m00, this.m01, this.m02, this.m10, this.m11, this.m12, 0, 0, 1);
     }
+    /**
+     * Returns the square root of the determinant of the upper 2x2 matrix. It can be used to calculate the scale factor of the transform.
+     */
     get meanScale() {
         return Math.sqrt(Math.abs(this.m00 * this.m11 - this.m01 * this.m10));
     }

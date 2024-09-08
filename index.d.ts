@@ -399,6 +399,9 @@ export declare class Transform {
     get isAffine(): boolean;
     get isTranslation(): boolean;
     get withoutTranslation(): Transform;
+    /**
+     * Returns the square root of the determinant of the upper 2x2 matrix. It can be used to calculate the scale factor of the transform.
+     */
     get meanScale(): number;
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
