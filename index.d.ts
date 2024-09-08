@@ -399,6 +399,7 @@ export declare class Transform {
     get isAffine(): boolean;
     get isTranslation(): boolean;
     get withoutTranslation(): Transform;
+    get meanScale(): number;
     /**
       Returns the members (m00, m01, 002, ... m22) in an array.
     */

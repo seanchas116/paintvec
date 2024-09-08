@@ -903,6 +903,10 @@ export class Transform {
     );
   }
 
+  get meanScale() {
+    return Math.sqrt(Math.abs(this.m00 * this.m11 - this.m01 * this.m10));
+  }
+
   /**
     Returns the members (m00, m01, 002, ... m22) in an array.
   */
