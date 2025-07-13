@@ -1,0 +1,47 @@
+/* Style adjustments for TypeDoc-generated content */
+
+/* Hide TypeDoc navigation breadcrumbs */
+.vp-doc a[href*="../README.md"] {
+  display: none;
+}
+
+/* Remove TypeDoc's horizontal rules */
+.vp-doc hr:first-of-type {
+  display: none;
+}
+
+/* Style the "Defined in" links */
+.vp-doc p:has(a[href*="github.com"]) {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  margin-top: -0.5rem;
+}
+
+/* Improve parameter tables */
+.vp-doc table {
+  margin-top: 1rem;
+}
+
+/* Style TypeDoc's parameter sections */
+.vp-doc h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Improve code block styling in generated docs */
+.vp-doc pre {
+  margin: 1rem 0;
+}
+
+/* Add visual separation for method sections */
+.vp-doc h3 {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3:first-of-type {
+  border-top: none;
+}
