@@ -12,7 +12,25 @@ paintvec is a simple JavaScript 2D vector math library that provides essential g
 ```bash
 npm run build
 ```
-Formats code with Prettier and compiles TypeScript to JavaScript.
+Builds the library using tsup, creating CommonJS and ESM bundles with TypeScript declarations.
+
+### Development Build
+```bash
+npm run dev
+```
+Runs tsup in watch mode for development.
+
+### Format Code
+```bash
+npm run format
+```
+Formats all TypeScript files in src/ using Prettier.
+
+### Type Check
+```bash
+npm run typecheck
+```
+Runs TypeScript compiler without emitting files to check for type errors.
 
 ### Test
 ```bash
@@ -33,7 +51,7 @@ npm run docs:serve     # Serve documentation locally
 
 ## Architecture
 
-The entire library is implemented in a single file (`index.ts`) containing five main classes:
+The entire library is implemented in a single file (`src/index.ts`) containing five main classes:
 
 1. **Vec2**: 2D vector/point with arithmetic operations, geometric calculations, and transformations
 2. **Rect**: Rectangle with position/size management, intersection/union operations, and various construction methods
@@ -50,7 +68,7 @@ The entire library is implemented in a single file (`index.ts`) containing five 
 
 ### Testing Approach
 
-Tests are in `index.test.ts` using Vitest. The test suite includes:
+Tests are in `src/index.test.ts` using Vitest. The test suite includes:
 - Comprehensive coverage of all public methods
 - Floating-point comparison helpers (`almostEqual`) for numerical precision
 - Organized test groups using `describe` blocks for each class

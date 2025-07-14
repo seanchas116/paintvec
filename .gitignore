@@ -39,6 +39,9 @@ jspm_packages
 /index.test.js
 /index.test.d.ts
 
+# Build output
+dist/
+
 .claude
 
 # VitePress build output
