@@ -46,7 +46,7 @@ export default defineConfig({
         {
           text: "Generated API Docs",
           items: [
-            { text: "Overview", link: "/api/generated/" },
+            { text: "Overview", link: "/api/generated/globals" },
             { text: "Vec2 (Full)", link: "/api/generated/classes/Vec2" },
             { text: "Rect (Full)", link: "/api/generated/classes/Rect" },
             {

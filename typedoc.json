@@ -2,7 +2,6 @@
   "entryPoints": ["./src/index.ts"],
   "out": "docs/api/generated",
   "plugin": ["typedoc-plugin-markdown"],
-  "readme": "none",
   "hideBreadcrumbs": true,
   "disableSources": false,
   "gitRevision": "master",
