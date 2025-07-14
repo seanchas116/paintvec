@@ -1,7 +1,7 @@
 # paintvec
 
 [![npm version](https://badge.fury.io/js/paintvec.svg)](https://badge.fury.io/js/paintvec)
-[![CircleCI](https://circleci.com/gh/seanchas116/paintvec.svg?style=svg)](https://circleci.com/gh/seanchas116/paintvec)
+[![Test](https://github.com/seanchas116/paintvec/actions/workflows/test.yml/badge.svg)](https://github.com/seanchas116/paintvec/actions/workflows/test.yml)
 
 A simple, dependency-free JavaScript/TypeScript library for 2D vector math with immutable operations.
 
