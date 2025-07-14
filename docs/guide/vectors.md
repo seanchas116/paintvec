@@ -222,4 +222,4 @@ function project(a: Vec2, b: Vec2): Vec2 {
 
 - Learn about [Rectangles](/guide/rectangles) which use Vec2 for position and size
 - Explore [Transforms](/guide/transforms) for more complex vector transformations
-- See the [Vec2 API Reference](/api/vec2) for complete method documentation
+- See the [Vec2 API Reference](/api/classes/Vec2) for complete method documentation

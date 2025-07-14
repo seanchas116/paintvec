@@ -316,4 +316,4 @@ function drawBorder(
 
 - Learn about [Segments](/guide/segments) for line geometry
 - Review [Rectangles](/guide/rectangles) to see EdgeOffsets in action
-- See the [EdgeOffsets API Reference](/api/edge-offsets) for complete documentation
+- See the [EdgeOffsets API Reference](/api/classes/EdgeOffsets) for complete documentation

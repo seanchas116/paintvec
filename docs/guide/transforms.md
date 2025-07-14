@@ -303,4 +303,4 @@ class TransformNode {
 
 - Explore [Edge Offsets](/guide/edge-offsets) for rectangle insets with transforms
 - Learn about [Segments](/guide/segments) and how they transform
-- See the [Transform API Reference](/api/transform) for complete method documentation
+- See the [Transform API Reference](/api/classes/Transform) for complete method documentation

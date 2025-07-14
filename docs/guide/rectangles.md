@@ -282,4 +282,4 @@ function constrainRect(rect: Rect, bounds: Rect): Rect {
 
 - Learn about [Transforms](/guide/transforms) for rotating and scaling rectangles
 - Explore [Edge Offsets](/guide/edge-offsets) for working with margins and padding
-- See the [Rect API Reference](/api/rect) for complete method documentation
+- See the [Rect API Reference](/api/classes/Rect) for complete method documentation

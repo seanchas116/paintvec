@@ -135,4 +135,4 @@ function lerp(a: Vec2, b: Vec2, t: number): Vec2 {
 - Learn about [Vectors](/guide/vectors) in detail
 - Explore [Rectangle operations](/guide/rectangles)
 - Master [2D Transforms](/guide/transforms)
-- Check the [API Reference](/api/) for complete documentation
+- Check the [API Reference](/api/globals) for complete documentation

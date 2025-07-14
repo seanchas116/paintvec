@@ -11,7 +11,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: API Reference
-      link: /api/
+      link: /api/globals
 
 features:
   - icon: 🚀

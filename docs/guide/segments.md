@@ -341,4 +341,4 @@ function polylineToSVGPath(segments: Segment[]): string {
 
 - Review [Vectors](/guide/vectors) for point operations
 - Explore [Transforms](/guide/transforms) for segment transformations
-- See the [Segment API Reference](/api/segment) for complete method documentation
+- See the [Segment API Reference](/api/classes/Segment) for complete method documentation

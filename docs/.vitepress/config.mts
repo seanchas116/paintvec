@@ -11,7 +11,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/getting-started" },
-      { text: "API", link: "/api/" },
+      { text: "API", link: "/api/globals" },
     ],
 
     sidebar: {
@@ -35,29 +35,12 @@ export default defineConfig({
         {
           text: "API Reference",
           items: [
-            { text: "Overview", link: "/api/" },
-            { text: "Vec2", link: "/api/vec2" },
-            { text: "Rect", link: "/api/rect" },
-            { text: "Transform", link: "/api/transform" },
-            { text: "EdgeOffsets", link: "/api/edge-offsets" },
-            { text: "Segment", link: "/api/segment" },
-          ],
-        },
-        {
-          text: "Generated API Docs",
-          items: [
-            { text: "Overview", link: "/api/generated/globals" },
-            { text: "Vec2 (Full)", link: "/api/generated/classes/Vec2" },
-            { text: "Rect (Full)", link: "/api/generated/classes/Rect" },
-            {
-              text: "Transform (Full)",
-              link: "/api/generated/classes/Transform",
-            },
-            {
-              text: "EdgeOffsets (Full)",
-              link: "/api/generated/classes/EdgeOffsets",
-            },
-            { text: "Segment (Full)", link: "/api/generated/classes/Segment" },
+            { text: "Overview", link: "/api/globals" },
+            { text: "Vec2", link: "/api/classes/Vec2" },
+            { text: "Rect", link: "/api/classes/Rect" },
+            { text: "Transform", link: "/api/classes/Transform" },
+            { text: "EdgeOffsets", link: "/api/classes/EdgeOffsets" },
+            { text: "Segment", link: "/api/classes/Segment" },
           ],
         },
       ],
