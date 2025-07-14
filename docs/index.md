@@ -5,9 +5,6 @@ hero:
   name: "paintvec"
   text: "Simple 2D Vector Math for JavaScript"
   tagline: A lightweight, immutable library for 2D geometry operations with TypeScript support
-  image:
-    src: /logo.svg
-    alt: paintvec
   actions:
     - theme: brand
       text: Get Started
