@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "paintvec",
   description: "A simple JavaScript 2D vector math library",
+  base: "/paintvec/",
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
