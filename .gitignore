@@ -38,3 +38,12 @@ jspm_packages
 
 /index.test.js
 /index.test.d.ts
+
+.claude
+
+# VitePress build output
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# TypeDoc generated files (regenerated on build)
+docs/api/generated
