@@ -49,12 +49,10 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.13",
-    "docsify-cli": "^4.4.4",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typedoc": "^0.28.7",
     "typedoc-plugin-markdown": "^4.7.0",
-    "typedoc-theme-clean": "github:seanchas116/typedoc-theme-clean",
     "typescript": "^5.8.3",
     "vitepress": "^1.6.3",
     "vitest": "^3.2.4"
